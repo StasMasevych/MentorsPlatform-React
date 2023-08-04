@@ -118,6 +118,9 @@ body {
 
 /* --------------------*/
 
+.hero {
+}
+
 .hero__container {
   display: flex;
   /* gap: 60px; */
