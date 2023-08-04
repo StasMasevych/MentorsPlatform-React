@@ -143,6 +143,10 @@ body {
   color: #000;
 }
 
+.textblock-hero__title span {
+  color: rgb(215, 35, 215);
+}
+
 .textblock-hero__subtitle {
   font-size: 18px;
   flex: 1 1 auto;
@@ -226,6 +230,11 @@ body {
   border: 1px solid #e1e1e3;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.02), 0 6px 30px 2px rgba(0, 0, 0, 0.06);
   border-radius: 28px;
+  transition: transform 0.2s;
+}
+
+.mentors__item:hover {
+  transform: scale(1.01);
 }
 
 .mentor__image {
@@ -253,5 +262,28 @@ body {
   color: #000;
 }
 
+/* --------------------*/
+
+.benefits {
+  margin: 38px auto;
+}
+
+.benefits__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
+/* --------------------*/
 /* --------------------*/
 /* --------------------*/

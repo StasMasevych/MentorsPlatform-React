@@ -3,6 +3,7 @@ import NavBar from "./Navbar";
 import Hero from "./Hero";
 import Brands from "./Brands";
 import Mentors from "./Mentors";
+import Benefits from "./Benefits";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Hero />
         <Brands />
         <Mentors />
+        <Benefits />
       </main>
 
       <footer className="footer">footer</footer>

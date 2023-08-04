@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero__container">
         <div className="hero__textblock textblock-hero">
           <h1 className="textblock-hero__title">
-            Learn and grow with the best coding mentors
+            Learn and grow with the best mentors in IT
           </h1>
           <h3 className="textblock-hero__subtitle">
             You can book 1:1 video calls with mentors from different categories
