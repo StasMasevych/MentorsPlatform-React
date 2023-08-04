@@ -1,13 +1,253 @@
-body {
+*,
+*::before,
+*::after {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+/* ------------------ */
+body {
+  font-family: "Raleway";
+  font-size: 12px; /* розмір шрифту по замовчуванню - саме більше де застосовується */
+  color: #616161; /* колір шрифту по замовчуванню - саме більше де застосовується */
+}
+/* --------------------*/
+.wrapper {
+  /* overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; */
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+[class*="__container"] {
+  max-width: 1087px;
+  margin: 0 auto;
+  padding: 0px 15px;
 }
+
+/* ------------------ */
+
+.header__container {
+  display: flex;
+  min-height: 114px;
+  align-items: center;
+}
+.header__logo {
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+  color: #000;
+}
+.header__menu {
+  flex: 1 1 auto;
+  display: flex;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  /* padding: 0px 40px 0px 0px; */
+}
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  margin: 0px 40px 0px 0px;
+}
+.menu__link {
+  /* font-family: "Roboto Mono", sans-serif; */
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  color: rgb(215, 35, 215);
+}
+
+.button {
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 12px;
+  letter-spacing: 1px;
+  color: #fcfdfe;
+  padding: 14px 30px;
+  border-radius: 22px;
+  background-color: #000;
+  transition: background-color 0.3s ease 0s;
+}
+
+.button:hover {
+  background-color: rgb(215, 35, 215);
+}
+
+/* --------------------*/
+
+.hero__container {
+  display: flex;
+  /* gap: 60px; */
+  gap: 4rem; /* 16 * 4 = 64px */
+}
+
+.hero__textblock {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  /* padding: 18px 8px; */
+  padding: 1rem 0.5rem;
+}
+
+.textblock-hero__title {
+  font-size: 46px;
+  font-weight: 800;
+  color: #000;
+}
+
+.textblock-hero__subtitle {
+  font-size: 18px;
+  flex: 1 1 auto;
+}
+
+.textblock-hero__button {
+  min-width: 176px;
+  margin: 0 auto;
+}
+
+.hero__image {
+  flex: 0 1 50%;
+}
+
+.hero__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
+
+/* --------------------*/
+
+.brands {
+  margin: 44px auto;
+  /* background: rgb(240, 246, 249); */
+}
+
+.brands__title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  color: #000;
+}
+
+.brands__list {
+  margin: 22px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.brands__item {
+}
+
+/* --------------------*/
+
+.mentors {
+  margin: 38px auto;
+}
+
+.mentors__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.mentors__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+
+.mentors__subtitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.mentors__list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.mentors__item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #e1e1e3;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.02), 0 6px 30px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 28px;
+}
+
+.mentor__image {
+  width: 100%;
+  height: 16rem;
+  /* height: 16.688rem; */
+}
+
+.mentor__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+}
+
+.mentor__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.mentor__name {
+  /* margin: 10px 0; */
+  font-size: 18px;
+  color: #000;
+}
+
+/* --------------------*/
+/* --------------------*/
