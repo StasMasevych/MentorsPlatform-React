@@ -7,7 +7,7 @@ export default function Mentors() {
         <h2 className="mentors__title"> Discover the famous mentors </h2>
         <p className="mentors__subtitle">
           Just book a mentor for 1:1 video call and get advice from the famous
-          experts in tech sector{" "}
+          experts in tech sector
         </p>
         <ul className="mentors__list">
           {initialMentors.map((mentor) => {
