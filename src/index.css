@@ -119,6 +119,7 @@ body {
 /* --------------------*/
 
 .hero {
+  margin: 14px 0;
 }
 
 .hero__container {
