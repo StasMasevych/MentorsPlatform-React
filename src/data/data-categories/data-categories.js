@@ -1,0 +1,15 @@
+export const categories = [
+  { id: crypto.randomUUID(), name: "Web development (HTML, CSS, Javascript)" },
+  { id: crypto.randomUUID(), name: "Javascript" },
+  { id: crypto.randomUUID(), name: "React" },
+  { id: crypto.randomUUID(), name: "Phyton" },
+  { id: crypto.randomUUID(), name: "Java" },
+  { id: crypto.randomUUID(), name: "Data Science" },
+  { id: crypto.randomUUID(), name: "Machine Learning" },
+  { id: crypto.randomUUID(), name: "ChatGPT and Bard" },
+  { id: crypto.randomUUID(), name: "Blockchain and Web3" },
+  { id: crypto.randomUUID(), name: "Low-code development" },
+  { id: crypto.randomUUID(), name: "Manual QA" },
+  { id: crypto.randomUUID(), name: "UX/UI Design" },
+  { id: crypto.randomUUID(), name: "Project management" },
+];

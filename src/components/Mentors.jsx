@@ -1,5 +1,7 @@
 import { initialMentors } from "../data/data-mentors/initialMentors";
 
+import Categories from "./Categories";
+
 export default function Mentors() {
   return (
     <div className="mentors">
@@ -9,6 +11,7 @@ export default function Mentors() {
           Just book a mentor for 1:1 video call and get advice from the famous
           experts in tech sector
         </p>
+        <Categories />
         <ul className="mentors__list">
           {initialMentors.map((mentor) => {
             return (

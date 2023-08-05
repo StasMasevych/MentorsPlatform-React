@@ -2,6 +2,8 @@ import imgCoding1 from "../assets/learning images/coding.jpg";
 import imgCoding2 from "../assets/learning images/coding2.png";
 import imgLearning from "../assets/learning images/live-class.jpg";
 
+// fix issue with height of images
+
 export default function Benefits() {
   return (
     <div className="benefits">
