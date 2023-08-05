@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import Mentors from "./Mentors";
 import Benefits from "./Benefits";
 import Reviews from "./Reviews";
+import Footer from "./Footer";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <Reviews />
       </main>
 
-      <footer className="footer">footer</footer>
+      <Footer />
     </div>
   );
 }
