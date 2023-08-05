@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Brands from "./Brands";
 import Mentors from "./Mentors";
 import Benefits from "./Benefits";
+import Reviews from "./Reviews";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Brands />
         <Mentors />
         <Benefits />
+        <Reviews />
       </main>
 
       <footer className="footer">footer</footer>

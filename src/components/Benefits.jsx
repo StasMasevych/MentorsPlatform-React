@@ -4,6 +4,10 @@ import imgLearning from "../assets/learning images/live-class.jpg";
 
 // fix issue with height of images
 
+// add reviews to  text blocks with images and texts
+
+// add new cool images and texts
+
 export default function Benefits() {
   return (
     <div className="benefits">

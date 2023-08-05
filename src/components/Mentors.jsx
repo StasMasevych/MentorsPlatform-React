@@ -2,6 +2,8 @@ import { initialMentors } from "../data/data-mentors/initialMentors";
 
 import Categories from "./Categories";
 
+// add slider
+
 export default function Mentors() {
   return (
     <div className="mentors">
@@ -21,12 +23,17 @@ export default function Mentors() {
                 </div>
                 <div className="mentor__info">
                   <h3 className="mentor__name">{mentor.name}</h3>
-                  <p className="mentor__job">{mentor.job}</p>
+                  <p className="mentor__job">💼 {mentor.job}</p>
+                  <div className="mentor__status status-mentor">
+                    <p className="status-mentor__mentorship">⭐️ mentorship</p>
+                    <p className="status-mentor__classes">🤩 live classes</p>
+                  </div>
                 </div>
               </li>
             );
           })}
         </ul>
+        <button className="button">Find more mentors</button>
       </div>
     </div>
   );
