@@ -265,7 +265,7 @@ body {
 /* --------------------*/
 
 .benefits {
-  margin: 38px auto;
+  margin: 58px auto;
 }
 
 .benefits__container {
@@ -274,16 +274,50 @@ body {
   gap: 2.5rem;
 }
 
+.benefits__title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+}
+
+.benefits__subtitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+}
+
 .blocks-benefits__content-block {
+  padding: 18px;
 }
 
 .content-block-benefits {
   display: flex;
   flex: 0 1 50%;
+  gap: 3rem;
+}
+
+.content-block-benefits__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+.text-content-block-benefits__title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #000;
+}
+
+.text-content-block-benefits__paragraph {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .content-block-benefits__image {
-  width: 100%;
+  width: 50%;
+  height: 100%;
 }
 
 .content-block-benefits__image img {
