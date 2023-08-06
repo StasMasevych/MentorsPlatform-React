@@ -5,6 +5,7 @@ import Brands from "./Brands";
 import Mentors from "./Mentors";
 import Benefits from "./Benefits";
 import Reviews from "./Reviews";
+import Courses from "./Courses";
 import Footer from "./Footer";
 
 export default function App() {
@@ -17,6 +18,8 @@ export default function App() {
         <Brands />
         <Mentors />
         <Benefits />
+        <Courses />
+
         <Reviews />
       </main>
 
