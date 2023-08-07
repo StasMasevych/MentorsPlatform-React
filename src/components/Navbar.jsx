@@ -1,37 +1,39 @@
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
   return (
     <header className="header">
       <div className="header__container">
-        <a href="link" className="header__logo">
+        <Link to="/" className="header__logo">
           Builders
-        </a>
+        </Link>
         <nav className="header__menu menu">
           <nav className="menu__body">
             <ul className="menu__list">
               <li className="menu__item">
-                <a className="menu__link" href="link">
+                <Link to="/about" className="menu__link">
                   About us
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a className="menu__link" href="link">
+                <Link to="/mentors" className="menu__link">
                   Find a mentor
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a className="menu__link" href="link">
+                <Link to="/live-classes" className="menu__link">
                   Find live classes
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a className="menu__link" href="link">
+                <Link to="/become-mentor" className="menu__link">
                   Become a mentor
-                </a>
+                </Link>
               </li>
               <li className="menu__item">
-                <a className="menu__link" href="link">
+                <Link to="/contact" className="menu__link">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

@@ -1,6 +1,21 @@
-export default function MentorItem({ mentor }) {
+import { useNavigate } from "react-router-dom";
+
+export default function MentorItem({ mentor, initialMentors }) {
+  const navigate = useNavigate();
+
+  function getMentor(name) {
+    console.log(name);
+    const findedMentorArray = initialMentors.filter(
+      (mentor) => mentor.name === name
+    );
+    const [mentorObj] = findedMentorArray;
+    navigate(`/mentors/${name}`);
+    console.log(mentorObj);
+    return mentorObj;
+  }
+
   return (
-    <li className="mentors__item mentor">
+    <li className="mentors__item mentor" onClick={() => getMentor(mentor.name)}>
       <div className="mentor__image">
         <img src={mentor.image} alt="mentor" />
       </div>

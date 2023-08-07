@@ -10,6 +10,7 @@ import Mentor from "../pages/Mentor";
 import Mentors from "../pages/Mentors";
 import LiveClass from "../pages/LiveClass";
 import LiveClasses from "../pages/LiveClasses";
+import Contact from "../pages/Contact";
 import NotFound from "../pages/NotFound";
 
 //components
@@ -28,10 +29,11 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/become-mentor" element={<BecomeMentor />} />
             <Route path="/create-live-class" element={<CreateLiveClass />} />
-            <Route path="/mentors/:id" element={<Mentor />} />
+            <Route path="/mentors/:name" element={<Mentor />} />
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/live-class:id" element={<LiveClass />} />
             <Route path="/live-classes" element={<LiveClasses />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </main>

@@ -17,7 +17,13 @@ export default function MentorsList() {
         <Categories />
         <ul className="mentors__list">
           {initialMentors.map((mentor) => {
-            return <MentorItem key={mentor.id} mentor={mentor} />;
+            return (
+              <MentorItem
+                key={mentor.id}
+                mentor={mentor}
+                initialMentors={initialMentors}
+              />
+            );
           })}
         </ul>
         <button className="button">Find more mentors</button>
