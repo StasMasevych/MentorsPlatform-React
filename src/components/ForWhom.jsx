@@ -1,7 +1,5 @@
 import imageLearning from "../assets/how it works images/learning-man.png";
 
-// add icons/emojies to each p
-
 export default function ForWhom() {
   return (
     <div className="for-whom">
