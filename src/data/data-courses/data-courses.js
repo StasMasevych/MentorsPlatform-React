@@ -102,6 +102,6 @@ export const courses = [
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
     duration: "6 hours",
-    payment: 150 + " UAH",
+    payment: 350 + " UAH",
   },
 ];
