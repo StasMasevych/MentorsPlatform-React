@@ -375,13 +375,24 @@ body {
   gap: 0.5rem;
 }
 
-.content-block-for-whom__text p {
-  font-size: 18px;
-  color: #000;
+.text-content-block-for-whom__box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   height: 20%;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
   padding: 12px 8px;
   border-radius: 18px;
+}
+
+.text-content-block-for-whom__box span {
+  font-size: 24px;
+  color: #000;
+}
+
+.text-content-block-for-whom__box p {
+  font-size: 18px;
+  color: #000;
 }
 
 .content-block-for-whom__image img {

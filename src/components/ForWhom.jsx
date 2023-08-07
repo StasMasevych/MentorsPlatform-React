@@ -11,30 +11,51 @@ export default function ForWhom() {
           <div className="content-block-for-whom__item content-block-for-whom__image">
             <img src={imageLearning} alt="learning" />
           </div>
-          <div className="content-block-for-whom__item content-block-for-whom__text">
-            <p>
-              people who want to switch to IT and need to focus where and how to
-              start
-            </p>
-            <p>beginners in IT who wants to have a regular personal mentor</p>
-            <p>
-              experts in IT who want to improve skills to the next level with
-              personal mentors
-            </p>
-            <p>
-              people who want to build their own products and become startup
-              guys{" "}
-            </p>
-            <p>people who don’t know how to solve certain issues</p>
-            <p>
-              experts who want to find a dream job in Ukraine or outside Ukraine
-              for great companies
-            </p>
-            <p>
-              experts in IT who want to be confident in taking orders on Upwork,
-              Fiverr and other freelance platforms by receiving support from
-              personal mentor
-            </p>
+          <div className="content-block-for-whom__item content-block-for-whom__text text-content-block-for-whom">
+            <div className="text-content-block-for-whom__box">
+              <span>🎯</span>
+              <p>
+                people who want to switch to IT and need to focus where and how
+                to start
+              </p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>💪</span>
+              <p>beginners in IT who wants to have a regular personal mentor</p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>🥇</span>
+              <p>
+                experts in IT who want to improve skills to the next level with
+                personal mentors
+              </p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>🤩</span>
+              <p>
+                people who want to build their own products and become startup
+                guys
+              </p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>🙌</span>
+              <p>people who don’t know how to solve certain issues</p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>💼</span>
+              <p>
+                experts who want to find a dream job in Ukraine or outside
+                Ukraine in great companies
+              </p>
+            </div>
+            <div className="text-content-block-for-whom__box">
+              <span>👨‍💻</span>
+              <p>
+                experts in IT who want to be confident in taking orders on
+                Upwork, Fiverr and other freelance platforms by receiving
+                support from personal mentor
+              </p>
+            </div>
           </div>
         </div>
       </div>
