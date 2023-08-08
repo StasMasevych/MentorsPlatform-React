@@ -762,7 +762,265 @@ ul {
     width: 100%;
   }
 }
-/* ======================== */
+/* ===========================================*/
+/* ===============PAGES=======================*/
+/* ===========================================*/
+
+.mentor-page {
+  margin: 24px auto;
+}
+
+.mentor-page__content {
+  margin: 0 28px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+}
+
+.content-mentor-page__image {
+  grid-column: 1/2;
+}
+
+.content-mentor-page__info {
+  grid-column: 2/4;
+}
+
+.content-mentor-page__item {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.content-mentor-page__item img {
+  width: 100%;
+  height: 36.16vw;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.info-content-mentor-page__header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-info-content-mentor-page__personal-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.header-info-content-mentor-page__avatar {
+}
+
+.header-info-content-mentor-page__avatar img {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 100px;
+
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.personal-data-header-info-content-mentor-page__fullname {
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.personal-data-header-info-content-mentor-page__job {
+  /* color: #000; */
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.info-content-mentor-page__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bio-info-content-mentor-page__title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.bio-info-content-mentor-page__text {
+  font-size: 14px;
+  /* letter-spacing: -0.25px; */
+  /* line-height: 26px; */
+  line-height: 1.4;
+}
+
+.info-content-mentor-page__separator-block {
+  margin: 20px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  width: 100%;
+}
+
+.mentor-topics-info-content-mentor-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mentor-topics-info-content-mentor-page__title {
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.mentor-topics-info-content-mentor-page__list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-mentor-topics-info-content-mentor-page__item {
+  background-color: #f5f5f5;
+  border-radius: 24px;
+  padding: 15px 30px;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+}
+
+.list-mentor-topics-info-content-mentor-page__item:hover {
+  transform: scale(1.01);
+}
+
+.info-content-mentor-page__booking {
+  grid-column: 2/4;
+}
+
+.booking-info-content-mentor-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.list-booking-info-content-mentor-page__item {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+  grid-auto-rows: auto;
+}
+
+.list-booking-info-content-mentor-page__item {
+  padding: 16px;
+  width: 100%;
+  height: 33, 3%;
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+}
+
+.item-list-booking-info-content-mentor-page__title {
+  grid-column: 1/2;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.item-list-booking-info-content-mentor-page__price {
+  grid-column: 3/4;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.item-list-booking-info-content-mentor-page__time {
+  grid-row: 2/3;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.item-list-booking-info-content-mentor-page__btn-book {
+  grid-column: 1/2;
+  width: 100%;
+  font-size: 12px;
+}
+
+.item-list-booking-info-content-mentor-page__btn-details {
+  grid-column: 3/4;
+  background-color: #f5f5f5;
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 12px;
+  letter-spacing: 1px;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 22px;
+  transition: background-color 0.3s ease 0s;
+}
+
+.item-list-booking-info-content-mentor-page__btn-details:hover {
+  background-color: rgb(215, 35, 215);
+  color: #fff;
+}
+
+/* ----------------------- */
+
+/* .mentor-page__details {
+  margin: 28px 28px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+}
+
+.details-mentor-page__item {
+  flex: 0 1 50%;
+} */
+
+.content-mentor-page__resume {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-content-mentor-page__title {
+  font-size: 22px;
+  color: #000;
+}
+
+.resume-content-mentor-page__subtitle {
+  font-size: 18px;
+  color: #000;
+}
+
+.resume-content-mentor-page__description {
+  font-size: 14px;
+}
+
+.resume-content-mentor-page__lang {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resume-content-mentor-page__lang h5 {
+  font-size: 18px;
+  color: #000;
+}
+
+.resume-content-mentor-page__lang p {
+  font-size: 14px;
+}
+
 /* ======================== */
 /* ======================== */
 /* ======================== */
