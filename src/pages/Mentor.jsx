@@ -4,6 +4,10 @@ import { useParams } from "react-router-dom";
 // probably put in local state
 // use it in UI
 
+// may be add * on free 10min call
+// add section on articles and videos with mentor
+// add reviews
+
 export default function Mentor() {
   const params = useParams();
   console.log(params);
@@ -268,6 +272,37 @@ export default function Mentor() {
               </ul>
             </div>
           </div> */}
+          <div className="content-mentor-page__item  content-mentor-page__help help-content-mentor-page">
+            <h3 className="help-content-mentor-page__title">
+              Mentor can help you with such topics 🚀
+            </h3>
+            <ul className="help-content-mentor-page__list list-help-content-mentor-page">
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+              <li className="list-help-content-mentor-page__item">
+                Using Redux for building React applications
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

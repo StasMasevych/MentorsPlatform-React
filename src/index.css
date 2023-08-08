@@ -1021,6 +1021,41 @@ ul {
   font-size: 14px;
 }
 
+/* ----------------------- */
+
+.content-mentor-page__help {
+  margin: 28px 28px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+}
+
+.help-content-mentor-page__title {
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.help-content-mentor-page__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-help-content-mentor-page__item {
+  background-color: #f5f5f5;
+  border-radius: 24px;
+  padding: 15px 30px;
+  font-size: 14px;
+  color: #000;
+  border: 1px solid transparent;
+}
+
 /* ======================== */
 /* ======================== */
 /* ======================== */
