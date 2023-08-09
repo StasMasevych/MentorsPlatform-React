@@ -779,7 +779,8 @@ ul {
   padding: 28px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-rows: auto auto;
   gap: 1.5rem;
   border: 1px solid #e3e3e3;
   border-radius: 18px;

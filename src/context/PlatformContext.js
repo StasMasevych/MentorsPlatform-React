@@ -9,7 +9,8 @@ export function PlatformProvider({ children }) {
 
   const initialState = {
     mentors: initialMentors,
-    user: {},
+    mentor: {},
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(platformReducer, initialState);
