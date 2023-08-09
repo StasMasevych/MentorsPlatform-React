@@ -18,7 +18,8 @@ export default function MentorItem({ mentor, initialMentors }) {
       mentorName,
       mentorsArray
     );
-
+    dispatch({ type: "SET_LOADING" });
+    console.log("Loading");
     const mentorObj = getMentor(mentorName, mentorsArray);
     console.log("I am dispatching", mentorObj);
     dispatch({ type: "GET_MENTOR", payload: mentorObj });

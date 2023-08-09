@@ -1,5 +1,6 @@
+import Spinner from "../components/Spinner";
 import { useParams } from "react-router-dom";
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 
 import { getMentor } from "../context/PlatformActions";
 
@@ -22,14 +23,20 @@ import { PlatformContext } from "../context/PlatformContext";
 // add reviews
 
 export default function Mentor() {
-  const { mentor, mentors, dispatch } = useContext(PlatformContext);
+  const { mentor, mentors, dispatch, loading } = useContext(PlatformContext);
   console.log("Here, on mentor page we get object from context", mentor);
-
+  /* const [mentorData, setMentorData] = useState({}); */
+  
+  console.log("mentors array from context", mentors);
   const params = useParams();
 
   useEffect(() => {
+    dispatch({ type: "SET_LOADING" });
+    const mentorObject = getMentor(params.name, mentors);
+    console.log("taken object from calling getMentor", mentorObject);
+    dispatch({ type: "GET_MENTOR", payload: mentorObject });
     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch, params.name]);
   /* console.log(params); */
 
   /*  useEffect(() => {
@@ -39,6 +46,10 @@ export default function Mentor() {
     }
     getMentorData();
   }, [params, dispatch]); */
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className="mentor-page" style={{ overflowY: "scroll" }}>
@@ -80,16 +91,17 @@ export default function Mentor() {
                     Skills
                   </h4>
                   <ul className="mentor-topics-info-content-mentor-page__list list-mentor-topics-info-content-mentor-page">
-                    {mentor.skills.map((skill, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="list-mentor-topics-info-content-mentor-page__item"
-                        >
-                          {skill}
-                        </li>
-                      );
-                    })}
+                    {mentor.skills &&
+                      mentor.skills.map((skill, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="list-mentor-topics-info-content-mentor-page__item"
+                          >
+                            {skill}
+                          </li>
+                        );
+                      })}
                   </ul>
                 </div>
                 <div className="info-content-mentor-page__separator-block">
@@ -109,9 +121,10 @@ export default function Mentor() {
                 </p>
                 <div className="resume-content-mentor-page__lang">
                   <h5>Languages</h5>
-                  {mentor.languages.map((lan) => {
-                    return <p>{lan}</p>;
-                  })}
+                  {mentor.languages &&
+                    mentor.languages.map((lan) => {
+                      return <p>{lan}</p>;
+                    })}
                 </div>
               </div>
               <div className="info-content-mentor-page__booking booking-info-content-mentor-page">
@@ -208,16 +221,17 @@ export default function Mentor() {
                 Mentor can help you with such topics 🚀
               </h3>
               <ul className="help-content-mentor-page__list list-help-content-mentor-page">
-                {mentor.topics.map((topic, index) => {
-                  return (
-                    <li
-                      key={index}
-                      className="list-help-content-mentor-page__item"
-                    >
-                      {topic}
-                    </li>
-                  );
-                })}
+                {mentor.topics &&
+                  mentor.topics.map((topic, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="list-help-content-mentor-page__item"
+                      >
+                        {topic}
+                      </li>
+                    );
+                  })}
               </ul>
             </div>
           </div>
