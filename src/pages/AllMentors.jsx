@@ -7,13 +7,16 @@ import { categories } from "../data/data-categories/data-categories";
 
 import MentorItem from "../components/MentorItem";
 
+// add loading more / pagination
+
 export default function AllMentors() {
   const { allMentors, dispatch } = useContext(PlatformContext);
-
+  console.log(allMentors);
   useEffect(() => {
     const allMentorsArr = getAllMentors(allMentorsArray);
     dispatch({ type: "GET_MENTORS", payload: allMentorsArr });
     console.log(allMentors);
+    window.scrollTo(0, 0);
   }, []);
 
   return (

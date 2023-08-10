@@ -150,7 +150,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Sara is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -163,7 +163,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Sara is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",
@@ -183,7 +183,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Jane is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -196,7 +196,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Jane is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",
@@ -216,7 +216,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Kate is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -229,7 +229,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Kate is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",
@@ -249,7 +249,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Marta is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -262,7 +262,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Marta is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",
@@ -282,7 +282,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Rebeca is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -295,7 +295,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Rebeca is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",
@@ -315,7 +315,7 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     about:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Margarita is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
       "React",
       "Javascript",
@@ -328,7 +328,7 @@ export const allMentorsArray = [
     experience: "5 years",
     experienceTitle: "5 years of experience in React development",
     experienceDescription:
-      "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
+      "Margarita is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     languages: ["English", "Ukrainian"],
     topics: [
       "Using Redux for building React applications",

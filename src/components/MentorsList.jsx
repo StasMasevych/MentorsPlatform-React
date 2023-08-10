@@ -1,5 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import { initialMentors } from "../data/data-mentors/initialMentors";
+import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
+
+import { useContext } from "react";
+import { PlatformContext } from "../context/PlatformContext";
 
 import Categories from "./Categories";
 import MentorItem from "./MentorItem";
@@ -7,6 +10,8 @@ import MentorItem from "./MentorItem";
 // add slider
 
 export default function MentorsList() {
+  const { featuredMentors } = useContext(PlatformContext);
+
   const navigate = useNavigate();
 
   return (
@@ -19,12 +24,12 @@ export default function MentorsList() {
         </p>
         <Categories />
         <ul className="mentors__list">
-          {initialMentors.map((mentor) => {
+          {featuredMentors.map((mentor) => {
             return (
               <MentorItem
                 key={mentor.id}
                 mentor={mentor}
-                initialMentors={initialMentors}
+                /* featuresMentorArray={featuredMentors} */
               />
             );
           })}

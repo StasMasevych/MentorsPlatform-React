@@ -6,11 +6,18 @@ import { getMentor } from "../context/PlatformActions";
 
 //context
 
+//
+
+import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
+
+//
+
 import { PlatformContext } from "../context/PlatformContext";
 
 // fix issue with loading page - Cannot read properties of undefined (reading 'map')
-
 // fix issue witj loading images at reloading page
+// fix issue with calling getMentor not 2 times after click, but 1 time after click, one time after reloading
+// if I call only 1 time in mentor page then I see previous profile pic for a while before loading the selected mentor
 
 // take mentor obj from reducer by context
 // probably put in local state
@@ -25,29 +32,43 @@ import { PlatformContext } from "../context/PlatformContext";
 // add reviews
 
 export default function Mentor() {
-  const { mentor, featuredMentors, dispatch, loading } =
+  const { mentor, /* featuredMentors */ dispatch, loading } =
     useContext(PlatformContext);
   console.log("Here, on mentor page we get object from context", mentor);
   /* const [mentorData, setMentorData] = useState({}); */
 
-  console.log("mentors array from context", featuredMentors);
+  console.log(
+    "mentors array from context",
+    allMentorsArray /* featuredMentors */
+  );
   const params = useParams();
-
-  /* useEffect(() => {
-    dispatch({ type: "SET_LOADING" });
-    const mentorObject = getMentor(params.name, featuredMentors);
-    console.log("taken object from calling getMentor", mentorObject);
-    dispatch({ type: "GET_MENTOR", payload: mentorObject });
-    window.scrollTo(0, 0);
-  }, []); */
 
   useEffect(() => {
     dispatch({ type: "SET_LOADING" });
-    const mentorObject = getMentor(params.name, featuredMentors);
+    const mentorObject = getMentor(params.name, allMentorsArray);
     console.log("taken object from calling getMentor", mentorObject);
     dispatch({ type: "GET_MENTOR", payload: mentorObject });
     window.scrollTo(0, 0);
-  }, [dispatch, params.name]);
+  }, []);
+  //
+
+  useEffect(
+    () => {
+      /* dispatch({ type: "SET_LOADING" });
+    const mentorObject = getMentor(
+      params.name,
+      allMentorsArray //featuredMentors 
+    );
+    console.log("taken object from calling getMentor", mentorObject);
+    dispatch({ type: "GET_MENTOR", payload: mentorObject }); */
+      window.scrollTo(0, 0);
+    },
+    [
+      /* dispatch, params.name */
+    ]
+  );
+
+  //
   /* console.log(params); */
 
   /*  useEffect(() => {

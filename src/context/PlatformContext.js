@@ -1,4 +1,4 @@
-import { initialMentors } from "../data/data-mentors/initialMentors";
+import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 import { createContext, useReducer } from "react";
 import { platformReducer } from "./PlatformReducer";
 
@@ -8,10 +8,10 @@ export function PlatformProvider({ children }) {
   /* const [user, setUser] = useState({ name: "Adam" }); */
 
   const initialState = {
-    featuredMentors: initialMentors, // homepage
+    featuredMentors: allMentorsArray.slice(0, 4), // homepage
     allMentors: [], // mentors page
     mentorsByCategory: [], // category page with mentors
-    mentor: {}, // mentor page
+    mentorA: {}, // mentor page
     loading: false,
   };
 

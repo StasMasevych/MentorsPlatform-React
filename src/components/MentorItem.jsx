@@ -7,15 +7,21 @@ import { PlatformContext } from "../context/PlatformContext";
 
 import { getMentor } from "../context/PlatformActions";
 
-export default function MentorItem({ mentor, initialMentors }) {
-  const { featuredMentors, dispatch } = useContext(PlatformContext);
+/* import { allMentorsArray } from "../data/data-mentors/allMentorsArray"; */
+
+export default function MentorItem({ mentor, featuresMentorArray }) {
+  const { allMentors, dispatch, mentorA } = useContext(PlatformContext);
+
+  /* const featuredMentorsArray = allMentorsArray.slice(0, 4); */
+  /* console.log(featuredMentorsArray); */
 
   const navigate = useNavigate();
 
   /*  function navigateHandler(mentorName) {
     navigate(`/mentors/${mentorName}`);
   } */
-
+  console.log(allMentors);
+  console.log(mentorA);
   function getMentorData(mentorName, mentorsArray) {
     console.log(
       "getMentorData function is starting work!",
@@ -52,10 +58,17 @@ export default function MentorItem({ mentor, initialMentors }) {
     
      */
 
+  // берем лише один масив як інішал зі всіма менторами
+
+  // якщо я клікнув по перших 4 елементах одного масиву то дали ми робим копію масиву
+  // і даєм туди лише перші 4 елементи а сам новий масив фільтруєм і даєм клікнутий обєкт в діспатч
+
+  // якщо клікнув на інші елементи (більше 4 елемента то робим те саме але з цими лише елементами)
+
   return (
     <li
       className="mentors__item mentor"
-      onClick={() => getMentorData(mentor.name, featuredMentors)}
+      onClick={() => getMentorData(mentor.name, allMentors)}
       /* onClick={() => navigateHandler(mentor.name)} */
     >
       <div className="mentor__image">
