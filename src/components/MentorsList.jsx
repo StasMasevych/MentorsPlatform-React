@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { initialMentors } from "../data/data-mentors/initialMentors";
 
 import Categories from "./Categories";
@@ -6,6 +7,8 @@ import MentorItem from "./MentorItem";
 // add slider
 
 export default function MentorsList() {
+  const navigate = useNavigate();
+
   return (
     <div className="mentors">
       <div className="mentors__container">
@@ -26,7 +29,9 @@ export default function MentorsList() {
             );
           })}
         </ul>
-        <button className="button">Find more mentors</button>
+        <button className="button" onClick={() => navigate("/mentors")}>
+          Find more mentors
+        </button>
       </div>
     </div>
   );

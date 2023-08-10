@@ -10,6 +10,8 @@ import { PlatformContext } from "../context/PlatformContext";
 
 // fix issue with loading page - Cannot read properties of undefined (reading 'map')
 
+// fix issue witj loading images at reloading page
+
 // take mentor obj from reducer by context
 // probably put in local state
 // use it in UI
@@ -23,16 +25,25 @@ import { PlatformContext } from "../context/PlatformContext";
 // add reviews
 
 export default function Mentor() {
-  const { mentor, mentors, dispatch, loading } = useContext(PlatformContext);
+  const { mentor, featuredMentors, dispatch, loading } =
+    useContext(PlatformContext);
   console.log("Here, on mentor page we get object from context", mentor);
   /* const [mentorData, setMentorData] = useState({}); */
-  
-  console.log("mentors array from context", mentors);
+
+  console.log("mentors array from context", featuredMentors);
   const params = useParams();
+
+  /* useEffect(() => {
+    dispatch({ type: "SET_LOADING" });
+    const mentorObject = getMentor(params.name, featuredMentors);
+    console.log("taken object from calling getMentor", mentorObject);
+    dispatch({ type: "GET_MENTOR", payload: mentorObject });
+    window.scrollTo(0, 0);
+  }, []); */
 
   useEffect(() => {
     dispatch({ type: "SET_LOADING" });
-    const mentorObject = getMentor(params.name, mentors);
+    const mentorObject = getMentor(params.name, featuredMentors);
     console.log("taken object from calling getMentor", mentorObject);
     dispatch({ type: "GET_MENTOR", payload: mentorObject });
     window.scrollTo(0, 0);

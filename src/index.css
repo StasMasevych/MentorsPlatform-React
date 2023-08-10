@@ -282,6 +282,13 @@ body {
 
 .mentor__job {
   font-size: 14px;
+  line-height: 18px;
+  /* color: #0a243f; */
+}
+
+.mentor__experience {
+  font-size: 14px;
+  /* color: #6b7b8a; */
 }
 
 .status-mentor__mentorship {
@@ -1075,6 +1082,92 @@ ul {
 }
 
 /* ======================== */
+
+.allMentors-page {
+  margin: 24px auto;
+}
+
+.allMentors-page__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-bar-allMentors-page__container-block {
+  display: flex;
+  gap: 8px;
+}
+
+.search-bar-allMentors-page__input {
+  width: 100%;
+  padding: 12px 24px;
+
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-color: transparent;
+  background-position: 95% center;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.search-bar-allMentors-page__input::placeholder {
+  color: color(#575756 a(0.8));
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* .search-bar-allMentors-page__input:hover {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid #575756;
+  border-radius: 0;
+  background-position: 100% center;
+} */
+
+.search-bar-allMentors-page__button {
+}
+
+.categories-allMentors-page__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.list-categories-allMentors-page__item {
+  background-color: #f5f5f5;
+  border-radius: 24px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #000;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+}
+
+.list-categories-allMentors-page__item:hover {
+  transform: scale(1.01);
+}
+
+.allMentors-page__title h3 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.mentors-content-allMentors-page__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
 /* ======================== */
 /* ======================== */
 /* ======================== */

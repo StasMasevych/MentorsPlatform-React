@@ -8,9 +8,13 @@ import { PlatformContext } from "../context/PlatformContext";
 import { getMentor } from "../context/PlatformActions";
 
 export default function MentorItem({ mentor, initialMentors }) {
-  const { user, mentors, dispatch } = useContext(PlatformContext);
+  const { featuredMentors, dispatch } = useContext(PlatformContext);
 
   const navigate = useNavigate();
+
+  /*  function navigateHandler(mentorName) {
+    navigate(`/mentors/${mentorName}`);
+  } */
 
   function getMentorData(mentorName, mentorsArray) {
     console.log(
@@ -51,7 +55,8 @@ export default function MentorItem({ mentor, initialMentors }) {
   return (
     <li
       className="mentors__item mentor"
-      onClick={() => getMentorData(mentor.name, mentors)}
+      onClick={() => getMentorData(mentor.name, featuredMentors)}
+      /* onClick={() => navigateHandler(mentor.name)} */
     >
       <div className="mentor__image">
         <img src={mentor.image} alt="mentor" />
@@ -59,6 +64,8 @@ export default function MentorItem({ mentor, initialMentors }) {
       <div className="mentor__info">
         <h3 className="mentor__name">{mentor.name}</h3>
         <p className="mentor__job">💼 {mentor.job}</p>
+        {/* <p className="mentor__experience">🥇 Experience {mentor.experience}</p> */}
+        {/* add maybe main mentor topic briefly */}
         <div className="mentor__status status-mentor">
           <p className="status-mentor__mentorship">⭐️ mentorship</p>
           <p className="status-mentor__classes">🤩 live classes</p>

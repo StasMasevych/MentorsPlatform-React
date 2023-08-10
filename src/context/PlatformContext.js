@@ -8,8 +8,10 @@ export function PlatformProvider({ children }) {
   /* const [user, setUser] = useState({ name: "Adam" }); */
 
   const initialState = {
-    mentors: initialMentors,
-    mentor: {},
+    featuredMentors: initialMentors, // homepage
+    allMentors: [], // mentors page
+    mentorsByCategory: [], // category page with mentors
+    mentor: {}, // mentor page
     loading: false,
   };
 

@@ -13,7 +13,9 @@ export function getMentor(mentorName, mentorsArray) {
 
 // get clicked all mentors array
 
-export function getAllMentors(allMentorsArray) {}
+export function getAllMentors(allMentorsArray) {
+  return allMentorsArray;
+}
 
 // get filtered by category array of mentors
 

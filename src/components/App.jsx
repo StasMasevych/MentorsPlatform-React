@@ -7,7 +7,7 @@ import About from "../pages/About";
 import BecomeMentor from "../pages/BecomeMentor";
 import CreateLiveClass from "../pages/CreateLiveClass";
 import Mentor from "../pages/Mentor";
-import Mentors from "../pages/Mentors";
+import AllMentors from "../pages/AllMentors";
 import LiveClass from "../pages/LiveClass";
 import LiveClasses from "../pages/LiveClasses";
 import Contact from "../pages/Contact";
@@ -35,7 +35,7 @@ export default function App() {
               <Route path="/become-mentor" element={<BecomeMentor />} />
               <Route path="/create-live-class" element={<CreateLiveClass />} />
               <Route path="/mentors/:name" element={<Mentor />} />
-              <Route path="/mentors" element={<Mentors />} />
+              <Route path="/mentors" element={<AllMentors />} />
               <Route path="/live-class:id" element={<LiveClass />} />
               <Route path="/live-classes" element={<LiveClasses />} />
               <Route path="/contact" element={<Contact />} />
