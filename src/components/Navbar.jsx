@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NavBar() {
+  const navigate = useNavigate();
   return (
     <header className="header">
       <div className="header__container">
@@ -39,7 +40,9 @@ export default function NavBar() {
           </nav>
         </nav>
         <div>
-          <button className="button">Explore mentors</button>
+          <button className="button" onClick={() => navigate("/mentors")}>
+            Explore mentors
+          </button>
         </div>
       </div>
     </header>

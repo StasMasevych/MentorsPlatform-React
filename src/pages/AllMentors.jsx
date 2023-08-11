@@ -12,6 +12,7 @@ import { categories } from "../data/data-categories/data-categories";
 import MentorItem from "../components/MentorItem";
 
 import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
+import { paginate } from "../utils/paginate";
 
 // add loading more / pagination
 
@@ -19,15 +20,42 @@ import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 
 export default function AllMentors() {
   const { mentorsByCategory, dispatch } = useContext(PlatformContext);
-  const [searchTerm, setSearchTerm] = useState("");
-  console.log(searchTerm);
+  /* console.log(mentorsByCategory.length); */
 
-  /* useEffect(() => {
-    const filteredMentorsArr = getAllMentors(mentorsByCategory);
-    dispatch({ type: "GET_MENTORS", payload: filteredMentorsArr });
-    console.log(mentorsByCategory);
-    window.scrollTo(0, 0);
-  }, []); */
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const [page, setPage] = useState(0);
+
+  // pagination
+
+  const newMentorsArrayOfArray = paginate(mentorsByCategory);
+  const mentorsPerPage = newMentorsArrayOfArray[page];
+  console.log(mentorsPerPage);
+
+  const handlePage = (index) => {
+    setPage(index);
+  };
+
+  const nextPage = () => {
+    setPage((oldPage) => {
+      let nextPage = oldPage + 1;
+      if (nextPage > mentorsByCategory.length - 1) {
+        nextPage = 0;
+      }
+      return nextPage;
+    });
+  };
+  const prevPage = () => {
+    setPage((oldPage) => {
+      let prevPage = oldPage - 1;
+      if (prevPage < 0) {
+        prevPage = mentorsByCategory.length - 1;
+      }
+      return prevPage;
+    });
+  };
+
+  // filter by clicking some category
 
   function onFilterHandler(categoryName) {
     console.log(categoryName);
@@ -40,27 +68,34 @@ export default function AllMentors() {
     dispatch({ type: "GET_FILTERED-MENTORS", payload: filteredMentorsArr });
   }
 
+  // at first render after loading/reloading get all mentors array
+
   useEffect(() => {
+    const allMentorsArr = getAllMentors(allMentorsArray);
+    dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
     window.scrollTo(0, 0);
   }, []);
+
+  // if mentors length change after filtering, triger new render
 
   useEffect(() => {
     /* window.scrollTo(0, 0); */
   }, [mentorsByCategory, dispatch]);
 
+  // get input value
+
   function onSearchHandler(e) {
     setSearchTerm(e.target.value);
-
-    // берем весь масив і фільтруєм
-    // дивимся по наявності в нейм співпадіння з серч терм
-    // якщо є то фільтруєм, новий відфільтрований масив даєм в діспатч і там в редюсері міняєм стейт
-    // витягуєм з контексту новий стейт масиву і рендеремо
   }
+
+  // get mentors by clicking "All" category
 
   function onGetAllHandler() {
-    const allMentors = getAllMentors(allMentorsArray);
-    dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentors });
+    const allMentorsArr = getAllMentors(allMentorsArray);
+    dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
   }
+
+  // get mentors by search
 
   function onSubmitHandler(e) {
     e.preventDefault();
@@ -118,36 +153,29 @@ export default function AllMentors() {
                 >
                   <p>{category.name}</p>
                 </li>
-                /* <Link
-                  className="list-categories-allMentors-page__item"
-                  to={`/mentors/categories/${category.name}`}
-                >
-                  <li key={category.id}>
-                    <p>{category.name}</p>
-                  </li>
-                </Link> */
               );
             })}
           </ul>
         </div>
 
         <div className="allMentors-page__title title-allMentors-page">
-          <h3>All mentors</h3>
+          <h3> All mentors</h3> {/* add dynamic category */}
         </div>
 
         <div clallMentors-page="allMentors-page__mentors-content mentors-content-allMentors-page">
-          {mentorsByCategory.length > 0 && (
+          {mentorsPerPage.length > 0 && (
             <ul className="mentors-content-allMentors-page__list">
-              {mentorsByCategory.map((singleMentor) => {
+              {mentorsPerPage.map((singleMentor) => {
                 return (
                   <MentorItem key={singleMentor.id} mentor={singleMentor} />
                 );
               })}
             </ul>
           )}
-          {mentorsByCategory.length === 0 && (
+          {mentorsPerPage.length === 0 && (
             <h1
               style={{
+                margin: "38px 0",
                 display: "block",
                 fontSize: "28px",
                 textAlign: "center",
@@ -158,9 +186,25 @@ export default function AllMentors() {
           )}
         </div>
 
-        {/*   <Routes>
-          <Route path={`categories/React`} element={<CategoryMentors />} />
-        </Routes> */}
+        <div className="btn-container">
+          <button className="prev-btn" onClick={prevPage}>
+            prev
+          </button>
+          {mentorsByCategory.map((item, index) => {
+            return (
+              <button
+                key={index}
+                className={`page-btn ${index === page ? "active-btn" : null}`}
+                onClick={() => handlePage(index)}
+              >
+                {index + 1}
+              </button>
+            );
+          })}
+          <button className="next-btn" onClick={nextPage}>
+            next
+          </button>
+        </div>
       </div>
     </div>
   );
