@@ -10,6 +10,7 @@ import { getMentor } from "../context/PlatformActions";
 /* import { allMentorsArray } from "../data/data-mentors/allMentorsArray"; */
 
 export default function MentorItem({ mentor, featuresMentorArray }) {
+  // add maybe button "Book" with relevant navigation
   const { mentorsByCategory, dispatch, mentorA } = useContext(PlatformContext);
 
   /* const featuredMentorsArray = allMentorsArray.slice(0, 4); */

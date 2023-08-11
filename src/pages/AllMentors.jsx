@@ -1,12 +1,11 @@
 import { Routes, Route, Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useContext, useState } from "react";
 import {
-  getAllMentors,
+  getSearchResults,
   getMentorsByCategory,
 } from "../context/PlatformActions";
 import { PlatformContext } from "../context/PlatformContext";
 
-/* import { mentorsByCategory } from "../data/data-mentors/allMentorsArray"; */
 import { categories } from "../data/data-categories/data-categories";
 
 import MentorItem from "../components/MentorItem";
@@ -15,9 +14,12 @@ import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 
 // add loading more / pagination
 
+// add isActive is true after clickig category, than conditional rendering - if true this style
+
 export default function AllMentors() {
   const { mentorsByCategory, dispatch } = useContext(PlatformContext);
-  /* console.log(mentorsByCategory); */
+  const [searchTerm, setSearchTerm] = useState("");
+  console.log(searchTerm);
 
   /* useEffect(() => {
     const filteredMentorsArr = getAllMentors(mentorsByCategory);
@@ -45,15 +47,44 @@ export default function AllMentors() {
     /* window.scrollTo(0, 0); */
   }, [mentorsByCategory, dispatch]);
 
+  function onSearchHandler(e) {
+    setSearchTerm(e.target.value);
+
+    // берем весь масив і фільтруєм
+    // дивимся по наявності в нейм співпадіння з серч терм
+    // якщо є то фільтруєм, новий відфільтрований масив даєм в діспатч і там в редюсері міняєм стейт
+    // витягуєм з контексту новий стейт масиву і рендеремо
+  }
+
+  function onSubmitHandler(e) {
+    e.preventDefault();
+
+    if (searchTerm === "") {
+      alert("Please, enter something");
+    } else {
+      const searchResults = getSearchResults(searchTerm, allMentorsArray);
+      console.log(searchResults);
+
+      dispatch({ type: "GET_FILTERED-MENTORS", payload: searchResults });
+
+      setSearchTerm("");
+    }
+  }
+
   return (
     <div className="allMentors-page">
       <div className="allMentors-page__container">
-        <form className="allMentors-page__search-bar search-bar-allMentors-page">
+        <form
+          className="allMentors-page__search-bar search-bar-allMentors-page"
+          onSubmit={onSubmitHandler}
+        >
           <div className="search-bar-allMentors-page__container-block">
             <input
               className="search-bar-allMentors-page__input"
               type="text"
-              placeholder="Search for mentors"
+              placeholder="name, company, category of a mentor..."
+              onChange={onSearchHandler}
+              value={searchTerm}
             />
             <button className="search-bar-allMentors-page__button button">
               search
