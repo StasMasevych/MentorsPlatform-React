@@ -26,6 +26,12 @@ export function getMentorsByCategory(mentorCategory, MentorsArray) {
   return filteredByCategoryArray;
 }
 
+// get filtered by searchTerm
+
+// default - from Upercase, if lovercase - makes to first letter upercase
+
+// add later ability to find str irresective of SOFTSERVE / SOFTserve / SoFTseRV etc.
+
 export function getSearchResults(searchInput, MentorsArray) {
   const capitalizeWords = (str) => {
     return str

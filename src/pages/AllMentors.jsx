@@ -3,6 +3,7 @@ import { useEffect, useContext, useState } from "react";
 import {
   getSearchResults,
   getMentorsByCategory,
+  getAllMentors,
 } from "../context/PlatformActions";
 import { PlatformContext } from "../context/PlatformContext";
 
@@ -56,6 +57,11 @@ export default function AllMentors() {
     // витягуєм з контексту новий стейт масиву і рендеремо
   }
 
+  function onGetAllHandler() {
+    const allMentors = getAllMentors(allMentorsArray);
+    dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentors });
+  }
+
   function onSubmitHandler(e) {
     e.preventDefault();
 
@@ -94,6 +100,12 @@ export default function AllMentors() {
 
         <div className="allMentors-page__categories categories-allMentors-page">
           <ul className="categories-allMentors-page__list list-categories-allMentors-page">
+            <li
+              className="list-categories-allMentors-page__item"
+              onClick={onGetAllHandler}
+            >
+              <p>All</p>
+            </li>
             {categories.map((category) => {
               return (
                 <li
