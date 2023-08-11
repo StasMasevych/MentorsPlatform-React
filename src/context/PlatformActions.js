@@ -19,8 +19,8 @@ export function getAllMentors(allMentorsArray) {
 
 // get filtered by category array of mentors
 
-export function getMentorsByCategory(mentorCategory, allMentorsArray) {
-  const filteredByCategoryArray = allMentorsArray.filter(
+export function getMentorsByCategory(mentorCategory, MentorsArray) {
+  const filteredByCategoryArray = MentorsArray.filter(
     (mentor) => mentor.category === mentorCategory
   );
   return filteredByCategoryArray;

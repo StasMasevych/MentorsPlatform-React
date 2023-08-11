@@ -9,8 +9,8 @@ export function PlatformProvider({ children }) {
 
   const initialState = {
     featuredMentors: allMentorsArray.slice(0, 4), // homepage
-    allMentors: [], // mentors page
-    mentorsByCategory: [], // category page with mentors
+    //allMentors: [], // mentors page
+    mentorsByCategory: allMentorsArray, // category page with mentors
     mentorA: {}, // mentor page
     loading: false,
   };

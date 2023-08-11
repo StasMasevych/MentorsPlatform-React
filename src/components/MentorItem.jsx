@@ -10,7 +10,7 @@ import { getMentor } from "../context/PlatformActions";
 /* import { allMentorsArray } from "../data/data-mentors/allMentorsArray"; */
 
 export default function MentorItem({ mentor, featuresMentorArray }) {
-  const { allMentors, dispatch, mentorA } = useContext(PlatformContext);
+  const { mentorsByCategory, dispatch, mentorA } = useContext(PlatformContext);
 
   /* const featuredMentorsArray = allMentorsArray.slice(0, 4); */
   /* console.log(featuredMentorsArray); */
@@ -20,7 +20,7 @@ export default function MentorItem({ mentor, featuresMentorArray }) {
   /*  function navigateHandler(mentorName) {
     navigate(`/mentors/${mentorName}`);
   } */
-  console.log(allMentors);
+  console.log(mentorsByCategory);
   console.log(mentorA);
   function getMentorData(mentorName, mentorsArray) {
     console.log(
@@ -33,7 +33,7 @@ export default function MentorItem({ mentor, featuresMentorArray }) {
     const mentorObj = getMentor(mentorName, mentorsArray);
     console.log("I am dispatching", mentorObj);
     dispatch({ type: "GET_MENTOR", payload: mentorObj });
-    navigate(`/mentors/${mentorName}`);
+    navigate(`/mentor/${mentorName}`);
   }
 
   /* 
@@ -68,7 +68,7 @@ export default function MentorItem({ mentor, featuresMentorArray }) {
   return (
     <li
       className="mentors__item mentor"
-      onClick={() => getMentorData(mentor.name, allMentors)}
+      onClick={() => getMentorData(mentor.name, mentorsByCategory)}
       /* onClick={() => navigateHandler(mentor.name)} */
     >
       <div className="mentor__image">

@@ -17,6 +17,7 @@ export const allMentorsArray = [
     job: "React developer",
     image: imgJohn,
     profileImg: profileImgJohn,
+    category: "React",
     about:
       "John is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -50,6 +51,7 @@ export const allMentorsArray = [
     job: "UI/UX designer",
     image: imgKelly,
     profileImg: profileImgKelly,
+    category: "React",
     about:
       "Kelly is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -83,6 +85,7 @@ export const allMentorsArray = [
     job: "Data scientist",
     image: imgAdam,
     profileImg: profileImgAdam,
+    category: "React",
     about:
       "Adam is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -116,6 +119,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Javascript",
     about:
       "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -149,6 +153,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Javascript",
     about:
       "Sara is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -182,6 +187,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Javascript",
     about:
       "Jane is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -215,6 +221,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Phyton",
     about:
       "Kate is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -248,6 +255,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Java",
     about:
       "Marta is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -281,6 +289,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Java",
     about:
       "Rebeca is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -314,6 +323,7 @@ export const allMentorsArray = [
     job: "Phyton developer",
     image: imgAnna,
     profileImg: profileImgAnna,
+    category: "Java",
     about:
       "Margarita is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [

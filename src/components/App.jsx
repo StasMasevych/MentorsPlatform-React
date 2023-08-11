@@ -8,6 +8,7 @@ import BecomeMentor from "../pages/BecomeMentor";
 import CreateLiveClass from "../pages/CreateLiveClass";
 import Mentor from "../pages/Mentor";
 import AllMentors from "../pages/AllMentors";
+import CategoryMentors from "../pages/CategoryMentors";
 import LiveClass from "../pages/LiveClass";
 import LiveClasses from "../pages/LiveClasses";
 import Contact from "../pages/Contact";
@@ -20,6 +21,8 @@ import Footer from "./Footer";
 //context
 
 import { PlatformProvider } from "../context/PlatformContext";
+
+// глянути вкладени раути - для категорій менторів всредині всіх менторів
 
 export default function App() {
   return (
@@ -34,8 +37,12 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/become-mentor" element={<BecomeMentor />} />
               <Route path="/create-live-class" element={<CreateLiveClass />} />
-              <Route path="/mentors/:name" element={<Mentor />} />
+              <Route path="/mentor/:name" element={<Mentor />} />
               <Route path="/mentors" element={<AllMentors />} />
+              <Route
+                path="/mentors/categories/:category"
+                element={<CategoryMentors />}
+              />
               <Route path="/live-class:id" element={<LiveClass />} />
               <Route path="/live-classes" element={<LiveClasses />} />
               <Route path="/contact" element={<Contact />} />
