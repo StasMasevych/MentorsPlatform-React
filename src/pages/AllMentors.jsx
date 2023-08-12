@@ -14,7 +14,7 @@ import MentorItem from "../components/MentorItem";
 import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 import { paginate } from "../utils/paginate";
 
-// add loading more / pagination
+// add dispatch mentor object to reducer after clicking
 
 // add isActive is true after clickig category, than conditional rendering - if true this style
 
@@ -81,6 +81,12 @@ export default function AllMentors() {
 
     console.log(filteredMentorsArr);
     dispatch({ type: "GET_FILTERED-MENTORS", payload: filteredMentorsArr });
+
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
   }
 
   // at first render after loading/reloading get all mentors array
@@ -95,12 +101,6 @@ export default function AllMentors() {
     });
   }, []);
 
-  // if mentors length change after filtering, triger new render
-
-  useEffect(() => {
-    /* window.scrollTo(0, 0); */
-  }, [mentorsByCategory, dispatch]);
-
   // get input value
 
   function onSearchHandler(e) {
@@ -112,6 +112,11 @@ export default function AllMentors() {
   function onGetAllHandler() {
     const allMentorsArr = getAllMentors(allMentorsArray);
     dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
   }
 
   // get mentors by search
@@ -126,6 +131,12 @@ export default function AllMentors() {
       console.log(searchResults);
 
       dispatch({ type: "GET_FILTERED-MENTORS", payload: searchResults });
+
+      window.scrollTo({
+        top: 100,
+        left: 100,
+        behavior: "smooth",
+      });
 
       setSearchTerm("");
     }
@@ -184,10 +195,8 @@ export default function AllMentors() {
         <div clallMentors-page="allMentors-page__mentors-content mentors-content-allMentors-page">
           {mentorsPerPage.length > 0 && (
             <ul className="mentors-content-allMentors-page__list">
-              {mentorsPerPage.map((singleMentor) => {
-                return (
-                  <MentorItem key={singleMentor.id} mentor={singleMentor} />
-                );
+              {mentorsPerPage.map((mentorItem) => {
+                return <MentorItem key={mentorItem.id} mentor={mentorItem} />;
               })}
             </ul>
           )}

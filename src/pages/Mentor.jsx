@@ -17,7 +17,7 @@ import { PlatformContext } from "../context/PlatformContext";
 // fix issue with loading page - Cannot read properties of undefined (reading 'map')
 // fix issue witj loading images at reloading page
 // fix issue with calling getMentor not 2 times after click, but 1 time after click, one time after reloading
-// if I call only 1 time in mentor page then I see previous profile pic for a while before loading the selected mentor
+// if I call only 1 time in mentor page then I see previous profile pic for a while before loading
 
 // take mentor obj from reducer by context
 // probably put in local state
@@ -32,9 +32,9 @@ import { PlatformContext } from "../context/PlatformContext";
 // add reviews
 
 export default function Mentor() {
-  const { mentor, /* featuredMentors */ dispatch, loading } =
+  const { singleMentor, /* featuredMentors */ dispatch, loading } =
     useContext(PlatformContext);
-  console.log("Here, on mentor page we get object from context", mentor);
+  console.log("Here, on mentor page we get object from context", singleMentor);
   /* const [mentorData, setMentorData] = useState({}); */
 
   console.log(
@@ -85,25 +85,25 @@ export default function Mentor() {
 
   return (
     <div className="mentor-page" style={{ overflowY: "scroll" }}>
-      {mentor && (
+      {singleMentor && (
         <div className="mentor-page__container">
           <div className="mentor-page__data">
             <div className="mentor-page__content content-mentor-page">
               {/* 1 row with 2 cols*/}
               <div className="content-mentor-page__item content-mentor-page__image image-content-mentor-page">
-                <img src={mentor.profileImg} alt="mentor" />
+                <img src={singleMentor.profileImg} alt="mentor" />
               </div>
               <div className="content-mentor-page__item content-mentor-page__info info-content-mentor-page">
                 <div className="info-content-mentor-page__header header-info-content-mentor-page">
                   <div className="header-info-content-mentor-page__avatar">
-                    <img src={mentor.image} alt="avatar" />
+                    <img src={singleMentor.image} alt="avatar" />
                   </div>
                   <div className="header-info-content-mentor-page__personal-data personal-data-header-info-content-mentor-page">
                     <h3 className="personal-data-header-info-content-mentor-page__fullname">
-                      {mentor.name}
+                      {singleMentor.name}
                     </h3>
                     <p className="personal-data-header-info-content-mentor-page__job">
-                      {mentor.job}
+                      {singleMentor.job}
                     </p>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export default function Mentor() {
                     About me
                   </h4>
                   <p className="bio-info-content-mentor-page__text">
-                    {mentor.about}
+                    {singleMentor.about}
                   </p>
                 </div>
                 <div className="info-content-mentor-page__separator-block seperator-block">
@@ -123,8 +123,8 @@ export default function Mentor() {
                     Skills
                   </h4>
                   <ul className="mentor-topics-info-content-mentor-page__list list-mentor-topics-info-content-mentor-page">
-                    {mentor.skills &&
-                      mentor.skills.map((skill, index) => {
+                    {singleMentor.skills &&
+                      singleMentor.skills.map((skill, index) => {
                         return (
                           <li
                             key={index}
@@ -146,15 +146,15 @@ export default function Mentor() {
                   Mentor's resume
                 </h3>
                 <p className="resume-content-mentor-page__subtitle">
-                  {mentor.experienceTitle}
+                  {singleMentor.experienceTitle}
                 </p>
                 <p className="resume-content-mentor-page__description">
-                  {mentor.experienceDescription}
+                  {singleMentor.experienceDescription}
                 </p>
                 <div className="resume-content-mentor-page__lang">
                   <h5>Languages</h5>
-                  {mentor.languages &&
-                    mentor.languages.map((lan) => {
+                  {singleMentor.languages &&
+                    singleMentor.languages.map((lan) => {
                       return <p>{lan}</p>;
                     })}
                 </div>
@@ -253,8 +253,8 @@ export default function Mentor() {
                 Mentor can help you with such topics 🚀
               </h3>
               <ul className="help-content-mentor-page__list list-help-content-mentor-page">
-                {mentor.topics &&
-                  mentor.topics.map((topic, index) => {
+                {singleMentor.topics &&
+                  singleMentor.topics.map((topic, index) => {
                     return (
                       <li
                         key={index}

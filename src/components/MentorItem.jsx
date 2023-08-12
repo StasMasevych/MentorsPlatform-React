@@ -11,18 +11,10 @@ import { getMentor } from "../context/PlatformActions";
 
 export default function MentorItem({ mentor, featuresMentorArray }) {
   // add maybe button "Book" with relevant navigation
-  const { mentorsByCategory, dispatch, mentorA } = useContext(PlatformContext);
-
-  /* const featuredMentorsArray = allMentorsArray.slice(0, 4); */
-  /* console.log(featuredMentorsArray); */
+  const { mentorsByCategory, dispatch } = useContext(PlatformContext);
 
   const navigate = useNavigate();
 
-  /*  function navigateHandler(mentorName) {
-    navigate(`/mentors/${mentorName}`);
-  } */
-  console.log(mentorsByCategory);
-  console.log(mentorA);
   function getMentorData(mentorName, mentorsArray) {
     console.log(
       "getMentorData function is starting work!",

@@ -5,7 +5,7 @@ export const platformReducer = (state, action) => {
     case "GET_FILTERED-MENTORS":
       return { ...state, mentorsByCategory: action.payload, loading: false };
     case "GET_MENTOR":
-      return { ...state, mentor: action.payload, loading: false };
+      return { ...state, singleMentor: action.payload, loading: false };
     case "SET_LOADING":
       return { ...state, loading: true };
 

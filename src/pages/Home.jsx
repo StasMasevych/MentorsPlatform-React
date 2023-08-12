@@ -5,7 +5,7 @@ import HowItWorks from "../components/HowItWorks";
 import ForWhom from "../components/ForWhom";
 import Benefits from "../components/Benefits";
 import Reviews from "../components/Reviews";
-import Courses from "../components/Courses";
+import LiveClassesList from "../components/LiveClassesList";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <HowItWorks />
       <ForWhom />
       <Benefits />
-      <Courses />
+      <LiveClassesList />
       <Reviews />
     </>
   );

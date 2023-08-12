@@ -7,7 +7,7 @@ import courseInsta from "../../assets/courses images/class_insta.png";
 import courseFlutter from "../../assets/courses images/class_flutter.png";
 import courseFigma from "../../assets/courses images/class_figma.png";
 
-export const courses = [
+export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "React course with cool projects",

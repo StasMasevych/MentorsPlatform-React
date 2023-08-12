@@ -1,4 +1,5 @@
 import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
+import { liveClassesArray } from "../data/data-courses/data-liveClasses";
 import { createContext, useReducer } from "react";
 import { platformReducer } from "./PlatformReducer";
 
@@ -9,9 +10,10 @@ export function PlatformProvider({ children }) {
 
   const initialState = {
     featuredMentors: allMentorsArray.slice(0, 4), // homepage
-    //allMentors: [], // mentors page
-    mentorsByCategory: allMentorsArray, // category page with mentors
-    mentorA: {}, // mentor page
+    mentorsByCategory: allMentorsArray, // all mentors array with default array
+    liveClasses: liveClassesArray, // all classes with deafult array
+    singleMentor: {}, // mentor page
+    liveClass: {},
     loading: false,
   };
 
