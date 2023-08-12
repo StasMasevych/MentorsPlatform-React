@@ -34,24 +34,39 @@ export default function AllMentors() {
 
   const handlePage = (index) => {
     setPage(index);
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
   };
 
   const nextPage = () => {
     setPage((oldPage) => {
       let nextPage = oldPage + 1;
-      if (nextPage > mentorsByCategory.length - 1) {
+      if (nextPage > newMentorsArrayOfArray.length - 1) {
         nextPage = 0;
       }
       return nextPage;
+    });
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
     });
   };
   const prevPage = () => {
     setPage((oldPage) => {
       let prevPage = oldPage - 1;
       if (prevPage < 0) {
-        prevPage = mentorsByCategory.length - 1;
+        prevPage = newMentorsArrayOfArray.length - 1;
       }
       return prevPage;
+    });
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
     });
   };
 
@@ -73,7 +88,11 @@ export default function AllMentors() {
   useEffect(() => {
     const allMentorsArr = getAllMentors(allMentorsArray);
     dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
   }, []);
 
   // if mentors length change after filtering, triger new render
@@ -190,7 +209,7 @@ export default function AllMentors() {
           <button className="prev-btn" onClick={prevPage}>
             prev
           </button>
-          {mentorsByCategory.map((item, index) => {
+          {newMentorsArrayOfArray.map((item, index) => {
             return (
               <button
                 key={index}
