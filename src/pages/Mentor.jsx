@@ -44,7 +44,6 @@ export default function Mentor() {
   const params = useParams();
 
   useEffect(() => {
-    dispatch({ type: "SET_LOADING" });
     const mentorObject = getMentor(params.name, allMentorsArray);
     console.log("taken object from calling getMentor", mentorObject);
     dispatch({ type: "GET_MENTOR", payload: mentorObject });

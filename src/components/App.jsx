@@ -43,8 +43,8 @@ export default function App() {
                 path="/mentors/categories/:category"
                 element={<CategoryMentors />}
               />
-              <Route path="/live-class:id" element={<LiveClass />} />
               <Route path="/live-classes" element={<LiveClasses />} />
+              <Route path="/live-class/:name" element={<LiveClass />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>

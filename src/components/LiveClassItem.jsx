@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 export default function LiveClassItem({ liveClass }) {
   return (
-    <a className="courses__nav" href="link">
+    <Link className="courses__nav" to={`/live-class/${liveClass.name}`}>
       <li className="courses__item item-courses" key={liveClass.id}>
         <div className="item-courses__image">
           <img src={liveClass.image} alt="course" />
@@ -29,6 +31,6 @@ export default function LiveClassItem({ liveClass }) {
           </div>
         </div>
       </li>
-    </a>
+    </Link>
   );
 }

@@ -13,7 +13,8 @@ export function PlatformProvider({ children }) {
     mentorsByCategory: allMentorsArray, // all mentors array with default array
     liveClasses: liveClassesArray, // all classes with deafult array
     singleMentor: {}, // mentor page
-    liveClass: {},
+    singleLiveClass: {},
+    subscription: "",
     loading: false,
   };
 

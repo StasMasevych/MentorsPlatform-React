@@ -58,3 +58,14 @@ export function getSearchResults(searchInput, MentorsArray) {
   });
   return filteredBySearchArray;
 }
+
+// get single live class from array
+
+export function getLiveClass(liveClassName, liveClassArray) {
+  const findedLiveClassArray = liveClassArray.filter(
+    (liveClass) => liveClass.name === liveClassName
+  );
+  const [liveClassObj] = findedLiveClassArray;
+
+  return liveClassObj;
+}
