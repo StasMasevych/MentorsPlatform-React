@@ -1,5 +1,7 @@
 import { Routes, Route, Link, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useContext, useState } from "react";
+/* import { FaSearch } from "react-icons/fa"; */
+
 import {
   getSearchResults,
   getMentorsByCategory,
@@ -15,6 +17,8 @@ import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 import { paginate } from "../utils/paginate";
 
 // add dispatch mentor object to reducer after clicking
+
+// add icon search (above) close to input
 
 // add isActive is true after clickig category, than conditional rendering - if true this style
 

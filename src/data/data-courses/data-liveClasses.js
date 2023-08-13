@@ -11,96 +11,112 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "React course with cool projects",
+    category: "React",
     image: courseReact,
     author: "Peter",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
-    duration: "1 month",
+    time: "19:00 EEST",
+    duration: "2 hours",
     payment: 200 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "ChatGPT masterclass with full instruction to use",
+    category: "ChatGPT",
     image: courseChatGPT,
     author: "Sam",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "4 hours",
     payment: 500 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Building Netflix clone with React",
+    category: "React",
     image: courseNetflix,
     author: "Ken",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "5 hours",
     payment: 150 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Building Telegram Bot with Java",
+    category: "Java",
     image: courseJava,
     author: "Alex",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "4 hours",
     payment: 150 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Deep dive into mecrofrontend with React",
+    category: "React",
     image: courseMicrfrontend,
     author: "Andriy",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "intermediate",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "3 hours",
     payment: 200 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Build mobile apps fast with Flutter Flow ",
+    category: "Flutter",
     image: courseFlutter,
     author: "Jack",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "5 hours",
     payment: 150 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Build Instagram clone authentification",
+    category: "React",
     image: courseInsta,
     author: "Kelly",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "6 hours",
     payment: 250 + " UAH",
   },
   {
     id: crypto.randomUUID(),
     name: "Become Figma superhero masterclass",
+    category: "Figma",
     image: courseFigma,
     author: "Deniel",
-    description:
+    shortDescription:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     level: "beginner",
     startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
     duration: "6 hours",
     payment: 350 + " UAH",
   },

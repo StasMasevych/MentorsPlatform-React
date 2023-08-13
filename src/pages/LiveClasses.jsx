@@ -31,39 +31,41 @@ export default function LiveClasses() {
   }
 
   return (
-    <div className="classes">
-      <div className="classes__container">
-        <div className="classes__text-block text-block-classes">
-          <h3 className="text-block-classes__title">
+    <div className="live-classes">
+      <div className="live-classes__container">
+        <div className="live-classes__text-block text-block-live-classes">
+          <h3 className="text-block-live-classes__title">
             Learn from the best experts
           </h3>
-          <p className="text-block-classes__subtitle">
+          <p className="text-block-live-classes__subtitle">
             Unlock your potential with the best experts. Learn live from
             experts, build new skills, create new projects
           </p>
         </div>
-        <ul className="classes__list list-classes">
+        <ul className="live-classes__list list-live-classes">
           {liveClassesArray.map((liveClass) => {
             return <LiveClassItem key={liveClass.id} liveClass={liveClass} />;
           })}
         </ul>
         {/* <div className="classes__reviews"></div> */}
-        <div className="classes__contact contact-classes">
-          <h4 className="contact-classes__title">
-            Make subscription to know about all new classes!🤩
+        <div className="live-classes__contact contact-live-classes">
+          <h4 className="contact-live-classes__title">
+            Get the information about new classes 🤩
           </h4>
           <form
-            className="contact-classes__form form-contact-classes"
+            className="contact-live-classes__form form-contact-live-classes"
             onSubmit={onSumbitHandler}
           >
             <input
-              className="form-contact-classes__input"
+              className="form-contact-live-classes__input"
               type="text"
               placeholder="Enter your email"
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
             />
-            <button className="form-contact-classes__button button">Add</button>
+            <button className="form-contact-live-classes__button button">
+              Add
+            </button>
           </form>
         </div>
       </div>
