@@ -172,8 +172,7 @@ export default function LiveClass() {
                   </p>
                 </div>
                 <p className="schedule-enrol-box-main-live-class__deadline">
-                  🔚 Last day to enrol {singleLiveClass.startDate} till 00:00
-                  EEST
+                  🔚 Last day to enrol {singleLiveClass.startDate}
                 </p>
               </div>
             </div>
@@ -186,7 +185,7 @@ export default function LiveClass() {
                 This live class include
               </h6>
               <p className="include-enrol-box-main-live-class__item">
-                ⭐️ Live master class with Q&A
+                ⭐️ Live session with Q&A
               </p>
               <p className="include-enrol-box-main-live-class__item">
                 ⏺️ Session recordings

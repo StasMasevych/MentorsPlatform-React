@@ -197,14 +197,14 @@ export default function AllMentors() {
         </div>
 
         <div clallMentors-page="allMentors-page__mentors-content mentors-content-allMentors-page">
-          {mentorsPerPage.length > 0 && (
+          {mentorsPerPage && mentorsPerPage.length > 0 && (
             <ul className="mentors-content-allMentors-page__list">
               {mentorsPerPage.map((mentorItem) => {
                 return <MentorItem key={mentorItem.id} mentor={mentorItem} />;
               })}
             </ul>
           )}
-          {mentorsPerPage.length === 0 && (
+          {!mentorsPerPage && (
             <h1
               style={{
                 margin: "38px 0",

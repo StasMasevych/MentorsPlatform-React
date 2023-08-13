@@ -35,6 +35,7 @@ body {
 
 body {
   font-family: "Raleway";
+  /* font-family: Sharpgrotesk20, sans-serif; */
   font-size: 12px; /* розмір шрифту по замовчуванню - саме більше де застосовується */
   color: #616161; /* колір шрифту по замовчуванню - саме більше де застосовується */
 }
@@ -1300,6 +1301,7 @@ ul {
 
 .live-class {
   margin: 24px auto;
+  /* font-family: Sharpgrotesk20, sans-serif; */
 }
 
 .live-class__header {

@@ -80,20 +80,6 @@ export const liveClassesArray = [
   },
   {
     id: crypto.randomUUID(),
-    name: "Build mobile apps fast with Flutter Flow ",
-    category: "Flutter",
-    image: courseFlutter,
-    author: "Jack",
-    shortDescription:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    level: "beginner",
-    startDate: new Date().toLocaleDateString(),
-    time: "19:00 EEST",
-    duration: "5 hours",
-    payment: 150 + " UAH",
-  },
-  {
-    id: crypto.randomUUID(),
     name: "Build Instagram clone authentification",
     category: "React",
     image: courseInsta,
@@ -119,5 +105,19 @@ export const liveClassesArray = [
     time: "19:00 EEST",
     duration: "6 hours",
     payment: 350 + " UAH",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Build Flutter app",
+    category: "Flutter",
+    image: courseFlutter,
+    author: "Devid",
+    shortDescription:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    level: "beginner",
+    startDate: new Date().toLocaleDateString(),
+    time: "19:00 EEST",
+    duration: "6 hours",
+    payment: 750 + " UAH",
   },
 ];
