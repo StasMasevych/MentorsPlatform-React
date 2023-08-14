@@ -5,6 +5,10 @@ import { getLiveClass } from "../context/PlatformActions";
 import { liveClassesArray } from "../data/data-courses/data-liveClasses";
 import { PlatformContext } from "../context/PlatformContext";
 
+// why our classes (3-4 cards)
+// add reviews
+// add FAQ
+
 export default function LiveClass() {
   const { singleLiveClass, dispatch } = useContext(PlatformContext);
   const params = useParams();

@@ -26,9 +26,9 @@ export default function AllMentors() {
   const { mentorsByCategory, dispatch } = useContext(PlatformContext);
   /* console.log(mentorsByCategory.length); */
 
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const [page, setPage] = useState(0);
+  const [searchTerm, setSearchTerm] = useState(""); //input
+  const [page, setPage] = useState(0); //pagination
+  const [isActive, setIsActive] = useState(false); // conditional rendering categories
 
   // pagination
 
@@ -75,6 +75,8 @@ export default function AllMentors() {
   };
 
   // filter by clicking some category
+
+  let isClicked;
 
   function onFilterHandler(categoryName) {
     console.log(categoryName);
@@ -178,6 +180,9 @@ export default function AllMentors() {
             {categories.map((category) => {
               return (
                 <li
+                  /* className={`list-categories-allMentors-page__item ${
+                    isClicked ? "active-btn" : null
+                  }`} */
                   className="list-categories-allMentors-page__item"
                   onClick={
                     () => onFilterHandler(category.name)
