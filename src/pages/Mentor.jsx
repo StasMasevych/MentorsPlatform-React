@@ -1,5 +1,5 @@
 import Spinner from "../components/Spinner";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useContext, useState } from "react";
 
 import { getMentor } from "../context/PlatformActions";
@@ -32,6 +32,8 @@ import { PlatformContext } from "../context/PlatformContext";
 // add reviews
 
 export default function Mentor() {
+  const navigate = useNavigate();
+  const params = useParams();
   const { singleMentor, /* featuredMentors */ dispatch, loading } =
     useContext(PlatformContext);
   console.log("Here, on mentor page we get object from context", singleMentor);
@@ -41,7 +43,6 @@ export default function Mentor() {
     "mentors array from context",
     allMentorsArray /* featuredMentors */
   );
-  const params = useParams();
 
   useEffect(() => {
     const mentorObject = getMentor(params.name, allMentorsArray);
@@ -173,7 +174,11 @@ export default function Mentor() {
                       30 min
                     </div>
 
-                    <button className="item-list-booking-info-content-mentor-page__btn-book button">
+                    <button
+                      /* to="https://calendly.com/stasmasevych/mentors-session" */
+                      className="item-list-booking-info-content-mentor-page__btn-book button"
+                      onClick={() => navigate(`/mentor/${params.name}/apply`)}
+                    >
                       Book now
                     </button>
 

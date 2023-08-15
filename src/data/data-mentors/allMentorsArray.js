@@ -19,6 +19,8 @@ export const allMentorsArray = [
     image: imgJohn,
     profileImg: profileImgJohn,
     category: "React",
+    nickCalendly: "stasmasevych",
+    typeCalendly: "60min",
     about:
       "John is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -54,6 +56,8 @@ export const allMentorsArray = [
     image: imgKelly,
     profileImg: profileImgKelly,
     category: "React",
+    nickCalendly: "kelly",
+    typeCalendly: "60min",
     about:
       "Kelly is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -89,6 +93,8 @@ export const allMentorsArray = [
     image: imgAdam,
     profileImg: profileImgAdam,
     category: "React",
+    nickCalendly: "adam",
+    typeCalendly: "60min",
     about:
       "Adam is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [
@@ -124,6 +130,8 @@ export const allMentorsArray = [
     image: imgAnna,
     profileImg: profileImgAnna,
     category: "Javascript",
+    nickCalendly: "anna",
+    typeCalendly: "60min",
     about:
       "Anna is the CEO of UpCoach and a veteran entrepreneur who has been building companies in the SaaS and e-commerce space for over 20 years. He's had multiple exits, including MaxCDN. In addition to UpCoach he runs a portfolio of companies and employs more than 400 people. His passion is to help individuals and their organizations reach their full potential.",
     skills: [

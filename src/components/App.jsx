@@ -12,6 +12,7 @@ import CategoryMentors from "../pages/CategoryMentors";
 import LiveClass from "../pages/LiveClass";
 import LiveClasses from "../pages/LiveClasses";
 import Contact from "../pages/Contact";
+import BookApplication from "../pages/BookApplication";
 import NotFound from "../pages/NotFound";
 
 //components
@@ -38,6 +39,7 @@ export default function App() {
               <Route path="/become-mentor" element={<BecomeMentor />} />
               <Route path="/create-live-class" element={<CreateLiveClass />} />
               <Route path="/mentor/:name" element={<Mentor />} />
+              <Route path="/mentor/:name/apply" element={<BookApplication />} />
               <Route path="/mentors" element={<AllMentors />} />
               <Route
                 path="/mentors/categories/:category"
