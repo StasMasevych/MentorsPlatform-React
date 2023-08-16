@@ -1631,17 +1631,37 @@ ul {
   border-radius: 18px;
 }
 
+.steps-booking__heading-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  padding: 0 0 18px 0;
+}
+
+.steps-booking__heading-text h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+}
+
+.steps-booking__heading-text h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .booking__steps {
-  /* width: 600px; */
+  max-width: 600px;
   /* background-color: #f7f7f7; */
   border-radius: 7px;
-  /* margin: 100px auto; */
+  margin: 0 auto;
   /* padding: 25px 100px; */
 }
 
 .steps-booking__numbers {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: space-around;
 }
 
 .steps-booking__numbers > div {
@@ -1674,7 +1694,8 @@ ul {
 
 .buttons {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: space-around;
 }
 
 .buttons button {
@@ -1691,6 +1712,7 @@ ul {
 }
 
 .booking__button {
+  text-transform: none;
   /* transition: all 0.5s ease; */
 }
 
@@ -1707,7 +1729,7 @@ ul {
 
 h3 {
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .booking__form {
@@ -1715,6 +1737,17 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.form-booking__question {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.form-booking__comment {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .form-booking__text-area-box {
@@ -1735,7 +1768,8 @@ h3 {
   background: rgb(255, 255, 255);
 }
 
-.form-booking__text-area-box textarea {
+/* .form-booking__text-area-box  */
+textarea {
   appearance: none;
   border-width: initial;
   border-style: none;
@@ -1749,6 +1783,17 @@ h3 {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
+
+  box-sizing: border-box;
+  overflow: visible;
+  height: auto;
+  min-height: 140px;
+  font-weight: 400;
+}
+
+.form-booking__text-area-box textarea::placeholder {
+  opacity: 0.5;
+  color: #808080;
 }
 
 .form-booking__select-box {
@@ -1765,12 +1810,22 @@ h3 {
   padding: 24px;
 }
 
+.select-box-form-booking__comment {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .select-box-form-booking__submit-message {
+  /* background-color: #effcf9; */
   margin: 22px 0;
   height: 20vh;
   max-width: 100%;
   text-align: center;
   font-size: 32px;
+}
+
+.select-box-form-booking__payment-widget-box {
+  padding: 24px;
 }
 
 /* .booking__wrapper {

@@ -9,12 +9,6 @@ import {
   PopupButton,
 } from "react-calendly";
 
-const messages = [
-  "Learn React ⚛️",
-  "Apply for jobs 💼",
-  "Invest your new income 🤑",
-];
-
 const questions = [
   "What would you like to cover in this session?",
   "What would you like to achieve by the end of the session?",
@@ -29,6 +23,15 @@ export default function BookApplication() {
   const [data, setData] = useState(null);
   console.log(data);
 
+  // input value
+
+  const [inputMyGoal, setInputMyGoal] = useState("");
+  const [inputMyExpactation, setInputMyExpactation] = useState("");
+  const [userData, setUserData] = useState({});
+  /* console.log(inputMyGoal, inputMyExpactation); */
+  console.log(userData);
+
+  // mentor obj local state
   const [mentorBooked, setMentorBooked] = useState({ name: "default" });
   console.log(mentorBooked);
   const params = useParams();
@@ -36,6 +39,7 @@ export default function BookApplication() {
 
   const { singleMentor, mentorsByCategory } = useContext(PlatformContext);
 
+  // get mentor obj with needed nickCalendly
   useEffect(() => {
     function getCalendlyforBooking() {
       const filteredMentor = mentorsByCategory.find(
@@ -44,7 +48,28 @@ export default function BookApplication() {
       setMentorBooked(filteredMentor);
     }
     getCalendlyforBooking();
+    window.scrollTo(0, 0);
   }, []);
+
+  // call function after step 3 to submit user data
+
+  useEffect(() => {
+    function getUserData() {
+      if (step === 3 && data) {
+        const newUserData = {
+          id: crypto.randomUUID(),
+          userGoal: inputMyGoal,
+          userExpectations: inputMyExpactation,
+        };
+
+        setUserData(newUserData);
+        return newUserData;
+      }
+    }
+    getUserData();
+  }, [data]);
+
+  // listenig Calendly events
 
   useCalendlyEventListener({
     onProfilePageViewed: () => console.log("onProfilePageViewed"),
@@ -65,29 +90,35 @@ export default function BookApplication() {
 
   function handleNext() {
     setStep((prevStep) => {
-      if (step >= 1 && step < 3) {
+      if (step >= 1 && step < 4) {
         return prevStep + 1;
       }
       return step;
     });
   }
 
+  // submit user data
+
   return (
     <div className="booking">
       <div className="booking__container">
         <div className="booking__wrapper">
           <div className="booking__steps steps-booking">
+            <div className="steps-booking__heading-text">
+              <h2> Book a session</h2>
+              <h5> Follow simple steps to book your session</h5>
+            </div>
             <div className="steps-booking__numbers">
               <div className={step >= 1 ? "active" : ""}>1</div>
               <div className={step >= 2 ? "active" : ""}>2</div>
               <div className={step >= 3 ? "active" : ""}>3</div>
-              {/*  <div className={step >= 4 ? "active" : ""}>4</div> */}
+              <div className={step >= 4 ? "active" : ""}>4</div>
             </div>
 
             {step === 1 && (
-              <form className="booking__form">
-                <h3>{questions[0]}</h3>
-                <p>
+              <form className="booking__form form-booking">
+                <h3 className="form-booking__question">{questions[0]}</h3>
+                <p className="form-booking__comment">
                   This can be one main subject, or a list of questions you have
                   for your mentor.
                 </p>
@@ -95,15 +126,21 @@ export default function BookApplication() {
                   <textarea
                     type="text"
                     placeholder="List all questions you want to discuss with mentor"
+                    /* value={inputMyGoal} */
+                    onChange={(e) => setInputMyGoal(e.target.value)}
                   />
                 </div>
               </form>
             )}
             {step === 2 && (
               <form className="booking__form">
-                <h3>{questions[1]}</h3>
+                <h3 className="form-booking__question">{questions[1]}</h3>
                 <div className="form-booking__text-area-box">
-                  <textarea />
+                  <textarea
+                    type="text"
+                    /* value={inputMyExpactation} */
+                    onChange={(e) => setInputMyExpactation(e.target.value)}
+                  />
                 </div>
               </form>
             )}
@@ -111,7 +148,9 @@ export default function BookApplication() {
               <div className="form-booking__select-box select-box-form-booking">
                 {!data ? (
                   <>
-                    <h3>Select date and time for session with mentor</h3>
+                    <h3 className="select-box-form-booking__comment">
+                      Select date and time for session with mentor
+                    </h3>
                     <div className="select-box-form-booking__calendly-form">
                       <InlineWidget url="https://calendly.com/stasmasevych/60min" />
                     </div>
@@ -122,6 +161,11 @@ export default function BookApplication() {
                     soon! 🚀
                   </p>
                 )}
+              </div>
+            )}
+            {step === 4 && (
+              <div className="select-box-form-booking__payment-widget-box">
+                <p>Here, it will be payment widget</p>
               </div>
             )}
 
