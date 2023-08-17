@@ -1,6 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useLogut } from "../hooks/useLogout";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 export default function NavBar() {
+  const { logout } = useLogut();
+  /* console.log(logout); */
+  const { user } = useAuthContext();
+
+  console.log(user);
   const navigate = useNavigate();
   return (
     <header className="header">
@@ -40,15 +47,29 @@ export default function NavBar() {
           </nav>
         </nav>
         <div className="header__buttons buttons-header">
-          <button
-            className="buttons-header__login"
-            onClick={() => navigate("/login")}
-          >
-            Login
-          </button>
-          <button className="button" onClick={() => navigate("/signup")}>
-            Sign up
-          </button>
+          {!user && (
+            <>
+              <button
+                className="buttons-header__login"
+                onClick={() => navigate("/login")}
+              >
+                Login
+              </button>
+              <button className="button" onClick={() => navigate("/signup")}>
+                Sign up
+              </button>
+            </>
+          )}
+          {user && (
+            <>
+              <h5 style={{ display: "flex", alignItems: "center" }}>
+                Hello, {user.displayName} 👋
+              </h5>
+              <button className="button" onClick={logout}>
+                Logout
+              </button>
+            </>
+          )}
         </div>
       </div>
     </header>
