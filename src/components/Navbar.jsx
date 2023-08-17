@@ -39,9 +39,15 @@ export default function NavBar() {
             </ul>
           </nav>
         </nav>
-        <div>
-          <button className="button" onClick={() => navigate("/mentors")}>
-            Explore mentors
+        <div className="header__buttons buttons-header">
+          <button
+            className="buttons-header__login"
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </button>
+          <button className="button" onClick={() => navigate("/signup")}>
+            Sign up
           </button>
         </div>
       </div>

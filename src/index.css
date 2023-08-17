@@ -74,6 +74,32 @@ body {
   flex: 1 1 auto;
   display: flex;
 }
+
+.header__buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.buttons-header__login {
+  background-color: #fff;
+  color: #000;
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 12px;
+  letter-spacing: 1px;
+  border: 1px solid #000;
+  padding: 14px 30px;
+  border-radius: 22px;
+  transition: background-color 0.3s ease 0s;
+}
+
+.buttons-header__login:hover {
+  background-color: rgb(215, 35, 215);
+  color: #fff;
+}
+
 .menu {
   display: flex;
   justify-content: center;
@@ -1828,17 +1854,106 @@ textarea {
   padding: 24px;
 }
 
-/* .booking__wrapper {
-  display: flex;
+/* ======================== */
+/* =========Login========== */
+/* ======================== */
+
+.login-form {
+  max-width: 360px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  background: #fff;
+  font-size: 1.1em;
 }
 
-.booking__form {
-  flex: 0 1 48%;
+.login-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
 }
 
-.booking__calendly {
-  flex: 0 1 48%;
-} */
+.login-form p {
+  margin: 24px auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.login-form label {
+  display: block;
+  margin: 24px auto;
+}
+
+.login-form label span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.login-form label input {
+  padding: 8px 6px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.login-form__button {
+  /* margin: 0 auto; */
+}
+
+/* ======================== */
+/* =========Signup========= */
+/* ======================== */
+
+.signup-form {
+  max-width: 360px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  background: #fff;
+  font-size: 1.1em;
+}
+
+.signup-form h2 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.signup-form p {
+  margin: 24px auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.signup-form label {
+  display: block;
+  margin: 24px auto;
+}
+
+.signup-form label span {
+  display: block;
+  margin-bottom: 6px;
+}
+.signup-form label input {
+  padding: 8px 6px;
+  font-size: 1em;
+  color: #777;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* ======================== */
+/* =========Logout========= */
+/* ======================== */
 
 /* ======================== */
 /* ======================== */

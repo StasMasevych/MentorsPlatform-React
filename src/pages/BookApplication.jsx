@@ -9,6 +9,8 @@ import {
   PopupButton,
 } from "react-calendly";
 
+// add payment widjet as step 4
+
 const questions = [
   "What would you like to cover in this session?",
   "What would you like to achieve by the end of the session?",
@@ -17,7 +19,6 @@ const questions = [
 export default function BookApplication() {
   // stepper
   const [step, setStep] = useState(1);
-  const [isOpen, setIsOpen] = useState(true);
 
   //Calendly event data
   const [data, setData] = useState(null);
@@ -27,8 +28,9 @@ export default function BookApplication() {
 
   const [inputMyGoal, setInputMyGoal] = useState("");
   const [inputMyExpactation, setInputMyExpactation] = useState("");
+
+  // object with input data for backend
   const [userData, setUserData] = useState({});
-  /* console.log(inputMyGoal, inputMyExpactation); */
   console.log(userData);
 
   // mentor obj local state
@@ -96,8 +98,6 @@ export default function BookApplication() {
       return step;
     });
   }
-
-  // submit user data
 
   return (
     <div className="booking">
@@ -169,11 +169,6 @@ export default function BookApplication() {
               </div>
             )}
 
-            {/* data && step === 3 && <p>Thanks for application!</p> */}
-            {/* <p className="message">
-              Step {step}: {messages[step - 1]}
-            </p> */}
-
             <div className="buttons">
               <button
                 className="booking__button button"
@@ -186,16 +181,6 @@ export default function BookApplication() {
               </button>
             </div>
           </div>
-          {/* <form className="booking__form">
-            <div>
-              <span>Question 1</span>
-              <input />
-            </div>
-            <div>
-              <span>Question 2</span>
-              <input />
-            </div>
-          </form> */}
 
           {/* <div className="booking__calendly">
             <p>Select date and time for session with mentor</p>
