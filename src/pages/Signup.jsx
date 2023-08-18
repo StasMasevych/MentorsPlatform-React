@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 import { useSignup } from "../hooks/useSignup";
+
+import GoogleIcon from "../assets/icons/google-logo_icon.png";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -17,7 +20,14 @@ export default function Signup() {
   return (
     <form className="signup-form" onSubmit={onSubmitHandler}>
       <h2>Signup</h2>
-      <p>Do you have an account? Login</p>
+      <p>
+        Do you have an account?{" "}
+        <Link to="/login">
+          <span style={{ color: "#616161", textDecoration: "underline" }}>
+            Login
+          </span>
+        </Link>
+      </p>
       <label>
         <span>name:</span>
         <input
@@ -46,10 +56,26 @@ export default function Signup() {
         />
       </label>
       {!isPending && (
-        <button className="login-form__button button">Signup</button>
+        <>
+          <button className="signup-form__button button">Signup</button>
+          <div className="signup-form__separator">
+            <p>or continue with</p>
+            <hr style={{ border: "1px solid #e3e3e3" }} />
+          </div>
+          <div>
+            <button className="signup-form__google-button  google-button-signup-form">
+              <div className="google-button-signup-form__image">
+                <img src={GoogleIcon} alt="go" />
+              </div>
+              <p className="google-button-signup-form__text">
+                Signup with Google
+              </p>
+            </button>
+          </div>
+        </>
       )}
       {isPending && (
-        <button className="login-form__button button" disabled>
+        <button className="signup-form__button button" disabled>
           Loading
         </button>
       )}

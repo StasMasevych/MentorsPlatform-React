@@ -1,5 +1,12 @@
+import { Link, useNavigate, useLocation } from "react-router-dom";
+
 export default function Footer() {
   const footerYear = new Date().getFullYear();
+
+  const location = useLocation();
+  console.log(location);
+
+  if (location.pathname === "/login" || location.pathname === "/signup") return;
 
   return (
     <footer className="footer">

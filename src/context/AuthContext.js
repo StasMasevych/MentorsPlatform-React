@@ -8,17 +8,17 @@ export const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, {
     user: null,
-    authIsReady: false,
+    authIsReady: false, // just to make sure that Firebase give us feedback (connected) - user or null
   });
 
-  console.log("AuthContext state:", state);
-  /* 
   useEffect(() => {
     const unsub = projectAuth.onAuthStateChanged((user) => {
       dispatch({ type: "AUTH_IS_READY", payload: user });
       unsub();
     });
-  }, []); */
+  }, []);
+
+  console.log("AuthContext state:", state);
 
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>

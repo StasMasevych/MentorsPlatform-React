@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLogut } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
@@ -7,8 +7,14 @@ export default function NavBar() {
   /* console.log(logout); */
   const { user } = useAuthContext();
 
+  const location = useLocation();
+  console.log(location);
+
   console.log(user);
   const navigate = useNavigate();
+
+  /* if (location.pathname === "/login") return; */
+
   return (
     <header className="header">
       <div className="header__container">

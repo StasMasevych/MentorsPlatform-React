@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useLogin } from "../hooks/useLogin";
+
+// make later 2 cols - 1 col form, 2 col - image
+
+import GoogleIcon from "../assets/icons/google-logo_icon.png";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -14,7 +19,14 @@ export default function Login() {
   return (
     <form className="login-form" onSubmit={onSubmitHandler}>
       <h2>Login</h2>
-      <p>Don’t have an account? Sign up</p>
+      <p>
+        Don’t have an account?{" "}
+        <Link to="/signup">
+          <span style={{ color: "#616161", textDecoration: "underline" }}>
+            Sign up
+          </span>
+        </Link>
+      </p>
       <label>
         <span>email:</span>
         <input
@@ -34,7 +46,23 @@ export default function Login() {
         />
       </label>
       {!isPending && (
-        <button className="login-form__button button">Login</button>
+        <>
+          <button className="login-form__button button">Login</button>
+          <div className="login-form__separator">
+            <p>or continue with</p>
+            <hr style={{ border: "1px solid #e3e3e3" }} />
+          </div>
+          <div>
+            <button className="login-form__google-button  google-button-login-form">
+              <div className="google-button-login-form__image">
+                <img src={GoogleIcon} alt="go" />
+              </div>
+              <p className="google-button-login-form__text">
+                Login with Google
+              </p>
+            </button>
+          </div>
+        </>
       )}
       {isPending && (
         <button className="login-form__button button" disabled>
