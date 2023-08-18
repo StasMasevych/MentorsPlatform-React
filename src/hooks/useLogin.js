@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { projectAuth, projectFirestore } from "../firebase/config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useAuthContext } from "./useAuthContext";
+import { auth } from "../firebase/config";
 
 export function useLogin() {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
-  const { dispatch, user } = useAuthContext();
+  const { dispatch } = useAuthContext();
 
   async function login(email, password) {
     setError(null);
@@ -14,7 +15,7 @@ export function useLogin() {
 
     try {
       // sign the user in Firebase and get this object
-      const res = await projectAuth.signInWithEmailAndPassword(email, password);
+      const res = await signInWithEmailAndPassword(auth, email, password);
 
       // like mirror - fristly Firebase than mirror to state
       dispatch({ type: "LOGIN", payload: res.user });

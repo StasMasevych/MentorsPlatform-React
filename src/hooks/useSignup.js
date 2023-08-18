@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
-import { projectAuth } from "../firebase/config";
 import { useAuthContext } from "./useAuthContext";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
+import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { db, auth } from "../firebase/config";
 
 export function useSignup() {
   const [isCancelled, setIsCancelled] = useState(false);
@@ -15,10 +21,7 @@ export function useSignup() {
 
     try {
       // signup user - Firebase create its user object and return it to us
-      const res = await projectAuth.createUserWithEmailAndPassword(
-        email,
-        password
-      );
+      const res = await createUserWithEmailAndPassword(auth, email, password);
       console.log(res.user);
 
       // if invalid response
@@ -26,9 +29,10 @@ export function useSignup() {
         throw new Error("'Could not complete signup')");
       }
 
-      // add displayName to user obj - Firebase update its user object and return it to us
-
-      await res.user.updateProfile({ displayName: displayName });
+      //updating user name in Firebase user obj (user.current.displaynme)
+      updateProfile(auth.currentUser, {
+        displayName: displayName,
+      });
 
       // dispatch login action - we take Firebase user object and send it to store
 

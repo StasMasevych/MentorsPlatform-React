@@ -6,6 +6,7 @@ export default function NavBar() {
   const { logout } = useLogut();
   /* console.log(logout); */
   const { user } = useAuthContext();
+  /* console.log(user); */
 
   const location = useLocation();
   console.log(location);
