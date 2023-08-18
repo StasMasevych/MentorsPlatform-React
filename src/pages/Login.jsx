@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLogin } from "../hooks/useLogin";
 
 // make later 2 cols - 1 col form, 2 col - image
 
 import GoogleIcon from "../assets/icons/google-logo_icon.png";
 
+import GoogleOAuth from "../components/GoogleOAuth";
+import { useAuthContext } from "../hooks/useAuthContext";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login, error, isPending } = useLogin();
+  const { user } = useAuthContext();
 
   function onSubmitHandler(e) {
     e.preventDefault();
@@ -53,14 +57,7 @@ export default function Login() {
             <hr style={{ border: "1px solid #e3e3e3" }} />
           </div>
           <div>
-            <button className="login-form__google-button  google-button-login-form">
-              <div className="google-button-login-form__image">
-                <img src={GoogleIcon} alt="go" />
-              </div>
-              <p className="google-button-login-form__text">
-                Login with Google
-              </p>
-            </button>
+            <GoogleOAuth />
           </div>
         </>
       )}

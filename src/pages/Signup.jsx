@@ -1,14 +1,19 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useSignup } from "../hooks/useSignup";
 
 import GoogleIcon from "../assets/icons/google-logo_icon.png";
 
+import GoogleOAuth from "../components/GoogleOAuth";
+import { useAuthContext } from "../hooks/useAuthContext";
+
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { user } = useAuthContext();
 
   const { signup, error, isPending } = useSignup();
 
@@ -63,14 +68,7 @@ export default function Signup() {
             <hr style={{ border: "1px solid #e3e3e3" }} />
           </div>
           <div>
-            <button className="signup-form__google-button  google-button-signup-form">
-              <div className="google-button-signup-form__image">
-                <img src={GoogleIcon} alt="go" />
-              </div>
-              <p className="google-button-signup-form__text">
-                Signup with Google
-              </p>
-            </button>
+            <GoogleOAuth />
           </div>
         </>
       )}
