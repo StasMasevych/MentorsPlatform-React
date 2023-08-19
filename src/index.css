@@ -2159,6 +2159,69 @@ textarea {
 .content-hero-become-mentor__button {
   width: 50%;
 }
+
+.become-mentor__reviews-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviews-block-become-mentor__title {
+  color: rgb(19, 19, 19);
+  font-size: 36px;
+  line-height: 110%;
+  font-weight: 800;
+  text-align: center;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaeaea;
+  border: 1px #000;
+}
+
+.small-container {
+  --swiper-theme-color: #000;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.container-box {
+  position: relative;
+}
+.container-box .arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+}
+.container-box .arrow.arrow-left {
+  left: 0;
+  /* left: 30%; */
+}
+.container-box .arrow.arrow-right {
+  right: 0;
+  /* right: 30%; */
+}
+
+.arrow-left {
+  font-size: 3rem;
+  color: #000;
+  left: 32px;
+  cursor: pointer;
+}
+
+.arrow-right {
+  font-size: 3rem;
+  color: #000;
+  right: 32px;
+  cursor: pointer;
+}
+
 /* ======================== */
 /* ======================== */
 /* ======================== */
