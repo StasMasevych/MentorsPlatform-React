@@ -3,7 +3,7 @@ import image from "../assets/learning images/online-meet.png";
 import "swiper/swiper-bundle.css";
 
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
-
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -13,9 +13,15 @@ import SwiperCore, {
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
+import MentorsList from "../components/MentorsList";
+import MentorItem from "../components/MentorItem";
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
 
 export default function BecomeMentor() {
+  const mentorsReviewArray = allMentorsArray.slice(0, 6);
+
   return (
     <div className="become-mentor">
       <div className="become-mentor__container">
@@ -47,37 +53,38 @@ export default function BecomeMentor() {
             Mentoring can help you turn your passion into conversations,
             friendships and network globally
           </h3>
-          <div className="reviews-block-become-mentor__reviews">
-            <div className="container-box">
-              <div className="small-container">
-                <Swiper
-                  slidesPerView={3}
-                  watchSlidesVisibility={true}
-                  navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
-                  autoHeight={true}
-                  pagination={{ clickable: true, dynamicBullets: true }}
-                >
+          <div className="reviews-block-become-mentor__slider">
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={15}
+              autoHeight={true}
+              navigation={{
+                prevEl: ".prevBtn",
+                nextEl: ".nextBtn",
+              }}
+            >
+              {mentorsReviewArray.map((mentor) => {
+                return (
                   <SwiperSlide>
-                    <div className="box">slide</div>
+                    <MentorItem mentor={mentor} />
                   </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="box">slide</div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="box">slide</div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="box">slide</div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className="box">slide</div>
-                  </SwiperSlide>
-                </Swiper>
-              </div>
-              <FaArrowAltCircleLeft className="arrow-left arrow" />
-              <FaArrowAltCircleRight className="arrow-right arrow" />
-              {/* <button className="arrow-left arrow">Prev</button>
-              <button className="arrow-right arrow">next</button> */}
+                );
+              })}
+            </Swiper>
+            <div
+              style={{
+                margin: "18px auto",
+                display: "flex",
+                justifyContent: "center",
+                gap: "10px",
+              }}
+            >
+              <button className="prevBtn button-slider">
+                <BsArrowLeftCircle size={32} />
+              </button>
+              <button className="nextBtn button-slider">
+                <BsArrowRightCircle size={32} />
+              </button>
             </div>
           </div>
         </div>
