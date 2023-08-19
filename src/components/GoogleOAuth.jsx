@@ -18,7 +18,7 @@ export default function GoogleOAuth() {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
 
-      // Check for user
+      // Check for user if it exists in Firestore
       const docRef = doc(db, "users", user.uid);
       const docSnap = await getDoc(docRef);
 
@@ -27,6 +27,7 @@ export default function GoogleOAuth() {
         await setDoc(doc(db, "users", user.uid), {
           name: user.displayName,
           email: user.email,
+          profilePic: user.photoURL,
           timestamp: serverTimestamp(),
         });
       }

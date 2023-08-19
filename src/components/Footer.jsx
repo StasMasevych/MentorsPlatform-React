@@ -4,7 +4,7 @@ export default function Footer() {
   const footerYear = new Date().getFullYear();
 
   const location = useLocation();
-  console.log(location);
+  /*  console.log(location); */
 
   if (location.pathname === "/login" || location.pathname === "/signup") return;
 

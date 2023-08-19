@@ -9,7 +9,7 @@ export default function NavBar() {
   /* console.log(user); */
 
   const location = useLocation();
-  console.log(location);
+  /* console.log(location); */
 
   console.log(user);
   const navigate = useNavigate();
@@ -69,12 +69,30 @@ export default function NavBar() {
           )}
           {user && (
             <>
-              <h5 style={{ display: "flex", alignItems: "center" }}>
-                Hello, {user.displayName} 👋
-              </h5>
               <button className="button" onClick={logout}>
                 Logout
               </button>
+              <div
+                style={{ display: "flex", gap: "0.2rem", alignItems: "center" }}
+              >
+                <div>
+                  <img
+                    src={user.photoURL}
+                    alt="go"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: "8vh",
+                      borderRadius: "50px",
+                      referrerPolicy: "no-referrer",
+                    }}
+                  />
+                </div>
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                  <p>Hello,</p>
+                  <p>{user.displayName} 👋</p>
+                </div>
+              </div>
             </>
           )}
         </div>
