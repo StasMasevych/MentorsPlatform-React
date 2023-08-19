@@ -75,21 +75,24 @@ export default function NavBar() {
               <div
                 style={{ display: "flex", gap: "0.2rem", alignItems: "center" }}
               >
-                <div>
-                  <img
-                    src={user.photoURL}
-                    alt="go"
-                    style={{
-                      display: "block",
-                      width: "100%",
-                      height: "8vh",
-                      borderRadius: "50px",
-                      referrerPolicy: "no-referrer",
-                    }}
-                  />
-                </div>
+                {user.photoURL && (
+                  <div>
+                    <img
+                      src={user.photoURL}
+                      alt="go"
+                      style={{
+                        display: "block",
+                        width: "100%",
+                        height: "8vh",
+                        borderRadius: "50px",
+                        referrerPolicy: "no-referrer",
+                      }}
+                    />
+                  </div>
+                )}
+
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <p>Hello,</p>
+                  <p>Welcome </p>
                   <p>{user.displayName} 👋</p>
                 </div>
               </div>

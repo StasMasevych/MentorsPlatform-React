@@ -32,6 +32,8 @@ export default function GoogleOAuth() {
         });
       }
       navigate("/");
+      window.location.reload();
+
       console.log("Successfully authorized!");
     } catch (error) {
       console.log("Could not authorize with Google");

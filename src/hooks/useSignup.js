@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useAuthContext } from "./useAuthContext";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
@@ -8,7 +9,7 @@ export function useSignup() {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
-
+  const { navigate } = useNavigate();
   const { dispatch } = useAuthContext();
 
   async function signup(email, password, displayName) {
@@ -33,6 +34,9 @@ export function useSignup() {
       // dispatch login action - we take Firebase user object and send it to store
 
       dispatch({ type: "LOGIN", payload: res.user });
+
+      navigate("/");
+      window.location.reload();
 
       // adding user to db (can see in Firebase Firestore after submitting the form)
 

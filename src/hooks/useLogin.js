@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useAuthContext } from "./useAuthContext";
@@ -7,6 +8,7 @@ export function useLogin() {
   const [isCancelled, setIsCancelled] = useState(false);
   const [error, setError] = useState(null);
   const [isPending, setIsPending] = useState(false);
+  const { navigate } = useNavigate();
   const { dispatch } = useAuthContext();
 
   async function login(email, password) {
@@ -19,6 +21,8 @@ export function useLogin() {
 
       // like mirror - fristly Firebase than mirror to state
       dispatch({ type: "LOGIN", payload: res.user });
+
+      navigate("/");
 
       // update state only for mounted component
       if (!isCancelled) {
