@@ -36,7 +36,7 @@ export function useSignup() {
       dispatch({ type: "LOGIN", payload: res.user });
 
       navigate("/");
-      window.location.reload();
+      /*  window.location.reload(); */
 
       // adding user to db (can see in Firebase Firestore after submitting the form)
 

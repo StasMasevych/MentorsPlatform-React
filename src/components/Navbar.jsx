@@ -83,7 +83,7 @@ export default function NavBar() {
                       style={{
                         display: "block",
                         width: "100%",
-                        height: "8vh",
+                        height: "5vh",
                         borderRadius: "50px",
                         referrerPolicy: "no-referrer",
                       }}
