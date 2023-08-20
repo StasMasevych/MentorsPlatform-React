@@ -2160,8 +2160,11 @@ textarea {
   width: 50%;
 }
 
+/* -------------------------- */
+
 .become-mentor__reviews-block {
   margin: 1rem 0;
+
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -2175,8 +2178,14 @@ textarea {
   text-align: center;
 }
 
-.eviews-block-become-mentor__slider {
-  display: flex;
+.reviews-block-become-mentor__slider {
+  /* height: 100%; */
+}
+
+.swiper-container {
+  list-style: none;
+  border-radius: 16px;
+  /* height: 100%; */
 }
 
 .swiper-fixed-width-300 {
@@ -2185,6 +2194,59 @@ textarea {
 
 .button-slider {
   background-color: #fff;
+}
+
+/* -------------------------- */
+
+.mentors-reviews__item {
+  padding: 0.5rem;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* border: 1px solid #e1e1e3; */
+
+  /*   border-radius: 16px; */
+  transition: transform 0.2s;
+}
+
+.mentors-reviews__item:hover {
+  transform: scale(1.01);
+}
+
+.mentor-reviews__image {
+  width: 100%;
+
+  /* height: 16.688rem; */
+  height: 100%;
+}
+
+.mentor-reviews__image img {
+  display: block;
+  width: 100%;
+  height: 26.16vw;
+  /* height: 100%; */
+  /* border-radius: 28px; */
+  border-radius: 16px;
+  object-fit: cover;
+  /* object-position: bottom; */
+}
+
+.mentor-reviews__text {
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 300;
+}
+
+.mentor-reviews__name {
+  font-size: 18px;
+  color: #000;
+}
+
+.mentor-reviews__job {
+  font-size: 14px;
+  line-height: 18px;
+  /* color: #0a243f; */
 }
 
 /* ======================== */

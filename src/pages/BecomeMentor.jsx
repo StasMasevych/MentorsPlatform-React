@@ -2,7 +2,6 @@ import image from "../assets/learning images/online-meet.png";
 
 import "swiper/swiper-bundle.css";
 
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import SwiperCore, {
   Navigation,
@@ -11,16 +10,17 @@ import SwiperCore, {
   A11y,
   EffectFade,
 } from "swiper";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
-import MentorsList from "../components/MentorsList";
-import MentorItem from "../components/MentorItem";
+import { mentorsReviews } from "../data/data-reviews/data-mentorsReviews";
+
+import MentorReviewItem from "../components/MentorReviewItem";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
 
 export default function BecomeMentor() {
-  const mentorsReviewArray = allMentorsArray.slice(0, 6);
+  /*  const mentorsReviewArray = mentorsReviews.slice(0, 6); */
 
   return (
     <div className="become-mentor">
@@ -53,20 +53,20 @@ export default function BecomeMentor() {
             Mentoring can help you turn your passion into conversations,
             friendships and network globally
           </h3>
-          <div className="reviews-block-become-mentor__slider">
+          <div className="reviews-block-become-mentor__slider slider-reviews-block-become-mentor">
             <Swiper
               slidesPerView={3}
-              spaceBetween={15}
+              spaceBetween={10}
               autoHeight={true}
               navigation={{
                 prevEl: ".prevBtn",
                 nextEl: ".nextBtn",
               }}
             >
-              {mentorsReviewArray.map((mentor) => {
+              {mentorsReviews.map((mentor) => {
                 return (
-                  <SwiperSlide>
-                    <MentorItem mentor={mentor} />
+                  <SwiperSlide style={{ listStyle: "none" }}>
+                    <MentorReviewItem mentor={mentor} />
                   </SwiperSlide>
                 );
               })}
