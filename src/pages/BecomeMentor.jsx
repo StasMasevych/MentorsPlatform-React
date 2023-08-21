@@ -1,6 +1,6 @@
 import "swiper/swiper-bundle.css";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import SwiperCore, {
@@ -48,7 +48,11 @@ export default function BecomeMentor() {
                 first time mentor or a lifelong learner, your mentorship can
                 make a massive impact.
               </p>
-              <button className="content-hero-become-mentor__button button">
+
+              <button
+                className="content-hero-become-mentor__button button"
+                onClick={() => navigate("/application")}
+              >
                 Become a mentor
               </button>
             </div>
@@ -139,10 +143,7 @@ export default function BecomeMentor() {
               link
             </p>
           </div>
-          <button
-            className="live-session-become-mentor__button button"
-            onClick={() => navigate("/application")}
-          >
+          <button className="live-session-become-mentor__button button">
             Become creator of live class
           </button>
         </div>

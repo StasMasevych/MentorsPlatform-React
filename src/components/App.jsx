@@ -45,9 +45,14 @@ export default function App() {
                 <Route
                   path="/become-mentor"
                   //element={<BecomeMentor />}
-                  element={user ? <BecomeMentor /> : <Navigate to="/login" />}
+                  element={<BecomeMentor />}
                 />
-                <Route path="/application" element={MentorApplication} />
+                <Route
+                  path="/application"
+                  element={
+                    user ? <MentorApplication /> : <Navigate to="/login" />
+                  }
+                />
                 <Route
                   exact
                   path="/create-live-class"

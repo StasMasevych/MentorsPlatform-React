@@ -9,7 +9,7 @@ export default function Footer() {
   if (
     location.pathname === "/login" ||
     location.pathname === "/signup" ||
-    location.pathname === "/mentor/application"
+    location.pathname === "/application"
   )
     return;
 
