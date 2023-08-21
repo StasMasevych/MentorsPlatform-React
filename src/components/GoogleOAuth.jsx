@@ -32,7 +32,7 @@ export default function GoogleOAuth() {
         });
       }
       navigate("/");
-      window.location.reload();
+      /* window.location.reload(); */
 
       console.log("Successfully authorized!");
     } catch (error) {

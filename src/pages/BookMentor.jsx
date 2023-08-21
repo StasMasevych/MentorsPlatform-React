@@ -16,7 +16,7 @@ const questions = [
   "What would you like to achieve by the end of the session?",
 ];
 
-export default function BookApplication() {
+export default function BookMentor() {
   // stepper
   const [step, setStep] = useState(1);
 

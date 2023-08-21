@@ -1,5 +1,7 @@
 import "swiper/swiper-bundle.css";
 
+import { useNavigate } from "react-router-dom";
+
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import SwiperCore, {
   Navigation,
@@ -23,6 +25,7 @@ import pmImg from "../assets/masterclass/pm-session.png";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
 
 export default function BecomeMentor() {
+  const navigate = useNavigate();
   /*  const mentorsReviewArray = mentorsReviews.slice(0, 6); */
 
   return (
@@ -100,7 +103,7 @@ export default function BecomeMentor() {
           <p className="live-session-become-mentor__subtitle">
             In our platform youe can share your cool experience in coding,
             design, project managament and more! It's great when you create
-            aroud you good community of learners!
+            around you a good community of learners!
           </p>
           <div className="live-session-become-mentor__content content-live-session-become-mentor">
             <ul className="content-live-session-become-mentor__list list-content-live-session-become-mentor">
@@ -136,7 +139,10 @@ export default function BecomeMentor() {
               link
             </p>
           </div>
-          <button className="live-session-become-mentor__button button">
+          <button
+            className="live-session-become-mentor__button button"
+            onClick={() => navigate("/application")}
+          >
             Become creator of live class
           </button>
         </div>

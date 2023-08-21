@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import BecomeMentor from "../pages/BecomeMentor";
+import MentorApplication from "../pages/MentorApplication";
 import CreateLiveClass from "../pages/CreateLiveClass";
 import Mentor from "../pages/Mentor";
 import AllMentors from "../pages/AllMentors";
@@ -12,7 +13,7 @@ import CategoryMentors from "../pages/CategoryMentors";
 import LiveClass from "../pages/LiveClass";
 import LiveClasses from "../pages/LiveClasses";
 import Contact from "../pages/Contact";
-import BookApplication from "../pages/BookApplication";
+import BookMentor from "../pages/BookMentor";
 import NotFound from "../pages/NotFound";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
@@ -46,6 +47,7 @@ export default function App() {
                   //element={<BecomeMentor />}
                   element={user ? <BecomeMentor /> : <Navigate to="/login" />}
                 />
+                <Route path="/application" element={MentorApplication} />
                 <Route
                   exact
                   path="/create-live-class"
@@ -59,9 +61,7 @@ export default function App() {
                 <Route
                   path="/mentor/:name/apply"
                   //element={<BookApplication />}
-                  element={
-                    user ? <BookApplication /> : <Navigate to="/login" />
-                  }
+                  element={user ? <BookMentor /> : <Navigate to="/login" />}
                 />
                 <Route path="/mentors" element={<AllMentors />} />
                 <Route

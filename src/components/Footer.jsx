@@ -6,7 +6,12 @@ export default function Footer() {
   const location = useLocation();
   /*  console.log(location); */
 
-  if (location.pathname === "/login" || location.pathname === "/signup") return;
+  if (
+    location.pathname === "/login" ||
+    location.pathname === "/signup" ||
+    location.pathname === "/mentor/application"
+  )
+    return;
 
   return (
     <footer className="footer">
