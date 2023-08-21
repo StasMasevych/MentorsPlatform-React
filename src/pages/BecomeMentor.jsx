@@ -1,5 +1,3 @@
-import image from "../assets/learning images/online-meet.png";
-
 import "swiper/swiper-bundle.css";
 
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
@@ -16,6 +14,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { mentorsReviews } from "../data/data-reviews/data-mentorsReviews";
 
 import MentorReviewItem from "../components/MentorReviewItem";
+
+import image from "../assets/learning images/online-meet.png";
+import codingImg from "../assets/masterclass/react-session.png";
+import designingImg from "../assets/masterclass/figma-session.png";
+import pmImg from "../assets/masterclass/pm-session.png";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
 
@@ -88,7 +91,61 @@ export default function BecomeMentor() {
             </div>
           </div>
         </div>
+
+        <div className="become-mentor__live-session live-session-become-mentor">
+          <h3 className="live-session-become-mentor__title">
+            Do you have a relevant experience and want to share it with others ?
+            Let's go! 🙌
+          </h3>
+          <p className="live-session-become-mentor__subtitle">
+            In our platform youe can share your cool experience in coding,
+            design, project managament and more! It's great when you create
+            aroud you good community of learners!
+          </p>
+          <div className="live-session-become-mentor__content content-live-session-become-mentor">
+            <ul className="content-live-session-become-mentor__list list-content-live-session-become-mentor">
+              <li className="list-content-live-session-become-mentor__item item-list-content-live-session-become-mentor">
+                <h5 className="item-list-content-live-session-become-mentor__title">
+                  Software development
+                </h5>
+                <div className="item-list-content-live-session-become-mentor__image">
+                  <img src={codingImg} alt="go" />
+                </div>
+              </li>
+              <li className="list-content-live-session-become-mentor__item">
+                <h5 className="item-list-content-live-session-become-mentor__title">
+                  UX/UI design
+                </h5>
+                <div className="item-list-content-live-session-become-mentor__image">
+                  <img src={designingImg} alt="go" />
+                </div>
+              </li>
+              <li className="list-content-live-session-become-mentor__item">
+                <h5 className="item-list-content-live-session-become-mentor__title">
+                  Project/product management
+                </h5>
+                <div className="item-list-content-live-session-become-mentor__image">
+                  <img src={pmImg} alt="go" />
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="live-session-become-mentor__guide">
+            <p>
+              Find our guide to become creator of live class under the link -
+              link
+            </p>
+          </div>
+          <button className="live-session-become-mentor__button button">
+            Become creator of live class
+          </button>
+        </div>
       </div>
     </div>
   );
 }
+
+// Do you have a relevant experience and want to share it with others ? Let's go!
+
+// In our platform youe can share your cool experience in coding, design, project managament and more!
+// It's great when you create aroud you good community of learners!
