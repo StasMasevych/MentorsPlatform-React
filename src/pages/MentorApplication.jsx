@@ -231,7 +231,7 @@ function FourthStep({ session, onChangeSession }) {
                   }
                   onClick={() => handleChangeIsActive(index)}
                 >
-                  {session}
+                  {session ? session : "I want to offer a fee for my sessions"}
                 </li>
               );
             })}
@@ -277,7 +277,41 @@ function FiveStep({ welcomeMessage, onChangeWelcomeMessage }) {
 
 // step 6
 
-function SixStep() {
+function SixStep({ onChangeProfileImage }) {
+  const [thumbnail, setThumbnail] = useState(null);
+  const [thumbnailError, setThumbnailError] = useState(null);
+  /* console.log(thumbnail); */
+  console.log(thumbnailError);
+
+  function onSubmitHandler(e) {
+    console.log("yoo!");
+  }
+
+  function handleFileChange(e) {
+    setThumbnail(null);
+    let selected = e.target.files[0];
+    console.log(selected);
+
+    if (!selected) {
+      setThumbnailError("Please, select some file");
+      return;
+    }
+
+    if (!selected.type.includes("image")) {
+      setThumbnailError("The selected file shall be an image");
+      return;
+    }
+
+    /*  if (selected.size > 100000) {
+      setThumbnailError('Image file size must be less than 100kb')
+      return
+    } */
+
+    setThumbnailError(null);
+    setThumbnail(selected);
+    onChangeProfileImage(selected);
+    console.log("thumbnail updated");
+  }
   return (
     <div className="mentor-application">
       <div className="mentor-application__container mentor-application__select-photo-container">
@@ -289,9 +323,11 @@ function SixStep() {
           of a mentor
         </p>
         <div className="mentor-application__form-box form-box-mentor-application">
-          <button className="mentor-application__select-button">
+          <label className="mentor-application__select-input" for="inputTag">
             📸 Select a photo
-          </button>
+            <input id="inputTag" type="file" onChange={handleFileChange} />
+          </label>
+          {thumbnailError && <div className="error">{thumbnailError}</div>}
         </div>
       </div>
     </div>
@@ -300,6 +336,8 @@ function SixStep() {
 
 export default function MentorApplication() {
   const [page, setPage] = useState(0);
+  const [finish, setFinish] = useState(false);
+
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [linkedinLink, setLinkedinLink] = useState("");
@@ -311,6 +349,7 @@ export default function MentorApplication() {
   const [topics, setTopics] = useState("");
   const [session, setSession] = useState("");
   const [welcomeMessage, setWelcomeMessage] = useState("");
+  const [profileImage, setProfileImage] = useState(null);
 
   // make states for all steps here and pass as props to child components
   // make formData general state object and put there all small states, and
@@ -331,6 +370,7 @@ export default function MentorApplication() {
       topics,
       session,
       welcomeMessage,
+      profileImage,
     };
 
     console.log(obj);
@@ -390,14 +430,27 @@ export default function MentorApplication() {
     }
 
     if (page === 5) {
-      return <SixStep />;
+      return <SixStep onChangeProfileImage={setProfileImage} />;
     }
 
-    /* return <FirstStep />; */
+    if (page === 6) {
+      /* setFinish(true); */
+      return (
+        <div className="mentor-application__messages-after-submit">
+          <p className="mentor-application__main-message-after-submit">
+            Congrats!🎉🎉🎉 You successfully submitted your applicaition!
+          </p>
+          <p className="mentor-application__second-message-after-submit">
+            We are going to check it for validation and contact with you soon!
+          </p>
+        </div>
+      );
+    }
   }
   return (
     <div>
       {conditionalComponent()}
+
       <div className="mentor-application__buttons">
         {page > 0 && (
           <div className="mentor-application__button-box-left">
