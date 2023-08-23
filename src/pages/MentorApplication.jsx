@@ -408,31 +408,22 @@ export default function MentorApplication() {
   }
 
   async function handleSubmit() {
+    setPage(page + 1);
     console.log("Calling handleSubmit");
 
     const newFormData = { ...formData, profileImage };
     console.log(newFormData);
 
-    /* const mentorData = {
-      name,
-      surname,
-      linkedinLink,
-      instagramLink,
-      job,
-      company,
-      category,
-      about,
-      topics,
-      session,
-      welcomeMessage,
-      profileImage,
-    }; */
     // dispatch obj with all states to reducer + took the UPD obj from context
-    /* dispatch({ type: "GET_MENTOR-FORM-DATA", payload: mentorData }); */
-    /* console.log(mentorData); */
-    //send to Firebase as new collection with new docs
+    dispatch({ type: "GET_MENTOR-FORM-DATA", payload: newFormData });
+
+    // send to Firebase as new collection with new docs
+
+    // add code
+
     // Store image in firebase
-    /* const storeImage = async (image) => {
+
+    const storeImage = async (image) => {
       return new Promise((resolve, reject) => {
         const storage = getStorage();
 
@@ -452,6 +443,7 @@ export default function MentorApplication() {
             const progress =
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log("Upload is " + progress + "% done");
+            // eslint-disable-next-line default-case
             switch (snapshot.state) {
               case "paused":
                 console.log("Upload is paused");
@@ -473,10 +465,10 @@ export default function MentorApplication() {
           }
         );
       });
-    }; */
-    /* const imgUrl = await storeImage(mentorData.profileImage); */
-    /* const imgUrl = storeImage(mentorData.profileImage); */
-    /* console.log(imgUrl); */
+    };
+    const imgUrl = await storeImage(newFormData.profileImage);
+    /*  const imgUrl = storeImage(mentorData.profileImage); */
+    console.log(imgUrl);
   }
 
   function conditionalComponent() {
