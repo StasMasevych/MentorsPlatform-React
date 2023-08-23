@@ -1,7 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { categories } from "../data/data-categories/data-categories";
 
+import { PlatformContext } from "../context/PlatformContext";
+
 import Category from "../components/Category";
+
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {
+  getStorage,
+  ref,
+  uploadBytesResumable,
+  getDownloadURL,
+} from "firebase/storage";
+
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+
+import { db } from "../firebase/config";
+import { auth } from "../firebase/config";
+
 // step 1
 
 function FirstStep({
@@ -231,7 +247,7 @@ function FourthStep({ session, onChangeSession }) {
                   }
                   onClick={() => handleChangeIsActive(index)}
                 >
-                  {session ? session : "I want to offer a fee for my sessions"}
+                  {session}
                 </li>
               );
             })}
@@ -277,7 +293,7 @@ function FiveStep({ welcomeMessage, onChangeWelcomeMessage }) {
 
 // step 6
 
-function SixStep({ onChangeProfileImage }) {
+function SixStep({ onChangeProfileImage, handleSubmit }) {
   const [thumbnail, setThumbnail] = useState(null);
   const [thumbnailError, setThumbnailError] = useState(null);
   /* console.log(thumbnail); */
@@ -322,13 +338,16 @@ function SixStep({ onChangeProfileImage }) {
           The photo shall with good quality and properly demonstrate the person
           of a mentor
         </p>
-        <div className="mentor-application__form-box form-box-mentor-application">
+        <form
+          onSubmit={handleSubmit}
+          className="mentor-application__form-box form-box-mentor-application"
+        >
           <label className="mentor-application__select-input" for="inputTag">
             📸 Select a photo
             <input id="inputTag" type="file" onChange={handleFileChange} />
           </label>
           {thumbnailError && <div className="error">{thumbnailError}</div>}
-        </div>
+        </form>
       </div>
     </div>
   );
@@ -336,7 +355,9 @@ function SixStep({ onChangeProfileImage }) {
 
 export default function MentorApplication() {
   const [page, setPage] = useState(0);
-  const [finish, setFinish] = useState(false);
+  /* console.log(page); */
+
+  // make states for all steps here and pass as props to child components
 
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
@@ -347,18 +368,25 @@ export default function MentorApplication() {
   const [category, setCategory] = useState("");
   const [about, setAbout] = useState("");
   const [topics, setTopics] = useState("");
-  const [session, setSession] = useState("");
+  const [session, setSession] = useState(
+    "I want to offer a fee for my sessions"
+  );
   const [welcomeMessage, setWelcomeMessage] = useState("");
   const [profileImage, setProfileImage] = useState(null);
+  // all data
+  const [formData, setFormData] = useState({});
+  console.log(formData);
+  // dispatch obj with all states to reducer + took the UPD obj from context
 
-  // make states for all steps here and pass as props to child components
-  // make formData general state object and put there all small states, and
-  // dispatch it to reducer + send to Firebase as new collection with new docs
+  const { dispatch, mentorFormData } = useContext(PlatformContext);
+  console.log(mentorFormData, "from PlatformContext");
 
-  function handleSubmit() {
+  console.log("This is page ", page); // reflect to render Steps, page 6 its finish
+
+  function handleAddDataToForm() {
     setPage(page + 1);
 
-    const obj = {
+    const mentorData = {
       name,
       surname,
       linkedinLink,
@@ -373,7 +401,82 @@ export default function MentorApplication() {
       profileImage,
     };
 
-    console.log(obj);
+    setFormData(mentorData);
+
+    /* console.log(mentorData); */
+    console.log("I am handleAddDataToForm and I am calling");
+  }
+
+  async function handleSubmit() {
+    console.log("Calling handleSubmit");
+
+    const newFormData = { ...formData, profileImage };
+    console.log(newFormData);
+
+    /* const mentorData = {
+      name,
+      surname,
+      linkedinLink,
+      instagramLink,
+      job,
+      company,
+      category,
+      about,
+      topics,
+      session,
+      welcomeMessage,
+      profileImage,
+    }; */
+    // dispatch obj with all states to reducer + took the UPD obj from context
+    /* dispatch({ type: "GET_MENTOR-FORM-DATA", payload: mentorData }); */
+    /* console.log(mentorData); */
+    //send to Firebase as new collection with new docs
+    // Store image in firebase
+    /* const storeImage = async (image) => {
+      return new Promise((resolve, reject) => {
+        const storage = getStorage();
+
+        const fileName = `${auth.currentUser.uid}-${
+          image?.name
+        }-${crypto.randomUUID()}`;
+
+        const storageRef = ref(storage, "images/" + fileName);
+
+        const uploadTask = uploadBytesResumable(storageRef, image);
+
+        uploadTask.on(
+          "state_changed",
+          (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+            const progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload is " + progress + "% done");
+            switch (snapshot.state) {
+              case "paused":
+                console.log("Upload is paused");
+                break;
+              case "running":
+                console.log("Upload is running");
+                break;
+            }
+          },
+          (error) => {
+            reject(error);
+          },
+          () => {
+            // Handle successful uploads on complete
+            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+              resolve(downloadURL);
+            });
+          }
+        );
+      });
+    }; */
+    /* const imgUrl = await storeImage(mentorData.profileImage); */
+    /* const imgUrl = storeImage(mentorData.profileImage); */
+    /* console.log(imgUrl); */
   }
 
   function conditionalComponent() {
@@ -430,15 +533,19 @@ export default function MentorApplication() {
     }
 
     if (page === 5) {
-      return <SixStep onChangeProfileImage={setProfileImage} />;
+      return (
+        <SixStep
+          onChangeProfileImage={setProfileImage}
+          handleSubmit={handleSubmit}
+        />
+      );
     }
 
     if (page === 6) {
-      /* setFinish(true); */
       return (
         <div className="mentor-application__messages-after-submit">
           <p className="mentor-application__main-message-after-submit">
-            Congrats!🎉🎉🎉 You successfully submitted your applicaition!
+            Congrats!🎉🎉🎉 You successfully submitted your application!
           </p>
           <p className="mentor-application__second-message-after-submit">
             We are going to check it for validation and contact with you soon!
@@ -452,7 +559,7 @@ export default function MentorApplication() {
       {conditionalComponent()}
 
       <div className="mentor-application__buttons">
-        {page > 0 && (
+        {page > 0 && page < 6 && (
           <div className="mentor-application__button-box-left">
             <button
               className="mentor-application__button button"
@@ -464,14 +571,22 @@ export default function MentorApplication() {
         )}
 
         <div className="mentor-application__button-box-right">
-          <button
-            className="mentor-application__button button"
-            onClick={handleSubmit}
-          >
-            {page === 0 || page === 1 || page === 2 || page === 3 || page === 4
-              ? "Next"
-              : "Join as a mentor"}
-          </button>
+          {page === 6 ? null : (
+            <button
+              className="mentor-application__button button"
+              onClick={() => {
+                page === 5 ? handleSubmit() : handleAddDataToForm();
+              }}
+            >
+              {page === 0 ||
+              page === 1 ||
+              page === 2 ||
+              page === 3 ||
+              page === 4
+                ? "Next"
+                : "Join as a mentor"}
+            </button>
+          )}
         </div>
       </div>
     </div>
