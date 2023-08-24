@@ -411,15 +411,14 @@ export default function MentorApplication() {
     setPage(page + 1);
     console.log("Calling handleSubmit");
 
-    const newFormData = { ...formData, profileImage };
+    const newFormData = {
+      ...formData,
+      profileImage,
+    };
     console.log(newFormData);
 
     // dispatch obj with all states to reducer + took the UPD obj from context
     dispatch({ type: "GET_MENTOR-FORM-DATA", payload: newFormData });
-
-    // send to Firebase as new collection with new docs
-
-    // add code
 
     // Store image in firebase
 
@@ -469,6 +468,19 @@ export default function MentorApplication() {
     const imgUrl = await storeImage(newFormData.profileImage);
     /*  const imgUrl = storeImage(mentorData.profileImage); */
     console.log(imgUrl);
+
+    // send to Firebase as new collection with new docs
+
+    const docRef = collection(db, "mentorApplications");
+
+    const updatedFormData = {
+      ...newFormData,
+      timestamp: serverTimestamp(),
+    };
+
+    delete updatedFormData.profileImage;
+
+    await addDoc(docRef, updatedFormData);
   }
 
   function conditionalComponent() {
