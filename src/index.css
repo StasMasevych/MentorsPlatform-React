@@ -46,7 +46,8 @@ body {
   flex-direction: column;
   min-height: 100%; */
   width: 100%;
-  min-height: 100%;
+  /* min-height: 100%; */
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
@@ -2319,6 +2320,7 @@ textarea {
 }
 
 /* ======================== */
+/* ===MENTOR APPLICATION=== */
 /* ======================== */
 
 .mentor-application {
@@ -2543,8 +2545,20 @@ input[type="file"] {
   font-size: 22px;
 }
 
-/* ======================== */
-/* ======================== */
+/* ========================= */
+/* ===CREATE LIVE CLASSES=== */
+/* ========================= */
+
+.create-live-class__header-message {
+  margin: 20px 0;
+  padding: 12px;
+  background-color: #76c7ad;
+  /* background-color: #e5771f; */
+  border-radius: 16px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
 /* ======================== */
 /* ======================== */
 /* ======================== */

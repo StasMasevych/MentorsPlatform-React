@@ -143,7 +143,10 @@ export default function BecomeMentor() {
               link
             </p>
           </div>
-          <button className="live-session-become-mentor__button button">
+          <button
+            className="live-session-become-mentor__button button"
+            onClick={() => navigate("/create-live-class")}
+          >
             Become creator of live class
           </button>
         </div>

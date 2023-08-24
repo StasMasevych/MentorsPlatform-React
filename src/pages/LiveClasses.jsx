@@ -4,14 +4,16 @@ import { liveClassesArray } from "../data/data-courses/data-liveClasses";
 import LiveClassItem from "../components/LiveClassItem";
 import { PlatformContext } from "../context/PlatformContext";
 
+import Subscription from "../components/Subscription";
+
 // add search for class title, mentor name and expertise
 // add reviews like ADPList
 // subscription will be send to Firebase DB
 
 export default function LiveClasses() {
-  const [inputText, setInputText] = useState("");
+  /* const [inputText, setInputText] = useState(""); */
 
-  const { dispatch } = useContext(PlatformContext);
+  /* const { dispatch } = useContext(PlatformContext); */
 
   useEffect(() => {
     window.scrollTo({
@@ -21,14 +23,14 @@ export default function LiveClasses() {
     });
   }, []);
 
-  function onSumbitHandler(e) {
+  /*  function onSumbitHandler(e) {
     e.preventDefault();
 
     if (!inputText) return;
 
     dispatch({ type: "GET_SUBSCRIPTION", payload: inputText });
     setInputText("");
-  }
+  } */
 
   return (
     <div className="live-classes">
@@ -47,27 +49,8 @@ export default function LiveClasses() {
             return <LiveClassItem key={liveClass.id} liveClass={liveClass} />;
           })}
         </ul>
-        {/* <div className="classes__reviews"></div> */}
-        <div className="live-classes__contact contact-live-classes">
-          <h4 className="contact-live-classes__title">
-            Get the information about new classes 🤩
-          </h4>
-          <form
-            className="contact-live-classes__form form-contact-live-classes"
-            onSubmit={onSumbitHandler}
-          >
-            <input
-              className="form-contact-live-classes__input"
-              type="text"
-              placeholder="Enter your email"
-              value={inputText}
-              onChange={(e) => setInputText(e.target.value)}
-            />
-            <button className="form-contact-live-classes__button button">
-              Add
-            </button>
-          </form>
-        </div>
+
+        <Subscription />
       </div>
     </div>
   );
