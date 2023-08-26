@@ -12,6 +12,7 @@ import { PlatformContext } from "../context/PlatformContext";
 import { categories } from "../data/data-categories/data-categories";
 
 import MentorItem from "../components/MentorItem";
+import HelpRequest from "../components/HelpRequest";
 
 import { allMentorsArray } from "../data/data-mentors/allMentorsArray";
 import { paginate } from "../utils/paginate";
@@ -242,6 +243,8 @@ export default function AllMentors() {
             next
           </button>
         </div>
+
+        <HelpRequest />
       </div>
     </div>
   );
