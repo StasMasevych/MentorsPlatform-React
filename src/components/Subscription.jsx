@@ -19,7 +19,9 @@ export default function Subscription() {
       >
         Subscribe
       </button>
-      {modalOpen && <ModalSubscription setOpenModal={setModalOpen} />}
+      {modalOpen && (
+        <ModalSubscription modalOpen={modalOpen} setOpenModal={setModalOpen} />
+      )}
     </div>
   );
 }
