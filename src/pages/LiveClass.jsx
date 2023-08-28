@@ -4,6 +4,7 @@ import { getLiveClass } from "../context/PlatformActions";
 
 import { liveClassesArray } from "../data/data-courses/data-liveClasses";
 import { PlatformContext } from "../context/PlatformContext";
+import CantJoin from "../components/CantJoin";
 
 // why our classes (3-4 cards)
 // add reviews
@@ -335,27 +336,8 @@ export default function LiveClass() {
             </ul>
           </div>
 
-          <div className="main-live-class__cant-join-main-live-class">
-            <div className="cant-join-main-live-class">
-              <h4 className="cant-join-main-live-class__title">
-                Do you want to stay in touch with us?
-              </h4>
-              <p className="cant-join-main-live-class_subtitle">
-                Get updates on new mentors, live classes and platform features
-              </p>
-              <button
-                className="cant-join-main-live-class__button button"
-                /* onClick={() => setModalOpen(true)} */
-              >
-                Subscribe
-              </button>
-              {/* {modalOpen && (
-                <ModalSubscription
-                  modalOpen={modalOpen}
-                  setOpenModal={setModalOpen}
-                />
-              )} */}
-            </div>
+          <div className="main-live-class__cant-join">
+            <CantJoin />
           </div>
         </div>
       </div>
