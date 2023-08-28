@@ -49,7 +49,7 @@ export default function LiveClass() {
               {singleLiveClass.shortDescription}
             </h5>
             <button className="text-block-header-live-class__button button">
-              Enrol now
+              Enroll now
             </button>
           </div>
           <div className="header-live-class__image">
@@ -104,9 +104,9 @@ export default function LiveClass() {
               </div>
             </div>
 
-            <div className="content-main-live-class__separator"></div>
+            <div className="content-main-live-class__separator separator"></div>
 
-            <div className="content-main-live-class__audience audience-content-main-live-class">
+            {/* <div className="content-main-live-class__audience audience-content-main-live-class">
               <h4 className="audience-content-main-live-class__title">
                 Who is this course for
               </h4>
@@ -156,7 +156,7 @@ export default function LiveClass() {
                   </p>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="main-live-class__enrol-box enrol-box-main-live-class">
@@ -182,7 +182,7 @@ export default function LiveClass() {
             </div>
 
             <button className="enrol-box-main-live-class__button button">
-              Enrol
+              Enroll
             </button>
             <div className="enrol-box-main-live-class__include include-enrol-box-main-live-class">
               <h6 className="include-enrol-box-main-live-class__text">
@@ -197,6 +197,164 @@ export default function LiveClass() {
               <p className="include-enrol-box-main-live-class__item">
                 📚 Exclusive resources
               </p>
+            </div>
+          </div>
+
+          <div className="main-live-class__audience content-main-live-class__audience audience-content-main-live-class">
+            <h4 className="audience-content-main-live-class__title">
+              Who is this course for
+            </h4>
+            <ul className="audience-content-main-live-class__list list-audience-content-main-live-class">
+              <li className="list-audience-content-main-live-class__item item-list-audience-content-main-live-class">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+              <li className="list-audience-content-main-live-class__item">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+              <li className="list-audience-content-main-live-class__item">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+              <li className="list-audience-content-main-live-class__item">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+              <li className="list-audience-content-main-live-class__item">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+              <li className="list-audience-content-main-live-class__item">
+                <span>👨‍💻</span>
+                <h5 className="item-list-audience-content-main-live-class__title">
+                  Founders / Entrepreneurs
+                </h5>
+                <p className="item-list-audience-content-main-live-class__text">
+                  Get ahead of the competition by utilizing the latest AI tools
+                  and techniques to create innovative and effective products
+                  that stand out from the crowd
+                </p>
+              </li>
+            </ul>
+            <div className="separator"></div>
+          </div>
+
+          <div className="main-live-class__benefits benefits-main-live-class">
+            <h2 className="benefits-main-live-class__title">
+              What you will get from this live class?
+            </h2>
+            <ul className="benefits-main-live-class__list list-benefits-main-live-class">
+              <li className="list-benefits-main-live-class__item item-list-benefits-main-live-class">
+                <span className="item-list-benefits-main-live-class__icon">
+                  ✅
+                </span>
+                <div className="item-list-benefits-main-live-class__text-block">
+                  <h5>New skills</h5>
+                  <p>
+                    Get ahead of the competition by utilizing the latest AI
+                    tools and techniques to create innovative and effective
+                    products that stand out from the crowd
+                  </p>
+                </div>
+              </li>
+              <li className="list-benefits-main-live-class__item">
+                <span className="item-list-benefits-main-live-class__icon">
+                  ✅
+                </span>
+                <div className="item-list-benefits-main-live-class__text-block">
+                  <h5>New skills</h5>
+                  <p>
+                    Get ahead of the competition by utilizing the latest AI
+                    tools and techniques to create innovative and effective
+                    products that stand out from the crowd
+                  </p>
+                </div>
+              </li>
+              <li className="list-benefits-main-live-class__item">
+                <span className="item-list-benefits-main-live-class__icon">
+                  ✅
+                </span>
+                <div className="item-list-benefits-main-live-class__text-block">
+                  <h5>New skills</h5>
+                  <p>
+                    Get ahead of the competition by utilizing the latest AI
+                    tools and techniques to create innovative and effective
+                    products that stand out from the crowd
+                  </p>
+                </div>
+              </li>
+              <li className="list-benefits-main-live-class__item">
+                <span className="item-list-benefits-main-live-class__icon">
+                  ✅
+                </span>
+                <div className="item-list-benefits-main-live-class__text-block">
+                  <h5>New skills</h5>
+                  <p>
+                    Get ahead of the competition by utilizing the latest AI
+                    tools and techniques to create innovative and effective
+                    products that stand out from the crowd
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="main-live-class__cant-join-main-live-class">
+            <div className="cant-join-main-live-class">
+              <h4 className="cant-join-main-live-class__title">
+                Do you want to stay in touch with us?
+              </h4>
+              <p className="cant-join-main-live-class_subtitle">
+                Get updates on new mentors, live classes and platform features
+              </p>
+              <button
+                className="cant-join-main-live-class__button button"
+                /* onClick={() => setModalOpen(true)} */
+              >
+                Subscribe
+              </button>
+              {/* {modalOpen && (
+                <ModalSubscription
+                  modalOpen={modalOpen}
+                  setOpenModal={setModalOpen}
+                />
+              )} */}
             </div>
           </div>
         </div>

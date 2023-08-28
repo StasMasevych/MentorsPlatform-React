@@ -62,11 +62,11 @@ export default function ModalHelpRequest({ modalOpen, setOpenModal }) {
               onSubmit={onSubmitHandler}
             >
               <h2 className="form-help-request-modal__title help-request-modal-form-item">
-                📌 You didn't find what you expected? Just keep calm 🧘‍♂️
+                📌 Make a request on what is important for you
               </h2>
               <p className="form-help-request-modal__subtitle help-request-modal-form-item">
                 Add what topics, mentors or live classes you want to have and we
-                will try to help you 👋
+                will try to help you with that 👋
               </p>
               <textarea
                 className="help-request-modal__textarea help-request-modal-form-item"

@@ -7,10 +7,10 @@ export default function HelpRequest() {
   return (
     <div className="help-request">
       <h4 className="help-request__title">
-        You didn't find some topic and want to learn it?
+        You didn't find what you expected? Just keep calm 🧘‍♂️
       </h4>
       <p className="help-request__subtitle">
-        Let us know and we are going to help you!
+        Let us know and we will try to help you!
       </p>
       <button
         className="help-request__button button"
