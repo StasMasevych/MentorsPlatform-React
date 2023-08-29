@@ -1,17 +1,33 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
+
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+
+import { db } from "../firebase/config";
+
 import { getLiveClass } from "../context/PlatformActions";
 
 import { liveClassesArray } from "../data/data-courses/data-liveClasses";
 import { PlatformContext } from "../context/PlatformContext";
 import CantJoin from "../components/CantJoin";
 
+import bgImage from "../assets/how it works images/programming-coffee.png";
+
 // why our classes (3-4 cards)
 // add reviews
 // add FAQ
 
 export default function LiveClass() {
-  const { singleLiveClass, dispatch } = useContext(PlatformContext);
+  // for registartion
+  const [name, setName] = useState("");
+  const [surname, setSurame] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [promo, setPromo] = useState("");
+  //
+  const { singleLiveClass, dispatch, registrationToLiveClass } =
+    useContext(PlatformContext);
+  console.log(registrationToLiveClass);
   const params = useParams();
 
   useEffect(() => {
@@ -20,6 +36,38 @@ export default function LiveClass() {
     dispatch({ type: "GET_LIVE-CLASS", payload: LiveClassObject });
     window.scrollTo(0, 0);
   }, []);
+
+  // registartion form
+
+  async function onSubmitHandler(e) {
+    e.preventDefault();
+
+    const formData = {
+      name,
+      surname,
+      email,
+      phone,
+      promo,
+    };
+
+    dispatch({ type: "GET_REGISTRATION-TO-CLASS", payload: formData });
+
+    // send to firestore
+    const docRef = collection(db, "registartionsToLiveClasses");
+
+    const registartionData = {
+      ...formData,
+      timestamp: serverTimestamp(),
+    };
+
+    await addDoc(docRef, registartionData);
+
+    setName("");
+    setSurame("");
+    setEmail("");
+    setPhone("");
+    setPromo("");
+  }
 
   return (
     <div className="live-class">
@@ -340,7 +388,101 @@ export default function LiveClass() {
           <div className="main-live-class__cant-join">
             <CantJoin />
           </div>
-          {/* add meet tutor - increase row + 1 in grid container "live-class__main"*/}
+
+          <div className="main-live-class__meet-tutor meet-tutor">
+            <h2 className="meet-tutor__title">Meet the tutor</h2>
+            <div className="meet-tutor__content content-meet-tutor">
+              <div className="content-meet-tutor__image">
+                <img src={singleLiveClass.tutorImg} alt="creator" />
+              </div>
+              <div className="content-meet-tutor__text text-content-meet-tutor">
+                <h5 className="text-content-meet-tutor__title">Max Haining</h5>
+                <p className="text-content-meet-tutor__description">
+                  Founded 100DaysOfNoCode in 2020. Started as a free Twitter
+                  challenge, and running cohort-based courses since October 2021
+                  with 250+ students from all over the world 🙂
+                </p>
+                <p className="text-content-meet-tutor__description">
+                  Coming from a non-tech background myself, I could never
+                  implement my own ideas. Learning to leverage No-Code and AI
+                  has unlocked huge leverage over my time and creativity. I'm
+                  now on a mission to help more innovators unlock the same
+                  freedom in their work 🙌
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="main-live-class__register register">
+            {!registrationToLiveClass ? (
+              <>
+                <h2 className="register__title">Register to live class 🙌</h2>
+                <div className="register__content">
+                  <form
+                    className="register__form form-register"
+                    onSubmit={onSubmitHandler}
+                  >
+                    <h2 className="form-register__title">Registration</h2>
+                    <input
+                      className="form-register__input"
+                      type="text"
+                      placeholder="name"
+                      onChange={(e) => setName(e.target.value)}
+                      value={name}
+                    />
+                    <input
+                      className="form-register__input"
+                      type="text"
+                      placeholder="surname"
+                      onChange={(e) => setSurame(e.target.value)}
+                      value={surname}
+                    />
+                    <input
+                      className="form-register__input"
+                      type="email"
+                      placeholder="email"
+                      onChange={(e) => setEmail(e.target.value)}
+                      value={email}
+                    />
+                    <input
+                      className="form-register__input"
+                      type="text"
+                      placeholder="phone number"
+                      onChange={(e) => setPhone(e.target.value)}
+                      value={phone}
+                    />
+                    <input
+                      className="form-register__input"
+                      type="text"
+                      placeholder="promo code"
+                      onChange={(e) => setPromo(e.target.value)}
+                      value={promo}
+                    />
+                    {/* add lter I accept terms and condition checkbox */}
+                    <button className="form-register__button button">
+                      Register
+                    </button>
+                  </form>
+
+                  <div className="register__bg-image">
+                    <img src={bgImage} alt="bg" />
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="register__confirmation-message confirmation-message-register">
+                <h2 className="confirmation-message-register__title">
+                  Thank you for registration! 🎉🎉🎉
+                </h2>
+                <p>The last step is to make payment for live class</p>
+                {/* add navidation from button to Payment page / WayForPay */}
+                <button className="confirmation-message-register__button button">
+                  Pay
+                </button>
+              </div>
+            )}
+          </div>
+
           {/* add reviews later - increase row + 1 in grid container "live-class__main" */}
           {/* add register form to live class - increase row + 1 in grid container "live-class__main"  */}
         </div>

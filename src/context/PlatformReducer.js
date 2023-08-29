@@ -12,6 +12,12 @@ export const platformReducer = (state, action) => {
       return { ...state, mentorFormData: action.payload, loading: false };
     case "GET_SUBSCRIPTION":
       return { ...state, subscription: action.payload, loading: false };
+    case "GET_REGISTRATION-TO-CLASS":
+      return {
+        ...state,
+        registrationToLiveClass: action.payload,
+        loading: false,
+      };
     case "GET_REQUEST-TO-HELP":
       return { ...state, requestToHelp: action.payload, loading: false };
     case "SET_LOADING":

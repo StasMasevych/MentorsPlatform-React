@@ -17,6 +17,7 @@ export function PlatformProvider({ children }) {
     mentorFormData: {}, // mentor application
     subscription: "", // from ModalSubscription
     requestToHelp: "", // from ModalHelpRequest
+    registrationToLiveClass: null, // from LiveClass
     loading: false,
   };
 
