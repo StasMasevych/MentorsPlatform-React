@@ -64,7 +64,8 @@ export default function LiveClass() {
             <div className="content-main-live-class__creator creator-content-main-live-class">
               <div className="creator-content-main-live-class__image">
                 <img
-                  src="https://media.npr.org/assets/img/2019/09/24/ap_19267645664475-39a0b4700f0b4127e4f83db26f015b4b42aecd1a.jpg"
+                  /*  src="https://media.npr.org/assets/img/2019/09/24/ap_19267645664475-39a0b4700f0b4127e4f83db26f015b4b42aecd1a.jpg" */
+                  src={singleLiveClass.tutorImg}
                   alt="creator"
                 />
               </div>
@@ -339,6 +340,9 @@ export default function LiveClass() {
           <div className="main-live-class__cant-join">
             <CantJoin />
           </div>
+          {/* add meet tutor - increase row + 1 in grid container "live-class__main"*/}
+          {/* add reviews later - increase row + 1 in grid container "live-class__main" */}
+          {/* add register form to live class - increase row + 1 in grid container "live-class__main"  */}
         </div>
       </div>
     </div>

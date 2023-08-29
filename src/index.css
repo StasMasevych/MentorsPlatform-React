@@ -1455,15 +1455,17 @@ ul {
 }
 
 .creator-content-main-live-class__image {
+  width: 14%;
 }
 
 .creator-content-main-live-class__image img {
   display: block;
   margin: 0 auto;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
   height: 14vh;
   border-radius: 50px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .creator-content-main-live-class__text {
@@ -1704,7 +1706,7 @@ ul {
 
 .main-live-class__cant-join {
   background-color: #f9fafa;
-  height: 54vh;
+  height: 38vh;
   border-radius: 16px;
   padding: 18px;
 }

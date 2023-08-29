@@ -1,3 +1,5 @@
+// classes images
+
 import courseReact from "../../assets/courses images/class_react.png";
 import courseMicrfrontend from "../../assets/courses images/class_react2.png";
 import courseChatGPT from "../../assets/courses images/class_chatgpt.png";
@@ -7,10 +9,22 @@ import courseInsta from "../../assets/courses images/class_insta.png";
 import courseFlutter from "../../assets/courses images/class_flutter.png";
 import courseFigma from "../../assets/courses images/class_figma.png";
 
+// author images
+
+import tutorReactImg from "../../assets/avatars/adam.png";
+import tutorMicrfrontendImg from "../../assets/avatars/bravos.png";
+import tutorJavaImg from "../../assets/avatars/kelly.png";
+import tutorNetflixImg from "../../assets/avatars/kim.png";
+import tutorInstaImg from "../../assets/avatars/me.jpg";
+import tutorFigmaImg from "../../assets/avatars/john.png";
+import tutorFlutterImg from "../../assets/avatars/anna.png";
+import tutorChatGptImg from "../../assets/avatars/adam2.png";
+
 export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "React course with cool projects",
+    tutorImg: tutorReactImg,
     category: "React",
     image: courseReact,
     author: "Peter",
@@ -25,6 +39,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "ChatGPT masterclass with full instruction to use",
+    tutorImg: tutorChatGptImg,
     category: "ChatGPT",
     image: courseChatGPT,
     author: "Sam",
@@ -39,6 +54,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Building Netflix clone with React",
+    tutorImg: tutorNetflixImg,
     category: "React",
     image: courseNetflix,
     author: "Ken",
@@ -53,6 +69,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Building Telegram Bot with Java",
+    tutorImg: tutorJavaImg,
     category: "Java",
     image: courseJava,
     author: "Alex",
@@ -67,6 +84,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Deep dive into mecrofrontend with React",
+    tutorImg: tutorMicrfrontendImg,
     category: "React",
     image: courseMicrfrontend,
     author: "Andriy",
@@ -81,6 +99,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Build Instagram clone authentification",
+    tutorImg: tutorInstaImg,
     category: "React",
     image: courseInsta,
     author: "Kelly",
@@ -95,6 +114,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Become Figma superhero masterclass",
+    tutorImg: tutorFigmaImg,
     category: "Figma",
     image: courseFigma,
     author: "Deniel",
@@ -109,6 +129,7 @@ export const liveClassesArray = [
   {
     id: crypto.randomUUID(),
     name: "Build Flutter app",
+    tutorImg: tutorFlutterImg,
     category: "Flutter",
     image: courseFlutter,
     author: "Devid",
