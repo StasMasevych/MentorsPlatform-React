@@ -10,6 +10,8 @@ export const platformReducer = (state, action) => {
       return { ...state, singleLiveClass: action.payload, loading: false };
     case "GET_MENTOR-FORM-DATA":
       return { ...state, mentorFormData: action.payload, loading: false };
+    case "GET_CREATOR-FORM-DATA":
+      return { ...state, creatorFormData: action.payload, loading: false };
     case "GET_SUBSCRIPTION":
       return { ...state, subscription: action.payload, loading: false };
     case "GET_REGISTRATION-TO-CLASS":

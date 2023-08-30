@@ -97,9 +97,12 @@ export default function LiveClass() {
             <h5 className="text-block-header-live-class__subtitle">
               {singleLiveClass.shortDescription}
             </h5>
-            <button className="text-block-header-live-class__button button">
+            <a
+              className="text-block-header-live-class__button button"
+              href="#registration"
+            >
               Enroll now
-            </button>
+            </a>
           </div>
           <div className="header-live-class__image">
             <img src={singleLiveClass.image} alt="live-class" />
@@ -231,9 +234,12 @@ export default function LiveClass() {
               </div>
             </div>
 
-            <button className="enrol-box-main-live-class__button button">
+            <a
+              className="enrol-box-main-live-class__button button"
+              href="#registration"
+            >
               Enroll
-            </button>
+            </a>
             <div className="enrol-box-main-live-class__include include-enrol-box-main-live-class">
               <h6 className="include-enrol-box-main-live-class__text">
                 This live class include
@@ -413,7 +419,11 @@ export default function LiveClass() {
             </div>
           </div>
 
-          <div className="main-live-class__register register">
+          <div
+            className="main-live-class__register register"
+            /* name="registration" */
+            id="registration"
+          >
             {!registrationToLiveClass ? (
               <>
                 <h2 className="register__title">Register to live class 🙌</h2>

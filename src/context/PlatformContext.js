@@ -15,6 +15,7 @@ export function PlatformProvider({ children }) {
     singleMentor: {}, // mentor page
     singleLiveClass: {}, // single liveClass page
     mentorFormData: {}, // mentor application
+    creatorFormData: {}, // create live class applocation
     subscription: "", // from ModalSubscription
     requestToHelp: "", // from ModalHelpRequest
     registrationToLiveClass: null, // from LiveClass
