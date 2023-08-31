@@ -61,6 +61,8 @@ body {
 }
 
 /* ======================== */
+/* =========HEADER========= */
+/* ======================== */
 
 .header__container {
   display: flex;
@@ -148,6 +150,164 @@ body {
   background-color: rgb(215, 35, 215);
 }
 
+/* ======================== */
+/* ===HEADER RESPONSIVE=== */
+/* ======================== */
+
+/* -----burger menu----- */
+
+.icon-menu,
+.close-icon-menu {
+  display: none;
+}
+
+/* -----------------------*/
+
+@media (max-width: 991.98px) {
+  [class*="__container"] {
+    /* max-width: 750px; */
+    max-width: 850px;
+  }
+
+  .header__logo {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .menu {
+    padding: 0 22px;
+  }
+
+  .menu__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .menu__item {
+    margin: 0;
+  }
+
+  .button {
+    padding: 12px 24px;
+  }
+
+  .buttons-header__login {
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* burger */
+  .close-icon-menu,
+  .icon-menu {
+    display: flex;
+    position: relative;
+    flex: 0 0 30px; /* ширина */
+    height: 18px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0px 0px 0px 20px;
+  }
+  /* створення 3 полосок */
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    background-color: #000;
+    height: 2px;
+  }
+
+  .icon-menu span {
+    height: 2px;
+    background-color: #000;
+  }
+
+  .close-icon-menu {
+    display: none;
+  }
+
+  .close-icon-menu::before,
+  .close-icon-menu::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    height: 2px;
+  }
+
+  .close-icon-menu::before {
+    transform: rotate(45deg);
+  }
+
+  .close-icon-menu::after {
+    transform: rotate(-45deg);
+  }
+
+  .header:target .icon-menu {
+    display: none;
+  }
+  .header:target .close-icon-menu {
+    display: flex;
+  }
+
+  .menu__body {
+    position: fixed;
+    top: 0;
+    left: -100%; /* ховаємо бургер до того як буде клік на бургер */
+    width: 100%;
+    /* width: 50%; */
+    height: 100%;
+    overflow: auto; /* якщо буде більше пунктів в меню щоб був скрол */
+    /* background-color: #4285f4; */
+    background-color: #fff;
+    padding: 90px 15px 30px 15px;
+    transition: left 0.3s ease 0s; /* меню буде виїжати зліва */
+  }
+
+  .header:target .menu__body {
+    left: 0; /* повертаєм наш бургер щоб було видно при кліку на бургер*/
+  }
+
+  /* прокладка - починаєтся перед меню зверху вертикально оскільки у нас флекс-дірекшн колонка, щоб меню заїжало вниз (прокрутка) при скролі */
+  .header:target .menu__body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px; /* висота хедера */
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu__link {
+    /* color: #fff; */
+    font-size: 20px;
+  }
+
+  .menu__item {
+    margin: 0px 0px 25px 0px;
+  }
+
+  .menu__item:last-child {
+    margin-bottom: 0; /* забираємо відступ внизу в останнього елементу */
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header__logo {
+    flex: 0 0 40px; /* розмір лого */
+  }
+}
+
+/* ======================== */
+/* ======================== */
 /* ======================== */
 
 .hero {

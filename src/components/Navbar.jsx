@@ -17,13 +17,14 @@ export default function NavBar() {
   /* if (location.pathname === "/login") return; */
 
   return (
-    <header className="header">
-      <div className="header__container">
+    <header className="header" id="open">
+      <div className="header__container" id="close">
         <Link to="/" className="header__logo">
           Builders
         </Link>
-        <nav className="header__menu menu">
-          <nav className="menu__body">
+        <div className="header__menu menu">
+          {/* menu__body - бургер меню без JS + нижче кнопка (a) для виклику */}
+          <nav class="menu__body" id="menue">
             <ul className="menu__list">
               <li className="menu__item">
                 <Link to="/about" className="menu__link">
@@ -52,7 +53,7 @@ export default function NavBar() {
               </li>
             </ul>
           </nav>
-        </nav>
+        </div>
         <div className="header__buttons buttons-header">
           {!user && (
             <>
@@ -65,6 +66,10 @@ export default function NavBar() {
               <button className="button" onClick={() => navigate("/signup")}>
                 Sign up
               </button>
+              <a href="#open" className="icon-menu">
+                <span></span>
+              </a>
+              <a href="#close" className="close-icon-menu"></a>
             </>
           )}
           {user && (
