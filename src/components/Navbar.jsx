@@ -1,8 +1,16 @@
+import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLogut } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
+import { MdClose } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
+
 export default function NavBar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  //
+
   const { logout } = useLogut();
   /* console.log(logout); */
   const { user } = useAuthContext();
@@ -24,30 +32,54 @@ export default function NavBar() {
         </Link>
         <div className="header__menu menu">
           {/* menu__body - бургер меню без JS + нижче кнопка (a) для виклику */}
-          <nav class="menu__body" id="menue">
+          <nav
+            className={`menu__body${navbarOpen ? " show-menu" : ""}`}
+            id="menu"
+          >
+            {/* <nav className="menu__body" id="menu"> */}
             <ul className="menu__list">
               <li className="menu__item">
-                <Link to="/about" className="menu__link">
+                <Link
+                  onClick={() => setNavbarOpen(false)}
+                  to="/about"
+                  className="menu__link"
+                >
                   About us
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/mentors" className="menu__link">
+                <Link
+                  onClick={() => setNavbarOpen(false)}
+                  to="/mentors"
+                  className="menu__link"
+                >
                   Find a mentor
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/live-classes" className="menu__link">
+                <Link
+                  onClick={() => setNavbarOpen(false)}
+                  to="/live-classes"
+                  className="menu__link"
+                >
                   Find live classes
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/become-mentor" className="menu__link">
+                <Link
+                  onClick={() => setNavbarOpen(false)}
+                  to="/become-mentor"
+                  className="menu__link"
+                >
                   Become a mentor
                 </Link>
               </li>
               <li className="menu__item">
-                <Link to="/contact" className="menu__link">
+                <Link
+                  onClick={() => setNavbarOpen(false)}
+                  to="/contact"
+                  className="menu__link"
+                >
                   Contact
                 </Link>
               </li>
@@ -66,10 +98,28 @@ export default function NavBar() {
               <button className="button" onClick={() => navigate("/signup")}>
                 Sign up
               </button>
-              <a href="#open" className="icon-menu">
-                <span></span>
-              </a>
-              <a href="#close" className="close-icon-menu"></a>
+              <button
+                className="toggle"
+                onClick={() => setNavbarOpen((prev) => !prev)}
+              >
+                {navbarOpen ? (
+                  <MdClose
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      backgroundColor: "#fff",
+                    }}
+                  />
+                ) : (
+                  <FiMenu
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      backgroundColor: "#fff",
+                    }}
+                  />
+                )}
+              </button>
             </>
           )}
           {user && (
@@ -78,7 +128,13 @@ export default function NavBar() {
                 Logout
               </button>
               <div
-                style={{ display: "flex", gap: "0.2rem", alignItems: "center" }}
+                style={{
+                  display: "flex",
+                  gap: "0.4rem",
+                  alignItems: "center",
+                  flex: "0 1 60%",
+                  /*  justifyContent: "space-between", */
+                }}
               >
                 {user.photoURL && (
                   <div>
@@ -88,7 +144,7 @@ export default function NavBar() {
                       style={{
                         display: "block",
                         width: "100%",
-                        height: "5vh",
+                        height: "6vh",
                         borderRadius: "50px",
                         referrerPolicy: "no-referrer",
                       }}
@@ -97,10 +153,32 @@ export default function NavBar() {
                 )}
 
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                  <p>Welcome </p>
-                  <p>{user.displayName} 👋</p>
+                  <p style={{ fontSize: "12px" }}>Welcome </p>
+                  <p style={{ fontSize: "12px" }}>{user.displayName} 👋</p>
                 </div>
               </div>
+              <button
+                className="toggle"
+                onClick={() => setNavbarOpen((prev) => !prev)}
+              >
+                {navbarOpen ? (
+                  <MdClose
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      backgroundColor: "#fff",
+                    }}
+                  />
+                ) : (
+                  <FiMenu
+                    style={{
+                      width: "32px",
+                      height: "32px",
+                      backgroundColor: "#fff",
+                    }}
+                  />
+                )}
+              </button>
             </>
           )}
         </div>
