@@ -2510,7 +2510,7 @@ ul {
 }
 
 /* ======================== */
-/* ====Live Class page==== */
+/* ====Live Class page===== */
 /* ======================== */
 
 .live-class {
@@ -2579,6 +2579,7 @@ ul {
 
 .header-live-class__image img {
   width: 100%;
+  height: 100%;
   /* height: 30vh; */
   /* object-fit: cover; */
   object-position: ceter;
@@ -3090,6 +3091,83 @@ ul {
 .confirmation-message-register__button {
   margin: 0 auto;
   width: 30%;
+}
+
+/* ========================== */
+/* Live Class Page Responsive */
+/* ========================== */
+
+@media (max-width: 991.98px) {
+  /* --------------------*/
+
+  .live-class__header {
+    gap: 1rem;
+  }
+
+  .header-live-class__text-block__live {
+    max-width: 12vw;
+  }
+
+  .header-live-class__text-block {
+    gap: 1rem;
+  }
+
+  .text-block-header-live-class__title {
+    font-size: 30px;
+  }
+
+  .text-block-header-live-class__details {
+    font-size: 14px;
+    gap: 0.5rem;
+  }
+
+  .text-block-header-live-class__subtitle {
+    font-size: 16px;
+  }
+
+  /* --------------------*/
+
+  /* --------------------*/
+}
+
+@media (max-width: 767.98px) {
+  /* --------------------*/
+
+  .header-live-class__text-block__live {
+    max-width: 16vw;
+  }
+
+  .text-block-header-live-class__title {
+    font-size: 26px;
+  }
+
+  .text-block-header-live-class__details {
+    font-size: 14px;
+  }
+
+  .text-block-header-live-class__subtitle {
+    font-size: 14px;
+  }
+
+  /* --------------------*/
+
+  /* --------------------*/
+}
+
+@media (max-width: 575.98px) {
+  /* --------------------*/
+  .header-live-class__text-block__live {
+    max-width: 22vw;
+  }
+
+  .live-class__header {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  /* --------------------*/
+
+  /* --------------------*/
 }
 
 /* ======================== */
