@@ -209,7 +209,7 @@ export default function Mentor() {
                   </li>
                   <li className="list-booking-info-content-mentor-page__item item-list-booking-info-content-mentor-page">
                     <div className="item-list-booking-info-content-mentor-page__title">
-                      Package of 6 calls/month
+                      Package of calls/month
                     </div>
 
                     <div className="item-list-booking-info-content-mentor-page__price">
@@ -220,7 +220,7 @@ export default function Mentor() {
                       6 calls (50 min each)
                     </div>
 
-                    <button className="item-list-booking-info-content-mentor-page__btn-book button">
+                    <button className="item-list-booking-info-content-mentor-page__btn-book item-list-booking-info-content-mentor-page__btn-book-last button">
                       Book now
                     </button>
 
