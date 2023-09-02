@@ -3222,6 +3222,7 @@ h3 {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.04em;
+  color: #000;
 }
 
 .form-booking__comment {
@@ -3290,8 +3291,9 @@ textarea {
 }
 
 .select-box-form-booking__comment {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
+  color: #000;
 }
 
 .select-box-form-booking__submit-message {
@@ -3305,6 +3307,63 @@ textarea {
 
 .select-box-form-booking__payment-widget-box {
   padding: 24px;
+}
+
+/* ======================== */
+/* ===BOOKING RESPONSIVE=== */
+/* ======================== */
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .booking__wrapper {
+    margin: 44px 78px;
+    padding: 48px 38px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .booking__wrapper {
+    margin: 44px 8px;
+    padding: 38px 14px;
+  }
+
+  .booking__form {
+    padding: 14px;
+  }
+
+  .form-booking__question {
+    font-size: 18px;
+  }
+
+  .form-booking__comment {
+    font-size: 14px;
+  }
+
+  .steps-booking__numbers > div {
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .buttons button {
+    font-size: 12px;
+  }
+
+  /* -------------------- */
+
+  .select-box-form-booking__calendly-form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .select-box-form-booking__comment {
+    font-size: 18px;
+  }
 }
 
 /* ======================== */

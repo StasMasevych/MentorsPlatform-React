@@ -152,7 +152,7 @@ export default function BookMentor() {
                       Select date and time for session with mentor
                     </h3>
                     <div className="select-box-form-booking__calendly-form">
-                      <InlineWidget url="https://calendly.com/stasmasevych/60min" />
+                      <InlineWidget url="https://calendly.com/stasmasevych/35min" />
                     </div>
                   </>
                 ) : (
