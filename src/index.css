@@ -3161,8 +3161,12 @@ ul {
   }
 
   .live-class__header {
-    display: grid;
     grid-template-columns: auto;
+  }
+
+  .live-class__header > .header-live-class__image {
+    grid-column-start: 1;
+    grid-row-start: 1;
   }
 
   /* --------------------*/

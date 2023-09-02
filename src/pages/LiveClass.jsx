@@ -73,7 +73,7 @@ export default function LiveClass() {
     <div className="live-class">
       <div className="live-class__container">
         <div className="live-class__header header-live-class">
-          <div className="header-live-class__text-block text-block-header-live-class">
+          <div className="header-live-class__text-block text-block-header-live-class header-live-class__item">
             <span className="header-live-class__text-block__live">
               Live session
             </span>
@@ -104,7 +104,7 @@ export default function LiveClass() {
               Enroll now
             </a>
           </div>
-          <div className="header-live-class__image">
+          <div className="header-live-class__image header-live-class__item">
             <img src={singleLiveClass.image} alt="live-class" />
           </div>
         </div>
