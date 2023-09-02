@@ -160,6 +160,10 @@ body {
   display: none;
 }
 
+.userAuth-textblock__burger-welcome {
+  display: none;
+}
+
 /* -----------------------*/
 
 @media (max-width: 991.98px) {
@@ -198,6 +202,17 @@ body {
 
 @media (max-width: 767.98px) {
   /* showing burger menu  */
+
+  .header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+  }
+
+  .header__container {
+    min-height: 55px;
+  }
 
   .toggle {
     display: flex;
@@ -245,16 +260,34 @@ body {
   .menu__item:last-child {
     margin-bottom: 0; /* забираємо відступ внизу в останнього елементу */
   }
+
+  /* hide input */
+
+  .search-bar-allMentors-page__input {
+    z-index: -9;
+  }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 575.98px) {
   .header__logo {
     flex: 0 0 40px; /* розмір лого */
+  }
+
+  .userAuth-textblock__name {
+    display: none;
+  }
+
+  .userAuth-textblock__welcome {
+    display: none;
+  }
+
+  .userAuth-textblock__burger-welcome {
+    display: block;
   }
 }
 
 /* ======================== */
-/* ======================== */
+/* ==========HERO========== */
 /* ======================== */
 
 .hero {
@@ -308,6 +341,53 @@ body {
 }
 
 /* ======================== */
+/* =====HERO RESPONSIVE==== */
+/* ======================== */
+
+@media (max-width: 991.98px) {
+  .hero__container {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .hero__textblock {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main {
+    margin: 44px 0;
+  }
+  .hero__container {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .hero__textblock {
+    gap: 1.5rem;
+  }
+
+  .textblock-hero__title {
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  .textblock-hero__subtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* ======================== */
+/* ==========BRANDS=========*/
+/* ======================== */
 
 .brands {
   margin: 44px auto;
@@ -331,6 +411,28 @@ body {
 .brands__item {
 }
 
+/* ======================== */
+/* ====BRANDS RESPONSIVE=== */
+/* ======================== */
+
+@media (max-width: 991.98px) {
+  .brands__list {
+    margin: 22px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+}
+
+@media (max-width: 575.98px) {
+}
+
+/* ======================== */
+/* =========MENTORS======== */
 /* ======================== */
 
 .mentors {
@@ -363,7 +465,7 @@ body {
 
 .mentors__list {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
@@ -438,6 +540,47 @@ body {
 }
 
 /* ======================== */
+/* ===MENTORS RESPONSIVE=== */
+/* ======================== */
+
+@media (max-width: 991.98px) {
+  .mentors__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mentors__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .mentor__image {
+    height: 12.688rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .mentors__list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mentors__list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .mentor__image {
+    height: 12.688rem;
+  }
+}
+/* ======================== */
+/* ======HOW IT WORKS====== */
+/* ======================== */
 
 .how-it-works {
   margin: 44px auto;
@@ -488,6 +631,48 @@ body {
 }
 
 /* ======================== */
+/* HOW IT WORKS RESPONSIVE  */
+/* ======================== */
+@media (max-width: 991.98px) {
+  .how-it-works__container {
+    gap: 2rem;
+  }
+
+  .list-how-it-works__item {
+    padding: 15px 20px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .how-it-works__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .how-it-works__title {
+    font-size: 36px;
+  }
+
+  .list-how-it-works__item {
+    padding: 12px 14px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .how-it-works__list {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .list-how-it-works__item {
+    padding: 12px 14px;
+    font-size: 10px;
+  }
+}
+/* ======================== */
+/* ========FOR WHOM======== */
+/* ======================== */
 
 .for-whom {
   margin: 44px auto;
@@ -530,7 +715,7 @@ body {
   gap: 0.5rem;
   height: 20%;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
-  padding: 12px 8px;
+  padding: 12px 18px;
   border-radius: 18px;
 }
 
@@ -550,6 +735,43 @@ body {
   border-radius: 18px;
 }
 
+/* ======================== */
+/* ==FOR WHOM RESPONSIVE==  */
+/* ======================== */
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .for-whom__title {
+    font-size: 36px;
+  }
+
+  .for-whom__content-block {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .text-content-block-for-whom__box {
+    padding: 12px 18px;
+  }
+
+  .text-content-block-for-whom__box p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-block-for-whom__image {
+    height: 110vh;
+  }
+  .content-block-for-whom__image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ======================== */
+/* ========BENEFITS======== */
 /* ======================== */
 
 .benefits {
@@ -599,14 +821,15 @@ body {
 }
 
 .text-content-block-benefits__paragraph {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .content-block-benefits__image {
   width: 50%;
-  /* height: 50%; */
-  height: 60vh;
+
+  /* height: 60vh; */
+  height: 46vh;
 }
 
 .content-block-benefits__image img {
@@ -619,6 +842,65 @@ body {
   border-radius: 18px;
 }
 
+/* ======================== */
+/* ==BENEFITS RESPONSIVE=== */
+/* ======================== */
+@media (max-width: 991.98px) {
+  .benefits__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .content-block-benefits {
+    display: flex;
+    flex: 0 1 50%;
+    gap: 1.5rem;
+  }
+
+  .content-block-benefits__image {
+    height: 40vh;
+  }
+
+  .text-content-block-benefits__paragraph {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-block-benefits {
+    display: flex;
+    flex: 0 1 50%;
+    gap: 1rem;
+  }
+
+  .benefits__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .benefits__subtitle {
+    font-size: 16px;
+  }
+
+  .content-block-benefits__image {
+    height: 30vh;
+  }
+
+  .content-block-benefits__text {
+    gap: 0.5rem;
+  }
+
+  .text-content-block-benefits__paragraph {
+    font-size: 12px;
+    font-weight: 300;
+  }
+}
+/* ======================== */
+/* ========CATEGORIES====== */
 /* ======================== */
 
 .categories {
@@ -649,12 +931,40 @@ body {
 }
 
 /* ======================== */
+/* ==CATEGORIES RESPONSIVE==*/
+/* ======================== */
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .categories__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .categories__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .categories__item {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+/* ======================== */
+/* ========REVIEWS========= */
+/* ======================== */
 
 .reviews {
-  /* margin: 58px auto; */
   margin: 24px auto;
-  /* padding: 24px 0 46px 0; */
-  /* background-color: #000; */
   background-color: #fff;
   /* background-color: #f9fafa; */
 }
@@ -679,12 +989,14 @@ body {
 .reviews__list {
   display: flex;
   flex-wrap: wrap;
+  /* якщо у флекс контейнера більше 2 елементів, то щоб були 2 в рядку треба 
+  дати флексу можливість врапуватись/переноситись */
   justify-content: center;
   gap: 1.5rem;
 }
 
 .reviews__item {
-  flex: 0 1 33%;
+  flex: 0 1 48%;
   /* background-color: #fff; */
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
   padding: 12px 8px;
@@ -720,6 +1032,34 @@ body {
   padding: 12px 0 0 0;
 }
 
+/* ======================== */
+/* ===REVIEWS RESPOSNIVE=== */
+/* ======================== */
+@media (max-width: 991.98px) {
+  .author-data-item-reviews__person {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .reviews__title {
+    font-size: 36px;
+  }
+
+  .author-data-item-reviews__person {
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .reviews__item {
+    flex: 0 1 100%;
+  }
+}
+/* ======================== */
+/* ========COURSES========= */
 /* ======================== */
 
 .courses {
@@ -820,6 +1160,38 @@ body {
 }
 
 /* ======================== */
+/* ===COURSES RESPONSIVE=== */
+/* ======================== */
+
+@media (max-width: 991.98px) {
+}
+
+@media (max-width: 767.98px) {
+  .courses__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .courses__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .courses__subtitle {
+    font-size: 16px;
+  }
+
+  .courses__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+/* ======================== */
+/* =========FOOTER========= */
+/* ======================== */
 
 .footer {
   /* margin: auto; */
@@ -899,6 +1271,10 @@ ul {
   gap: 1.5rem;
   font-size: 16px;
 }
+
+/* ======================== */
+/* ===FOOTER RESPONSIVE=== */
+/* ======================== */
 
 @media (max-width: 767px) {
   .footer-col {

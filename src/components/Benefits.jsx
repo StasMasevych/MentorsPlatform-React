@@ -1,5 +1,5 @@
-import imgCoding1 from "../assets/learning images/coding.jpg";
-import imgCoding2 from "../assets/learning images/coding2.png";
+import imgSreamer from "../assets/masterclass/streamer.webp";
+import imgCoding from "../assets/learning images/coding2.png";
 import imgLearning from "../assets/learning images/live-class.jpg";
 
 // fix issue with height of images
@@ -40,7 +40,7 @@ export default function Benefits() {
               </p>
             </div>
             <div className="content-block-benefits__image">
-              <img src={imgCoding1} alt="pic" />
+              <img src={imgSreamer} alt="pic" />
             </div>
           </div>
           <div className="blocks-benefits__content-block content-block-benefits">
@@ -82,7 +82,7 @@ export default function Benefits() {
               </p>
             </div>
             <div className="content-block-benefits__image">
-              <img src={imgCoding2} alt="pic" />
+              <img src={imgCoding} alt="pic" />
             </div>
           </div>
         </div>

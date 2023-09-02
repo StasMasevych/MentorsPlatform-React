@@ -31,7 +31,6 @@ export default function NavBar() {
           Builders
         </Link>
         <div className="header__menu menu">
-          {/* menu__body - бургер меню без JS + нижче кнопка (a) для виклику */}
           <nav
             className={`menu__body${navbarOpen ? " show-menu" : ""}`}
             id="menu"
@@ -90,12 +89,15 @@ export default function NavBar() {
           {!user && (
             <>
               <button
-                className="buttons-header__login"
+                className="buttons-header__login login-buttons-header__button"
                 onClick={() => navigate("/login")}
               >
                 Login
               </button>
-              <button className="button" onClick={() => navigate("/signup")}>
+              <button
+                className="login-buttons-header__button button"
+                onClick={() => navigate("/signup")}
+              >
                 Sign up
               </button>
               <button
@@ -128,6 +130,7 @@ export default function NavBar() {
                 Logout
               </button>
               <div
+                /* className="buttons-header__google-auth" */
                 style={{
                   display: "flex",
                   gap: "0.4rem",
@@ -152,9 +155,28 @@ export default function NavBar() {
                   </div>
                 )}
 
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <p style={{ fontSize: "12px" }}>Welcome </p>
-                  <p style={{ fontSize: "12px" }}>{user.displayName} 👋</p>
+                <div
+                  className="userAuth-textblock"
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+                  <p
+                    className="userAuth-textblock__welcome"
+                    style={{ fontSize: "12px" }}
+                  >
+                    Welcome{" "}
+                  </p>
+                  <p
+                    className="userAuth-textblock__burger-welcome"
+                    style={{ fontSize: "12px" }}
+                  >
+                    Welcome 👋
+                  </p>
+                  <p
+                    className="userAuth-textblock__name"
+                    style={{ fontSize: "12px" }}
+                  >
+                    {user.displayName} 👋
+                  </p>
                 </div>
               </div>
               <button
