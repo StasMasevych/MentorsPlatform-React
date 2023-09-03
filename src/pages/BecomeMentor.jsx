@@ -40,7 +40,7 @@ export default function BecomeMentor() {
               <img src={image} alt="go" />
             </div>
             <div className="hero-become-mentor__content content-hero-become-mentor">
-              <h3>Open next chapter in your career by mentoring</h3>
+              <h3>Open next chapter in your career by mentoring ⭐️</h3>
               <p>
                 At our platform, mentors are the lifeblood of our community.
                 Your knowledge, passion and experience provides our members the
@@ -113,7 +113,7 @@ export default function BecomeMentor() {
             <ul className="content-live-session-become-mentor__list list-content-live-session-become-mentor">
               <li className="list-content-live-session-become-mentor__item item-list-content-live-session-become-mentor">
                 <h5 className="item-list-content-live-session-become-mentor__title">
-                  Software development
+                  Web and mobile development
                 </h5>
                 <div className="item-list-content-live-session-become-mentor__image">
                   <img src={codingImg} alt="go" />
@@ -121,7 +121,7 @@ export default function BecomeMentor() {
               </li>
               <li className="list-content-live-session-become-mentor__item">
                 <h5 className="item-list-content-live-session-become-mentor__title">
-                  UX/UI design
+                  UX/UI design and prototyping
                 </h5>
                 <div className="item-list-content-live-session-become-mentor__image">
                   <img src={designingImg} alt="go" />
@@ -137,12 +137,12 @@ export default function BecomeMentor() {
               </li>
             </ul>
           </div>
-          <div className="live-session-become-mentor__guide">
+          {/* <div className="live-session-become-mentor__guide">
             <p>
               Find our guide to become creator of live class under the link -
               link
             </p>
-          </div>
+          </div> */}
           <button
             className="live-session-become-mentor__button button"
             onClick={() => navigate("/create-live-class")}

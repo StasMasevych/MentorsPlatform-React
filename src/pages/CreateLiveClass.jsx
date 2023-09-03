@@ -435,6 +435,9 @@ export default function CreateLiveClass() {
 
   console.log("This is page ", page); // reflect to render Steps, page 6 its finish
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   function handleAddDataToForm() {
     setPage(page + 1);
 

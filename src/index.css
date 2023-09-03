@@ -2531,7 +2531,7 @@ ul {
 }
 
 .header-live-class__text-block__live {
-  max-width: 8vw;
+  max-width: 12vw;
   text-align: center;
   padding: 6px 8px;
   border-radius: 8px;
@@ -3879,12 +3879,15 @@ textarea {
   flex: 0 1 49%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  gap: 1rem;
 }
 
 .hero-become-mentor__image img {
   width: 100%;
+  height: 100%;
   border-radius: 16px;
+  object-fit: cover;
 }
 
 .hero-become-mentor__content h3 {
@@ -4043,12 +4046,15 @@ textarea {
 }
 
 .item-list-content-live-session--mentor__image {
+  /* height: 80%; */
 }
 
 .item-list-content-live-session-become-mentor__image img {
   width: 100%;
-  height: 36vh;
+  height: 30vh;
+  /*  height: 100%; */
   border-radius: 16px;
+  /* object-fit: cover; */
 }
 
 .live-session-become-mentor__guide p {
@@ -4060,6 +4066,110 @@ textarea {
 
 .live-session-become-mentor__button {
   margin: 0 auto;
+}
+
+/* =============================*/
+/* =BECOME A MENTOR RESPONSIVE= */
+/* =============================*/
+@media (max-width: 991.98px) {
+  .become-mentor__hero {
+    gap: 1.5rem;
+  }
+
+  .hero-become-mentor__content h3 {
+    font-size: 36px;
+  }
+
+  .hero-become-mentor__content p {
+    font-size: 14px;
+  }
+
+  .live-session-become-mentor__content {
+    margin: 12px 0;
+  }
+
+  .item-list-content-live-session-become-mentor__image img {
+  }
+
+  /* .item-list-content-live-session-become-mentor__title {
+    font-size: 16px;
+  } */
+}
+
+@media (max-width: 767.98px) {
+  .become-mentor {
+    margin: 28px 0;
+  }
+  .become-mentor__hero {
+    gap: 1rem;
+  }
+
+  .hero-become-mentor__content h3 {
+    font-size: 32px;
+  }
+
+  .reviews-block-become-mentor__title {
+    font-size: 36px;
+  }
+
+  .mentor-reviews__text {
+    font-size: 14px;
+  }
+
+  .mentor-reviews__name {
+    font-size: 16px;
+  }
+
+  .mentor-reviews__job {
+  }
+
+  .live-session-become-mentor__title {
+    font-size: 36px;
+  }
+
+  .live-session-become-mentor__subtitle {
+    font-size: 18px;
+  }
+
+  .become-mentor__live-session {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .become-mentor__header-message {
+    font-size: 20px;
+  }
+  .become-mentor__hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero-become-mentor__content h3 {
+    text-align: center;
+  }
+
+  .hero-become-mentor__content p {
+    text-align: center;
+  }
+
+  .mentors-reviews__item {
+    gap: 0.5rem;
+  }
+
+  .mentor-reviews__text {
+    font-size: 12px;
+  }
+
+  .content-hero-become-mentor__button {
+    margin: 0 auto;
+  }
+
+  .content-live-session-become-mentor__list {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0 42px;
+  }
 }
 
 /* ======================== */
