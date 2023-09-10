@@ -269,6 +269,10 @@ body {
 }
 
 @media (max-width: 575.98px) {
+  .header__container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
   .header__logo {
     flex: 0 0 40px; /* розмір лого */
   }
@@ -357,7 +361,7 @@ body {
 
 @media (max-width: 767.98px) {
   .main {
-    margin: 44px 0;
+    margin: 74px 0;
   }
   .hero__container {
     display: flex;
@@ -1471,6 +1475,7 @@ ul {
 .next-btn {
   background: transparent;
   border-color: transparent;
+  color: #000;
   font-weight: bold;
   text-transform: capitalize;
   letter-spacing: 0.1rem;
