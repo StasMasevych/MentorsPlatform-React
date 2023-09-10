@@ -732,7 +732,7 @@ body {
 
 .content-block-for-whom__image img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; for Safari*/
   border-radius: 18px;
 }
 
@@ -763,11 +763,11 @@ body {
 
 @media (max-width: 575.98px) {
   .content-block-for-whom__image {
-    height: 110vh;
+    height: 90vh;
   }
   .content-block-for-whom__image img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; for Safari*/
   }
 }
 
