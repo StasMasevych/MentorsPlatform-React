@@ -12,14 +12,10 @@ export default function Benefits() {
   return (
     <div className="benefits">
       <div className="benefits__container">
-        <h2 className="benefits__title">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit
-        </h2>
+        <h2 className="benefits__title">How mentors can help you ?</h2>
         <p className="benefits__subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          There are many cases where mentors can make your learning process very
+          fast and efficient.
         </p>
         <div className="benefits__blocks blocks-benefits">
           <div className="blocks-benefits__content-block content-block-benefits">

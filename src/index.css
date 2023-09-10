@@ -471,7 +471,7 @@ body {
 
 .mentors__item {
   padding: 0.5rem;
-  height: 100%;
+  /* height: 100%; for Safari*/
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -493,6 +493,7 @@ body {
 }
 
 .mentor__image img {
+  display: block;
   width: 100%;
   height: 100%;
   /* border-radius: 28px; */
@@ -786,7 +787,7 @@ body {
 
 .benefits__title {
   text-align: center;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
   color: #000;
 }
@@ -858,6 +859,10 @@ body {
     display: flex;
     flex: 0 1 50%;
     gap: 1.5rem;
+  }
+
+  .benefits__title {
+    font-size: 36px;
   }
 
   .content-block-benefits__image {
