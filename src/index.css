@@ -264,7 +264,7 @@ body {
   /* hide input */
 
   .search-bar-allMentors-page__input {
-    z-index: -9;
+    /*  z-index: -9; */
   }
 }
 
@@ -1418,18 +1418,32 @@ ul {
 }
 
 @media (max-width: 575.98px) {
+  .search-bar-allMentors-page__container-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .search-bar-allMentors-page__input {
+    padding: 18px 24px;
+  }
+
+  .search-bar-allMentors-page__button {
+    padding: 18px 24px;
+  }
+
   .mentors-content-allMentors-page__list {
     display: grid;
     gap: 0.5rem;
   }
 
-  .search-bar-allMentors-page__input::placeholder {
+  /* .search-bar-allMentors-page__input::placeholder {
     font-size: 8px;
   }
 
   .search-bar-allMentors-page__input {
     padding: 10px 8px;
-  }
+  } */
 
   .list-categories-allMentors-page__item {
     background-color: #f5f5f5;

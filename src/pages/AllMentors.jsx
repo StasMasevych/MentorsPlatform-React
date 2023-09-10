@@ -108,12 +108,6 @@ export default function AllMentors() {
     });
   }, []);
 
-  // get input value
-
-  function onSearchHandler(e) {
-    setSearchTerm(e.target.value);
-  }
-
   // get mentors by clicking "All" category
 
   function onGetAllHandler() {
@@ -161,7 +155,7 @@ export default function AllMentors() {
               className="search-bar-allMentors-page__input"
               type="text"
               placeholder="name, company, category of a mentor..."
-              onChange={onSearchHandler}
+              onChange={(e) => setSearchTerm(e.target.value)}
               value={searchTerm}
             />
             <button className="search-bar-allMentors-page__button button">
