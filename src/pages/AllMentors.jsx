@@ -40,8 +40,8 @@ export default function AllMentors() {
   const handlePage = (index) => {
     setPage(index);
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   };
@@ -55,8 +55,8 @@ export default function AllMentors() {
       return nextPage;
     });
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   };
@@ -69,8 +69,8 @@ export default function AllMentors() {
       return prevPage;
     });
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   };
@@ -90,8 +90,8 @@ export default function AllMentors() {
     dispatch({ type: "GET_FILTERED-MENTORS", payload: filteredMentorsArr });
 
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   }
@@ -102,8 +102,8 @@ export default function AllMentors() {
     const allMentorsArr = getAllMentors(allMentorsArray);
     dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   }, []);
@@ -114,8 +114,8 @@ export default function AllMentors() {
     const allMentorsArr = getAllMentors(allMentorsArray);
     dispatch({ type: "GET_FILTERED-MENTORS", payload: allMentorsArr });
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   }
@@ -134,8 +134,8 @@ export default function AllMentors() {
       dispatch({ type: "GET_FILTERED-MENTORS", payload: searchResults });
 
       window.scrollTo({
-        top: 100,
-        left: 100,
+        top: 0,
+        left: 0,
         behavior: "smooth",
       });
 
