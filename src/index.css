@@ -1759,11 +1759,14 @@ ul {
 }
 
 .header-info-content-mentor-page__avatar {
+  /* width: 100%; */
+  height: 20vh;
 }
 
 .header-info-content-mentor-page__avatar img {
-  width: 100%;
-  height: 20vh;
+  height: 100%;
+  /* height: 90%;
+  width: 30%; */
   object-fit: cover;
   border-radius: 100px;
 
@@ -2036,8 +2039,12 @@ ul {
     gap: 0.5rem;
   }
 
-  .header-info-content-mentor-page__avatar img {
+  .header-info-content-mentor-page__avatar {
     height: 14vh;
+  }
+
+  .header-info-content-mentor-page__avatar img {
+    height: 100%;
   }
 
   .personal-data-header-info-content-mentor-page__fullname {
