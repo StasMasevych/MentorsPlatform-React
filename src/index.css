@@ -2735,14 +2735,15 @@ ul {
 }
 
 .creator-content-main-live-class__image {
-  width: 14%;
+  /* width: 14%; */
+  height: 14vh;
 }
 
 .creator-content-main-live-class__image img {
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: 14vh;
+  height: 100%;
   border-radius: 50px;
   object-fit: cover;
   /* object-fit: cover; */
@@ -3225,10 +3226,10 @@ ul {
     gap: 1rem;
   }
 
-  .creator-content-main-live-class__image img {
+  /* .creator-content-main-live-class__image img {
     width: 100%;
-    height: 10vh;
-  }
+    height: 14vh;
+  } */
 
   .schedule-enrol-box-main-live-class__info {
     font-size: 14px;
@@ -3269,13 +3270,13 @@ ul {
     font-size: 14px;
   }
 
-  .creator-content-main-live-class__image {
+  /* .creator-content-main-live-class__image {
     width: 18%;
-  }
+  } */
 
-  .creator-content-main-live-class__image img {
+  /*  .creator-content-main-live-class__image img {
     height: 8vh;
-  }
+  } */
 
   .overview-content-main-live-class__description {
     gap: 1rem;
@@ -3300,13 +3301,13 @@ ul {
     grid-row-start: 1;
   }
 
-  .creator-content-main-live-class__image {
+  /* .creator-content-main-live-class__image {
     width: 16%;
   }
 
   .creator-content-main-live-class__image img {
     height: 10vh;
-  }
+  } */
 
   .overview-content-main-live-class__title {
     font-size: 28px;
