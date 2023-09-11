@@ -140,14 +140,18 @@ export default function NavBar() {
                 }}
               >
                 {user.photoURL && (
-                  <div>
+                  <div
+                    style={{
+                      height: "6vh",
+                    }}
+                  >
                     <img
                       src={user.photoURL}
                       alt="go"
                       style={{
                         display: "block",
                         width: "100%",
-                        height: "6vh",
+                        height: "100%",
                         borderRadius: "50px",
                         referrerPolicy: "no-referrer",
                       }}
