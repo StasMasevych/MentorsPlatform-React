@@ -41,7 +41,7 @@ export default function App() {
             <main className="main" style={{ overflowY: "hidden" }}>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                {/*  <Route path="/about" element={<About />} /> */}
                 <Route
                   path="/become-mentor"
                   //element={<BecomeMentor />}
@@ -80,7 +80,7 @@ export default function App() {
                 />
 
                 <Route path="/live-class/:name" element={<LiveClass />} />
-                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="/contact" element={<Contact />} /> */}
                 <Route
                   path="/login"
                   //element={<Login />}

@@ -2,7 +2,7 @@ import imageLearning from "../assets/how it works images/learning-man.png";
 
 export default function ForWhom() {
   return (
-    <div className="for-whom">
+    <div className="for-whom" id="about">
       <div className="for-whom__container">
         <h2 className="for-whom__title">For whom is our platform ?</h2>
         <div className="for-whom__content-block content-block-for-whom">

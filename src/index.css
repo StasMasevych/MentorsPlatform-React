@@ -1265,6 +1265,14 @@ ul {
   position: relative;
 }
 
+.footer-col h5 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -2172,6 +2180,10 @@ ul {
 }
 
 @media (max-width: 575.98px) {
+  .header-info-content-mentor-page__avatar {
+    height: 10vh;
+  }
+
   .content-mentor-page__help {
     margin: 28px 10px;
   }
@@ -3309,6 +3321,10 @@ ul {
     height: 10vh;
   } */
 
+  .creator-content-main-live-class__image {
+    height: 10vh;
+  }
+
   .overview-content-main-live-class__title {
     font-size: 28px;
   }
@@ -3413,6 +3429,11 @@ ul {
   .register__content {
     display: flex;
     flex-direction: column;
+  }
+
+  .enrol-box-main-live-class__button {
+    margin: 0 auto;
+    width: 50%;
   }
 
   /* --------------------*/

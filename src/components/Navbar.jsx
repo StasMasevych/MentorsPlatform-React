@@ -38,13 +38,14 @@ export default function NavBar() {
             {/* <nav className="menu__body" id="menu"> */}
             <ul className="menu__list">
               <li className="menu__item">
-                <Link
+                <a
                   onClick={() => setNavbarOpen(false)}
-                  to="/about"
+                  /* to="/about" */
+                  href="#about"
                   className="menu__link"
                 >
-                  About us
-                </Link>
+                  About
+                </a>
               </li>
               <li className="menu__item">
                 <Link
@@ -74,13 +75,14 @@ export default function NavBar() {
                 </Link>
               </li>
               <li className="menu__item">
-                <Link
+                <a
                   onClick={() => setNavbarOpen(false)}
-                  to="/contact"
+                  /* to="/contact" */
+                  href="#contact"
                   className="menu__link"
                 >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </nav>

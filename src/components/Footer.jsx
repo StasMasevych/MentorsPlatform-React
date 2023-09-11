@@ -21,44 +21,48 @@ export default function Footer() {
             <h4>company</h4>
             <ul>
               <li>
-                <a href="#">about us</a>
+                <a href="#about">about us</a>
               </li>
-              <li>
+              {/*  <li>
                 <a href="#">our story</a>
               </li>
               <li>
                 <a href="#">privacy policy</a>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="footer-col">
             <h4>categories</h4>
             <ul>
               <li>
-                <a href="#">web development</a>
+                {/* <a href="#">web development</a> */}
+                <Link to="/mentors">web development</Link>
               </li>
               <li>
-                <a href="#">javascript</a>
+                {/* <a href="#">javascript</a> */}
+                <Link to="/mentors">javascript</Link>
               </li>
               <li>
-                <a href="#">phyton</a>
+                {/* <a href="#">phyton</a> */}
+                <Link to="/mentors">phyton</Link>
               </li>
               <li>
-                <a href="#">QA</a>
+                {/* <a href="#">QA</a> */}
+                <Link to="/mentors">UX/UI design</Link>
               </li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>learning</h4>
             <ul>
+              <li>{/* <a href="#">FAQ</a> */}</li>
               <li>
-                <a href="#">FAQ</a>
+                {/* <a href="#">mentors</a> */}
+                <Link to="/mentors">mentors</Link>
               </li>
               <li>
-                <a href="#">mentors</a>
-              </li>
-              <li>
-                <a href="#">live classes</a>
+                {/* <a href="#">live classes</a> */}
+                <Link to="/live-classes">live-classes</Link>
               </li>
               {/* <li>
                 <a href="#">order status</a>
@@ -84,6 +88,7 @@ export default function Footer() {
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
+            <h5 id="contact">techmate@gmail.com</h5>
           </div>
         </div>
         <div className="footer__content content-footer">
