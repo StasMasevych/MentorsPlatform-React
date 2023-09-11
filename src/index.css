@@ -2182,6 +2182,10 @@ ul {
     width: 100%;
   }
 
+  .info-content-mentor-page__booking {
+    grid-column: 1/4;
+  }
+
   .list-mentor-topics-info-content-mentor-page__item {
     font-size: 12px;
   }
@@ -2190,8 +2194,13 @@ ul {
     padding: 10px;
   }
 
+  .content-mentor-page__resume {
+    grid-column: 1/4;
+  }
+
   .resume-content-mentor-page__title {
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 20px;
   }
 
   .resume-content-mentor-page__description {
@@ -2210,19 +2219,21 @@ ul {
     font-size: 14px;
   }
 
-  .item-list-booking-info-content-mentor-page__btn-book {
+  /* .item-list-booking-info-content-mentor-page__btn-book {
     font-size: 8px;
     padding: 10px 28px;
-  }
+    
+  } */
 
-  .item-list-booking-info-content-mentor-page__btn-book-last {
+  /* .item-list-booking-info-content-mentor-page__btn-book-last {
     width: 80%;
-  }
+  } */
 
-  .item-list-booking-info-content-mentor-page__btn-details {
+  /* .item-list-booking-info-content-mentor-page__btn-details {
     font-size: 8px;
     padding: 10px 28px;
-  }
+
+  } */
 
   .item-list-booking-info-content-mentor-page__time {
     font-size: 10px;
