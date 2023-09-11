@@ -3890,13 +3890,18 @@ textarea {
   border-radius: 0.5rem;
 }
 
+.google-button-signup-form__image {
+  flex: 0 1 20%;
+  /* height: 6vh; */
+}
 .google-button-signup-form__image img {
   display: block;
   width: 100%;
-  height: 6vh;
+  height: 100%;
 }
 
 .signup-form__google-button p {
+  flex: 0 1 80%;
   margin: 0;
 }
 
