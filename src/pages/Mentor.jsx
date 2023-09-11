@@ -209,7 +209,7 @@ export default function Mentor() {
                   </li>
                   <li className="list-booking-info-content-mentor-page__item item-list-booking-info-content-mentor-page">
                     <div className="item-list-booking-info-content-mentor-page__title">
-                      Package of calls/month
+                      Package of calls
                     </div>
 
                     <div className="item-list-booking-info-content-mentor-page__price">
