@@ -130,20 +130,24 @@ export default function NavBar() {
                 Logout
               </button>
               <div
-                /* className="buttons-header__google-auth" */
+                className="buttons-header__google-auth"
                 style={{
                   display: "flex",
                   gap: "0.4rem",
                   alignItems: "center",
-                  flex: "0 1 60%",
+                  /* flex: "0 1 60%", */
                   /*  justifyContent: "space-between", */
                 }}
               >
                 {user.photoURL && (
                   <div
-                    style={{
-                      height: "6vh",
-                    }}
+                    className="header__userPhoto"
+                    style={
+                      {
+                        /* flex: "0 1 20%", */
+                        /* height: "6vh", */
+                      }
+                    }
                   >
                     <img
                       src={user.photoURL}
@@ -161,7 +165,11 @@ export default function NavBar() {
 
                 <div
                   className="userAuth-textblock"
-                  style={{ display: "flex", flexDirection: "column" }}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    /* flex: "0 1 80%", */
+                  }}
                 >
                   <p
                     className="userAuth-textblock__welcome"

@@ -150,6 +150,15 @@ body {
   background-color: rgb(215, 35, 215);
 }
 
+/* making google avatar good on mobile */
+.header__userPhoto {
+  flex: 0 1 20%;
+}
+
+.userAuth-textblock {
+  flex: 0 1 80%;
+}
+
 /* ======================== */
 /* ===HEADER RESPONSIVE=== */
 /* ======================== */
@@ -287,6 +296,15 @@ body {
 
   .userAuth-textblock__burger-welcome {
     display: block;
+  }
+
+  /* making google avatar good on mobile */
+  .header__userPhoto {
+    flex: 0 1 30%;
+  }
+
+  .userAuth-textblock {
+    flex: 0 1 70%;
   }
 }
 

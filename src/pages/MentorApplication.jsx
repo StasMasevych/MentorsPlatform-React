@@ -140,8 +140,8 @@ function ThirdStep({
 
   useEffect(() => {
     window.scrollTo({
-      top: 100,
-      left: 100,
+      top: 0,
+      left: 0,
       behavior: "smooth",
     });
   }, []);
@@ -213,6 +213,12 @@ function ThirdStep({
 function FourthStep({ session, onChangeSession }) {
   const [isActive, setIsActive] = useState(0);
 
+  const sessions = [
+    "I want to offer a fee for my sessions",
+    "I want to offer free sessions",
+    "I want to offer both free and paid sessions",
+  ];
+
   function handleChangeIsActive(index) {
     setIsActive(index);
 
@@ -223,11 +229,13 @@ function FourthStep({ session, onChangeSession }) {
     onChangeSession(selectedSession);
   }
 
-  const sessions = [
-    "I want to offer a fee for my sessions",
-    "I want to offer free sessions",
-    "I want to offer both free and paid sessions",
-  ];
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div className="mentor-application">
