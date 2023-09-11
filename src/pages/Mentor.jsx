@@ -213,7 +213,7 @@ export default function Mentor() {
                     </div>
 
                     <div className="item-list-booking-info-content-mentor-page__price">
-                      6000 UAH/month
+                      6000 UAH
                     </div>
 
                     <div className="item-list-booking-info-content-mentor-page__time">
