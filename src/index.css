@@ -2215,6 +2215,10 @@ ul {
     font-size: 12px;
   }
 
+  .item-list-booking-info-content-mentor-page__title {
+    grid-column: 1/3;
+  }
+
   .item-list-booking-info-content-mentor-page__price {
     font-size: 14px;
   }
