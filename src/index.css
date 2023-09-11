@@ -4061,16 +4061,15 @@ textarea {
 }
 
 .mentor-reviews__image {
-  width: 100%;
-
-  /* height: 16.688rem; */
-  height: 100%;
+  /*  height: 26.16vw; */
+  height: 26.16vw;
 }
 
 .mentor-reviews__image img {
   display: block;
   width: 100%;
-  height: 26.16vw;
+  height: 100%;
+  /*  height: 26.16vw; */
   /* height: 100%; */
   /* border-radius: 28px; */
   border-radius: 16px;
@@ -4267,7 +4266,30 @@ textarea {
     grid-template-columns: auto;
     padding: 0 42px;
   }
+
+  .mentor-reviews__image {
+    /*  height: 26.16vw; */
+    height: 64.16vw;
+  }
 }
+
+/* Swiper  */
+
+/* .swiper-container {
+  width: 480px;
+}
+
+@media screen and (min-width: 576px) {
+  .swiper-container {
+    width: 676px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+} */
 
 /* ======================== */
 /* ===MENTOR APPLICATION=== */

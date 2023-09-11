@@ -65,12 +65,29 @@ export default function BecomeMentor() {
           </h3>
           <div className="reviews-block-become-mentor__slider slider-reviews-block-become-mentor">
             <Swiper
-              slidesPerView={3}
-              spaceBetween={10}
+              /* slidesPerView={3} */
+              /* spaceBetween={10} */
+              spaceBetween={5}
               autoHeight={true}
               navigation={{
                 prevEl: ".prevBtn",
                 nextEl: ".nextBtn",
+              }}
+              breakpoints={{
+                // when window width is >= 576px
+                576: {
+                  /* width: 676, */
+                  slidesPerView: 1,
+                },
+                // when window width is >= 768px
+                768: {
+                  /* width: 868, */
+                  slidesPerView: 2,
+                },
+                991: {
+                  /* width: 1001, */
+                  slidesPerView: 3,
+                },
               }}
             >
               {mentorsReviews.map((mentor) => {
