@@ -24,6 +24,10 @@ export default function NavBar() {
 
   return (
     <header className="header" id="open">
+      {/* <div className="header__Ukraine">
+        <span>Support Ukraine 🇺🇦</span>
+        <a href="https://war.ukraine.ua/">Find more information on support</a>
+      </div> */}
       <div className="header__container" id="close">
         <Link to="/" className="header__logo">
           Builders
