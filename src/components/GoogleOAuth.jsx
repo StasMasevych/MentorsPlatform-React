@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import GoogleIcon from "../assets/icons/google-logo_icon.png";
+import { useAuthContext } from "../hooks/useAuthContext";
 
 //firebase
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -8,6 +10,10 @@ import { doc, setDoc, getDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase/config";
 
 export default function GoogleOAuth() {
+  const [googleUser, setGoogleUser] = useState(null);
+  console.log(googleUser);
+  /*  const { user } = useAuthContext(); */
+
   const navigate = useNavigate();
 
   async function onGoogleClick() {
@@ -17,6 +23,7 @@ export default function GoogleOAuth() {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
+      setGoogleUser(user);
 
       // Check for user if it exists in Firestore
       const docRef = doc(db, "users", user.uid);
@@ -31,7 +38,9 @@ export default function GoogleOAuth() {
           timestamp: serverTimestamp(),
         });
       }
+
       navigate("/");
+
       /* window.location.reload(); */
 
       console.log("Successfully authorized!");
@@ -39,6 +48,12 @@ export default function GoogleOAuth() {
       console.log("Could not authorize with Google");
     }
   }
+
+  /*   useEffect(() => {
+    if (user != null) {
+      navigate("/");
+    }
+  }, [user]); */
 
   return (
     <button

@@ -9,8 +9,6 @@ import { FiMenu } from "react-icons/fi";
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  //
-
   const { logout } = useLogut();
   /* console.log(logout); */
   const { user } = useAuthContext();
