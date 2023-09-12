@@ -18,7 +18,7 @@ import tutorNetflixImg from "../../assets/avatars/kim.png";
 import tutorInstaImg from "../../assets/avatars/me.jpg";
 import tutorFigmaImg from "../../assets/avatars/john.png";
 import tutorFlutterImg from "../../assets/avatars/anna.png";
-import tutorChatGptImg from "../../assets/avatars/adam2.png";
+import tutorChatGptImg from "../../assets/avatars/kim.png";
 
 export const liveClassesArray = [
   {
