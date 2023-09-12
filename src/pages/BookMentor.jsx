@@ -10,6 +10,7 @@ import {
 } from "react-calendly";
 
 // add payment widjet as step 4
+// add mentor name as unique id for calendly (before set this at calndly account)
 
 const questions = [
   "What would you like to cover in this session?",
