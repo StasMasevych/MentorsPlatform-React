@@ -41,6 +41,7 @@ body {
   font-size: 12px; /* розмір шрифту по замовчуванню - саме більше де застосовується */
   color: #616161; /* колір шрифту по замовчуванню - саме більше де застосовується */
 }
+
 /* --------------------*/
 .wrapper {
   /* overflow: hidden;
@@ -182,6 +183,10 @@ body {
   display: none;
 }
 
+.icon {
+  color: red;
+}
+
 .userAuth-textblock__burger-welcome {
   display: none;
 }
@@ -244,6 +249,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     margin: 0px 0px 0px 20px;
+    color: #000;
   }
 
   .menu__body {
@@ -4083,6 +4089,14 @@ textarea {
 
 .button-slider {
   background-color: #fff;
+}
+
+.nextBtn {
+  color: #000;
+}
+
+.prevBtn {
+  color: #000;
 }
 
 /* -------------------------- */

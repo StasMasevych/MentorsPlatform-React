@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLogut } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
+import { IconContext } from "react-icons";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
@@ -115,6 +116,7 @@ export default function NavBar() {
                       height: "32px",
                       backgroundColor: "#fff",
                     }}
+                    color="red"
                   />
                 ) : (
                   <FiMenu
@@ -123,6 +125,7 @@ export default function NavBar() {
                       height: "32px",
                       backgroundColor: "#fff",
                     }}
+                    color="red"
                   />
                 )}
               </button>
