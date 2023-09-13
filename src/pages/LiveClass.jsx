@@ -34,7 +34,11 @@ export default function LiveClass() {
     const LiveClassObject = getLiveClass(params.name, liveClassesArray);
 
     dispatch({ type: "GET_LIVE-CLASS", payload: LiveClassObject });
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   // registartion form
