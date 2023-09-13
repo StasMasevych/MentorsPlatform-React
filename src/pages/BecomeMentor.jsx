@@ -1,5 +1,6 @@
 import "swiper/swiper-bundle.css";
 
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
@@ -27,6 +28,14 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectFade]);
 export default function BecomeMentor() {
   const navigate = useNavigate();
   /*  const mentorsReviewArray = mentorsReviews.slice(0, 6); */
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div className="become-mentor">
