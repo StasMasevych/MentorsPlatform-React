@@ -88,7 +88,7 @@ export default function Footer() {
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
-            <h5 id="contact">techmate@gmail.com</h5>
+            <h5 id="contact">skillbuddy@gmail.com</h5>
           </div>
         </div>
         <div className="footer__content content-footer">
