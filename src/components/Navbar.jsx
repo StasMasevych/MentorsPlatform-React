@@ -7,6 +7,8 @@ import { IconContext } from "react-icons";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
+import logo from "../assets/logo/logo_2.png";
+
 export default function NavBar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
@@ -31,7 +33,9 @@ export default function NavBar() {
       </div> */}
       <div className="header__container" id="close">
         <Link to="/" className="header__logo">
-          Builders
+          <div className="logo-header__box">
+            <img src={logo} alt="logo" />
+          </div>
         </Link>
         <div className="header__menu menu">
           <nav

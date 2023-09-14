@@ -83,12 +83,27 @@ body {
   min-height: 114px;
   align-items: center;
 }
+
+/* --------------------*/
+
 .header__logo {
   font-weight: 700;
   font-size: 22px;
   text-decoration: none;
   color: #000;
 }
+
+.logo-header__box {
+  width: 10vw;
+}
+
+.logo-header__box img {
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------*/
+
 .header__menu {
   flex: 1 1 auto;
   display: flex;
@@ -324,6 +339,19 @@ body {
 
   .userAuth-textblock {
     flex: 0 1 70%;
+  }
+
+  .toggle {
+    margin: 0;
+  }
+
+  .logo-header__box {
+    width: 26vw;
+  }
+
+  .logo-header__box img {
+    width: 100%;
+    height: 100%;
   }
 }
 
