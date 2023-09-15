@@ -165,8 +165,15 @@ export default function BookMentor() {
               </div>
             )}
             {step === 4 && (
-              <div className="select-box-form-booking__payment-widget-box">
-                <p>Here, it will be payment widget</p>
+              <div className="select-box-form-booking__payment payment-select-box-form-booking">
+                <h3>Make payment to finish your booking process</h3>
+                {/* add navigation to payment page */}
+                <a
+                  href="https://secure.wayforpay.com/page?vkh=6503299f-0220-4d04-8925-091822d1dba8"
+                  className="payment-select-box-form-booking__button button"
+                >
+                  Make payment
+                </a>
               </div>
             )}
 

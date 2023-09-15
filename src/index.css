@@ -199,7 +199,7 @@ body {
 }
 
 .icon {
-  color: red;
+  color: #000;
 }
 
 .userAuth-textblock__burger-welcome {
@@ -3693,9 +3693,11 @@ textarea {
 }
 
 .select-box-form-booking__comment {
+  margin: 0px 0px 6px 0px;
   font-size: 18px;
   font-weight: 400;
   color: #000;
+  text-align: center;
 }
 
 .select-box-form-booking__submit-message {
@@ -3709,6 +3711,20 @@ textarea {
 
 .select-box-form-booking__payment-widget-box {
   padding: 24px;
+}
+
+.select-box-form-booking__payment h3 {
+  margin: 18px auto;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+}
+
+.payment-select-box-form-booking__button {
+  display: block;
+  text-align: center;
+  margin: 34px auto;
 }
 
 /* ======================== */

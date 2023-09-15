@@ -120,7 +120,6 @@ export default function NavBar() {
                       height: "32px",
                       backgroundColor: "#fff",
                     }}
-                    color="red"
                   />
                 ) : (
                   <FiMenu
@@ -129,7 +128,6 @@ export default function NavBar() {
                       height: "32px",
                       backgroundColor: "#fff",
                     }}
-                    color="red"
                   />
                 )}
               </button>
